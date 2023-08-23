@@ -1,15 +1,22 @@
-// tailwind.config.js
 module.exports = {
   content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
+    './assets/**/*.{vue,js,css}',
+    './components/**/*.{vue,js}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
   ],
   theme: {
+    fontFamily: {
+      'gilroy': ['Gilroy'],
+      'stapel': ['Stapel'],
+      'inter': ['Inter'],
+      'muller': ['Muller']
+    }
   },
   variants: {
+    extend: {},
   },
   plugins: [],
 };

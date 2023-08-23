@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Nuxt 3 starter',
+      title: 'Midas',
       link: [
         {
           rel: 'icon',
@@ -18,7 +18,7 @@ export default defineNuxtConfig({
   ],
   css: [
     '~/assets/styles/css/tailwind.css',
-    '~/assets/styles/scss/main.scss',
+    '~/assets/styles/scss/main.scss'
   ],
   postcss: {
     plugins: {
@@ -26,4 +26,5 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
 });

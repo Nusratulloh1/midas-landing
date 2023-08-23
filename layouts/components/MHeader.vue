@@ -1,0 +1,82 @@
+<template>
+    <header>
+        <nav class=" py-5 w-full">
+            <div class="flex items-center justify-between container mx-auto">
+                <div class="flex items-center gap-8">
+                    <MLogo></MLogo>
+                    <ul class="flex items-center gap-8 text-[#404040] text-sm font-medium font-gilroy">
+                        <li>
+                            <a href="#">Community</a>
+                        </li>
+                        <li>
+                            <a href="#">Get Support</a>
+                        </li>
+                        <li>
+                            <a href="#">About us</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all">
+                    Request early access
+                </button>
+            </div>
+        </nav>
+        <div class="container mx-auto">
+            <div class="aviable">
+                <h6>
+                    Available in EU🇪🇺, UK🇬🇧, and USA🇺🇸! See it in action:
+                </h6>
+                <button>
+                    Watch our Promo Video.
+                </button>
+            </div>
+        </div>
+    </header>
+</template>
+<script lang="ts" setup>
+import { MLogo } from '../../components/icons'
+
+</script>
+<style lang="scss" scoped>
+
+.aviable {
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.01);
+    background: rgba(0, 0, 0, 0.90);
+    backdrop-filter: blur(8px);
+    height: 50px;
+    width: 90%;
+    margin: auto;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h6 {
+        color: #FCFCFC;
+        font-family: 'Gilroy';
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-right: 5px;
+    }
+
+    button {
+        color: #FCFCFC;
+        font-family: 'Gilroy';
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: 0.5px;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+        transition: 0.5s;
+
+        &:hover {
+            color: #CBE8CA;
+        }
+    }
+}
+</style>
