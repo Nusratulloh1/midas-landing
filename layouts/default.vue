@@ -1,9 +1,9 @@
 <template>
-  <div class=" bg-[#FAFAFA]">
+  <div>
     <MHeader></MHeader>
     <main>
       <slot />
-      <div class="bg-[#0D0D0D]">
+      <div>
         <div class="container flex justify-end mx-auto">
           <button class="h-16 w-16 bg-[#F5F5F5] rounded-2xl px-4 py-4 hover:bg-[#CBE8CA] transition-all">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,5 +21,31 @@
 <script lang="ts" setup>
 import MHeader from './components/MHeader.vue'
 import MFooter from './components/MFooter.vue'
+import { onMounted } from 'vue'
+onMounted(() => {
+  const dark = document.getElementsByClassName('dark')
+  window.addEventListener('scroll', () => {
+    const verticalScrollPx = window.scrollY || window.pageYOffset;
+
+    if (verticalScrollPx < 860) {
+      document.body.style.backgroundColor = '#FAFAFA';
+      dark[0].classList.remove('white')
+    } else if (verticalScrollPx > 860 && verticalScrollPx < 2300) {
+
+      document.body.style.backgroundColor = '#0D0D0D';
+      dark[0].classList.add('white')
+    }
+    else if (verticalScrollPx > 2300 && verticalScrollPx < 4696) {
+      dark[0].classList.remove('white')
+      document.body.style.backgroundColor = '#EAF6EA';
+    }
+    else if (verticalScrollPx > 4696 && verticalScrollPx < 6210) {
+      document.body.style.backgroundColor = '#F6F6F6';
+    }
+    else {
+      document.body.style.backgroundColor = '#0D0D0D';
+    }
+  });
+})
 
 </script>

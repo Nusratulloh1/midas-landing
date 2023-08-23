@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class=" pt-28 top-section h-[75vh] relative overflow-hidden">
+    <section class=" pt-28 top-section h-[883px] relative overflow-hidden">
       <div class="container mx-auto">
         <h1>
           Save money,
@@ -28,24 +28,26 @@
       <MDiagramIcon class=" left-1 bottom-0 absolute"></MDiagramIcon>
       <MBankIcon class=" right-9 bottom-0 absolute"></MBankIcon>
     </section>
-    <section class="bg-[#0D0D0D] pt-20 pb-10">
+    <section class=" pt-20 pb-10">
       <div class="container mx-auto">
-        <h3 class=" text-7xl font-medium text-white font-stapel">
-          Redefining Finance:
-          <br>
-          Dive into standout features
-        </h3>
-        <div class=" bg-white pt-10 px-24 rounded-[32px] w-full my-10 h-[594px] flex items-center justify-between">
-          <div>
-            <h3 class=" text-7xl font-medium text-[#0D0D0D] font-stapel">
-              One-stop <br> Finance Hub
-            </h3>
-            <p class="mt-6 max-w-[512px] text-2xl font-gilroy">
-              Manage, track, and optimize all your financial activities seamlessly in one intuitive app.
-            </p>
-          </div>
-          <div>
-            <MPhoneIcon></MPhoneIcon>
+        <div class="dark">
+          <h3 class=" text-7xl font-medium  font-stapel leading-[normal]">
+            Redefining Finance:
+            <br>
+            Dive into standout features
+          </h3>
+          <div class="content  pt-10 px-24 rounded-[32px] w-full my-10 h-[594px] flex items-center justify-between">
+            <div>
+              <h3 class=" text-7xl font-medium  font-stapel leading-[normal]">
+                One-stop <br> Finance Hub
+              </h3>
+              <p class="mt-6 max-w-[512px] text-2xl font-gilroy leading-[normal]">
+                Manage, track, and optimize all your financial activities seamlessly in one intuitive app.
+              </p>
+            </div>
+            <div>
+              <MPhoneIcon></MPhoneIcon>
+            </div>
           </div>
         </div>
         <!-- <div class="anime flex bg-black !w-[1000px] !h-auto">
@@ -64,7 +66,7 @@
           <Blottie ref="blottie" :loop="true" renderer="svg" :path="mishen12" @ready="onReady" />
           <Blottie ref="blottie" :loop="true" renderer="svg" :path="mishen13" @ready="onReady" />
         </div> -->
-        <div class="grid grid-cols-3 gap-4 2xl:gap-10">
+        <div class="grid grid-cols-3 gap-4">
           <div class="advantage">
             <h5>
               Reach your <br> Financial Goals
@@ -101,7 +103,7 @@
             </p>
           </div>
         </div>
-        <div class=" bg-white px-24 rounded-[32px] w-full my-10 h-[594px] flex items-center justify-between">
+        <!-- <div class=" bg-white px-24 rounded-[32px] w-full my-10 h-[594px] flex items-center justify-between">
           <div>
             <h3 class=" text-[64px] font-medium text-[#0D0D0D] font-stapel">
               Bank sync
@@ -113,7 +115,7 @@
           <div class=" w-[451px]">
             <Blottie ref="blottie" :loop="true" renderer="svg" :path="banka" @ready="onReady" />
           </div>
-        </div>
+        </div> -->
         <div class="flex justify-center mt-20">
           <button class=" text-[#343330] hover:text-[#CBE8CA] animate-bounce w-24 mx-auto">
             <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -127,13 +129,13 @@
     </section>
     <MoneySaving></MoneySaving>
     <Spaces></Spaces>
-    <section class=" bg-[#0D0D0D] py-20">
+    <section class="  py-20">
       <div class="container mx-auto">
         <h3 class=" text-7xl font-medium text-white font-stapel">
           Our Testers loves Midas:
         </h3>
         <div class="reviews overflow-hidden">
-          <div class="left flex gap-9 w-5/12 box-border overflow-hidden justify-end">
+          <div class="left flex gap-9 w-1/2 box-border overflow-hidden justify-end">
             <div class="flex flex-col gap-8 mt-[-20px]">
               <div class="box" v-for="rev in reviews" :key="rev.id">
                 <p>
@@ -170,7 +172,7 @@
               <div class="flex items-center gap-4">
                 <div class=" bg-[#A1BAA1] flex items-center rounded-[10px] py-2 px-4 gap-[6px]">
                   <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    v-for="i in 5">
+                    v-for="i in 5" :key="i">
                     <path
                       d="M7 0L8.5716 4.83688H13.6574L9.5429 7.82624L11.1145 12.6631L7 9.67376L2.8855 12.6631L4.4571 7.82624L0.342604 4.83688H5.4284L7 0Z"
                       fill="white" />
@@ -297,6 +299,7 @@ const reviews: any = ref(
     font-family: 'Stapel';
     font-size: 104px;
     font-weight: 500;
+    line-height: normal;
   }
 
   p {
@@ -307,6 +310,8 @@ const reviews: any = ref(
     font-weight: 400;
     max-width: 1064px;
     margin: auto;
+    line-height: normal;
+    margin-top: 24px;
   }
 }
 
@@ -325,6 +330,7 @@ const reviews: any = ref(
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 24px;
+    line-height: normal;
   }
 
   p {
@@ -333,12 +339,49 @@ const reviews: any = ref(
     font-family: 'Gilroy';
     font-size: 18px;
     font-weight: 400;
+    line-height: normal;
   }
 
   .anime {
     width: 190.745px;
     height: 191.459px;
     margin: auto;
+  }
+}
+
+.dark {
+  h3 {
+    color: #0D0D0D;
+  }
+
+  .content {
+    background: #0D0D0D;
+
+    h3 {
+      color: #E8E8E8;
+    }
+
+    p {
+      color: white;
+    }
+  }
+
+  &.white {
+    h3 {
+      color: white;
+    }
+
+    .content {
+      background: white;
+
+      h3 {
+        color: #0D0D0D;
+      }
+
+      p {
+        color: #404040;
+      }
+    }
   }
 }
 
@@ -387,5 +430,4 @@ const reviews: any = ref(
       }
     }
   }
-}
-</style>
+}</style>
