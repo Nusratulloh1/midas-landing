@@ -4,41 +4,48 @@
 @layer components {}
 
 @import '~/assets/fonts/index.css';
-body{
-    // transition: background 1s ease-in-out;
+
+body {
+  -webkit-transition: background-color 700ms linear;
+  -moz-transition: background-color 700ms linear;
+  -o-transition: background-color 700ms linear;
+  -ms-transition: background-color 700ms linear;
+  transition: background-color 700ms linear;  
 }
+
 a {
 
-    &:hover {
-        color: #CBE8CA;
-    }
+  &:hover {
+    color: #CBE8CA;
+  }
 }
+
 @media (min-width: 640px) {
-    .container {
-      max-width: 620px;
-    }
+  .container {
+    max-width: 620px;
   }
-  
-  @media (min-width: 768px) {
-    .container {
-      max-width: 748px;
-    }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 748px;
   }
-  
-  @media (min-width: 1024px) {
-    .container {
-      max-width: 1004px;
-    }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1004px;
   }
-  
-  @media (min-width: 1280px) {
-    .container {
-      max-width: 1120px;
-    }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1120px;
   }
-  
-  @media (min-width: 1536px) {
-    .container {
-      max-width: 1120px;
-    }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1120px;
   }
+}

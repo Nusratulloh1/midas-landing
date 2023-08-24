@@ -28,7 +28,6 @@ onMounted(() => {
   const review = document.getElementsByClassName('review')
   window.addEventListener('scroll', () => {
     const verticalScrollPx = window.scrollY || window.pageYOffset;
-    console.log(verticalScrollPx);
 
     if (verticalScrollPx < 550) {
       document.body.style.backgroundColor = '#FAFAFA';
