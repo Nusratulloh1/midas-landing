@@ -8,7 +8,7 @@
                 Manage your Money Flow in 3 modes:
             </h4>
         </div>
-        <div class="grid grid-cols-3 mt-11 2xl:container mx-auto">
+        <div class="grid grid-cols-3 mt-11  container mx-auto">
             <div class="serving">
                 <h6>
                     Default
@@ -1089,12 +1089,12 @@
 
                 </div>
                 <p>
-                    Transactions go to specific budget
+                    Transactions go to <br> specific budget
                 </p>
             </div>
         </div>
         <div class="container mx-auto mt-16">
-            <div class="cards flex items-center gap-4 justify-center">
+            <div class="cards flex items-center gap-4 justify-center h-[535px]">
                 <div class="card !pr-2">
                     <h5>
                         Set Multiple Budgets with Ease
@@ -1553,7 +1553,7 @@
 </script>
 <style lang="scss" scoped>
 .serving {
-    padding: 48px 29px;
+    padding: 40px 0px;
     text-align: center;
     background: var(--secondary-50, #E8E8E8);
     height: 558px;
@@ -1564,24 +1564,25 @@
     h6 {
         color: var(--secondary-400, #666);
         text-align: center;
-        font-family: Stapel;
-        font-size: 32px;
+        font-family: 'Stapel';
+        font-size: 30px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: normal;
         line-height: normal;
     }
 
     p {
         color: var(--secondary-500-main, #404040);
-        font-family: Stapel;
-        font-size: 20px;
+        font-family: 'Stapel';
+        font-size: 18px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: normal;
         line-height: normal;
     }
 
     svg {
         margin: auto;
+        width: 300px;
     }
 
     &.second {
@@ -1603,6 +1604,7 @@
             color: #D9D9D9;
         }
     }
+
 }
 
 .card {
@@ -1614,6 +1616,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all 500ms ease-in-out;
 
     h5 {
         color: var(--system-white-blocks-elements, #FFF);
@@ -1645,4 +1648,12 @@
             color: #0D0D0D;
         }
     }
-}</style>
+
+    &:hover {
+        margin-top: -50px;
+        cursor: pointer;
+        box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+}
+</style>

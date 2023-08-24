@@ -5,3 +5,5 @@ export { default as MTargetIcon } from "./MTargetIcon.vue"
 export { default as MPieIcon } from "./MPieIcon.vue";
 export { default as MPhoneIcon } from "./MPhoneIcon.vue";
 export { default as MoneyIcon } from "./MoneyIcon.vue";
+export { default as MFinanceAnimeIcon } from "./MFinanceAnimeIcon.vue";
+export { default as MTargetAnimeIcon } from "./MTargetAnimeIcon.vue";

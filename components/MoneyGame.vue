@@ -5,7 +5,7 @@
             <h5 class=" text-[64px] text-[#1A1A1A] font-stapel font-medium leading-[normal]">
                 Stay Inspired with MoneyGame
             </h5>
-            <p class="text-xl font-stapel text-[#666] font-normal mt-5">
+            <p class="text-xl font-stapel text-[#666] font-light mt-5">
                 Harness the power of interactive notifications, stories, and widgets to ensure you stay within your
                 financial limits and keep your savings journey on track.
             </p>

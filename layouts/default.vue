@@ -24,25 +24,32 @@ import MFooter from './components/MFooter.vue'
 import { onMounted } from 'vue'
 onMounted(() => {
   const dark = document.getElementsByClassName('dark')
+  const money = document.getElementsByClassName('money-saving')
+  const review = document.getElementsByClassName('review')
   window.addEventListener('scroll', () => {
     const verticalScrollPx = window.scrollY || window.pageYOffset;
+    console.log(verticalScrollPx);
 
-    if (verticalScrollPx < 860) {
+    if (verticalScrollPx < 550) {
       document.body.style.backgroundColor = '#FAFAFA';
       dark[0].classList.remove('white')
-    } else if (verticalScrollPx > 860 && verticalScrollPx < 2300) {
+    } else if (verticalScrollPx > 550 && verticalScrollPx < 2100) {
 
       document.body.style.backgroundColor = '#0D0D0D';
       dark[0].classList.add('white')
+      money[0].classList.remove('scrolled')
     }
-    else if (verticalScrollPx > 2300 && verticalScrollPx < 4696) {
+    else if (verticalScrollPx > 2100 && verticalScrollPx < 4389) {
       dark[0].classList.remove('white')
+      money[0].classList.add('scrolled')
       document.body.style.backgroundColor = '#EAF6EA';
     }
-    else if (verticalScrollPx > 4696 && verticalScrollPx < 6210) {
+    else if (verticalScrollPx > 4389 && verticalScrollPx < 6050) {
       document.body.style.backgroundColor = '#F6F6F6';
+      review[0].classList.remove('scrolled')
     }
     else {
+      review[0].classList.add('scrolled')
       document.body.style.backgroundColor = '#0D0D0D';
     }
   });
