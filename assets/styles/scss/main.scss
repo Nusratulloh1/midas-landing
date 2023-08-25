@@ -12,6 +12,7 @@ body {
   -ms-transition: background-color 700ms linear;
   transition: background-color 700ms linear;
   font-family: Inter;
+  zoom: 80%;
 }
 
 a {
@@ -35,7 +36,7 @@ a {
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 1004px;
+    max-width: 1024px;
   }
 }
 
@@ -47,6 +48,6 @@ a {
 
 @media (min-width: 1536px) {
   .container {
-    max-width: 1120px;
+    max-width: 1536px;
   }
 }

@@ -1,7 +1,7 @@
 <template>
     <header>
         <nav class=" py-5 w-full">
-            <div class="flex items-center justify-between container mx-auto">
+            <div class="flex items-center justify-between max-w-screen-2xl mx-auto">
                 <div class="flex items-center gap-8">
                     <MLogo></MLogo>
                     <ul class="flex items-center gap-8 text-[#404040] text-sm font-medium font-gilroy pt-1">
