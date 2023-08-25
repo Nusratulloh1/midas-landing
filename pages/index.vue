@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section ref="container" class=" pt-[90px] 2xl:pt-28 top-section h-[78vh] 2xl:h-[883px] relative overflow-hidden"
+    <section ref="container" class=" pt-[70px] 2xl:pt-24 top-section h-[78vh] 2xl:h-[883px] relative overflow-hidden"
       style=" transition: .3s ease-out all">
       <div class="container mx-auto">
         <h1>
@@ -18,15 +18,17 @@
           </button>
         </div>
       </div>
-      <button class=" absolute right-[49%] bottom-4 text-[#343330] hover:text-[#CBE8CA] animate-bounce">
-        <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M33.7411 24.5536L21.9286 36.3661C21.8067 36.4881 21.6619 36.5849 21.5026 36.651C21.3433 36.717 21.1725 36.751 21 36.751C20.8275 36.751 20.6567 36.717 20.4974 36.651C20.3381 36.5849 20.1933 36.4881 20.0714 36.3661L8.25891 24.5536C8.01263 24.3073 7.87427 23.9733 7.87427 23.625C7.87427 23.2767 8.01263 22.9427 8.25891 22.6964C8.50518 22.4501 8.83921 22.3118 9.1875 22.3118C9.53579 22.3118 9.86982 22.4501 10.1161 22.6964L19.6875 32.2695V6.5625C19.6875 6.2144 19.8258 5.88056 20.0719 5.63442C20.3181 5.38828 20.6519 5.25 21 5.25C21.3481 5.25 21.6819 5.38828 21.9281 5.63442C22.1742 5.88056 22.3125 6.2144 22.3125 6.5625V32.2695L31.8839 22.6964C32.1302 22.4501 32.4642 22.3118 32.8125 22.3118C33.1608 22.3118 33.4948 22.4501 33.7411 22.6964C33.9874 22.9427 34.1257 23.2767 34.1257 23.625C34.1257 23.9733 33.9874 24.3073 33.7411 24.5536Z" />
-        </svg>
-      </button>
+      <div>
+        <button class="absolute right-[48.8%] bottom-4  text-[#343330] hover:text-[#CBE8CA] animate-bounce">
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M33.7411 24.5536L21.9286 36.3661C21.8067 36.4881 21.6619 36.5849 21.5026 36.651C21.3433 36.717 21.1725 36.751 21 36.751C20.8275 36.751 20.6567 36.717 20.4974 36.651C20.3381 36.5849 20.1933 36.4881 20.0714 36.3661L8.25891 24.5536C8.01263 24.3073 7.87427 23.9733 7.87427 23.625C7.87427 23.2767 8.01263 22.9427 8.25891 22.6964C8.50518 22.4501 8.83921 22.3118 9.1875 22.3118C9.53579 22.3118 9.86982 22.4501 10.1161 22.6964L19.6875 32.2695V6.5625C19.6875 6.2144 19.8258 5.88056 20.0719 5.63442C20.3181 5.38828 20.6519 5.25 21 5.25C21.3481 5.25 21.6819 5.38828 21.9281 5.63442C22.1742 5.88056 22.3125 6.2144 22.3125 6.5625V32.2695L31.8839 22.6964C32.1302 22.4501 32.4642 22.3118 32.8125 22.3118C33.1608 22.3118 33.4948 22.4501 33.7411 22.6964C33.9874 22.9427 34.1257 23.2767 34.1257 23.625C34.1257 23.9733 33.9874 24.3073 33.7411 24.5536Z" />
+          </svg>
+        </button>
+      </div>
       <div class="svgs">
-        <MTargetIcon :style="layer0" class="left-2 top-32 absolute"></MTargetIcon>
-        <MPieIcon :style="layer1" class="right-7 top-[106px] absolute"></MPieIcon>
+        <MTargetIcon :style="layer0" class="left-2 top-20 absolute"></MTargetIcon>
+        <MPieIcon :style="layer1" class="right-7 top-[56px] absolute"></MPieIcon>
         <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
         </MDiagramIcon>
         <MBankIcon :style="layer3" class=" right-9 bottom-0 absolute"> </MBankIcon>
@@ -40,7 +42,7 @@
             <br>
             Dive into standout features
           </h3>
-          <div class="content  pt-10 px-24 rounded-[32px] w-full my-10 h-[594px] flex items-center justify-between">
+          <div class="content  pt-10 px-24 rounded-[32px] w-full my-10 mb-16 h-[594px] flex items-center justify-between">
             <div>
               <h3 class=" text-7xl font-medium  font-stapel leading-[normal]">
                 One-stop <br> Finance Hub
@@ -109,7 +111,7 @@
         </div> -->
         <div class="flex justify-center mt-20">
           <button class=" text-[#343330] hover:text-[#CBE8CA] animate-bounce w-24 mx-auto">
-            <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" class="mx-auto" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M33.7411 24.5536L21.9286 36.3661C21.8067 36.4881 21.6619 36.5849 21.5026 36.651C21.3433 36.717 21.1725 36.751 21 36.751C20.8275 36.751 20.6567 36.717 20.4974 36.651C20.3381 36.5849 20.1933 36.4881 20.0714 36.3661L8.25891 24.5536C8.01263 24.3073 7.87427 23.9733 7.87427 23.625C7.87427 23.2767 8.01263 22.9427 8.25891 22.6964C8.50518 22.4501 8.83921 22.3118 9.1875 22.3118C9.53579 22.3118 9.86982 22.4501 10.1161 22.6964L19.6875 32.2695V6.5625C19.6875 6.2144 19.8258 5.88056 20.0719 5.63442C20.3181 5.38828 20.6519 5.25 21 5.25C21.3481 5.25 21.6819 5.38828 21.9281 5.63442C22.1742 5.88056 22.3125 6.2144 22.3125 6.5625V32.2695L31.8839 22.6964C32.1302 22.4501 32.4642 22.3118 32.8125 22.3118C33.1608 22.3118 33.4948 22.4501 33.7411 22.6964C33.9874 22.9427 34.1257 23.2767 34.1257 23.625C34.1257 23.9733 33.9874 24.3073 33.7411 24.5536Z"
                 fill="white" />
@@ -143,22 +145,22 @@ function onReady(anim?: AnimationItem) {
 }
 const layer0 = computed(() => ({
   transform: `translateX(${parallax.tilt * 10}px) translateY(${parallax.roll * 70
-    }px) scale(1.33)`,
+    }px) scale(1)`,
 }))
 
 const layer1 = computed(() => ({
   transform: `translateX(${parallax.tilt * 20}px) translateY(${parallax.roll * 50
-    }px) scale(1.33)`,
+    }px) scale(1)`,
 }))
 
 const layer2 = computed(() => ({
   transform: `translateX(${parallax.tilt * 30}px) translateY(${parallax.roll * 80
-    }px) scale(1.33)`,
+    }px) scale(1)`,
 }))
 
 const layer3 = computed(() => ({
   transform: `translateX(${parallax.tilt * 40}px) translateY(${parallax.roll * 90
-    }px) scale(1.33)`,
+    }px) scale(1)`,
 }))
 </script>
 <style lang="scss">

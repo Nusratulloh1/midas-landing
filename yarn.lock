@@ -5616,7 +5616,7 @@
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-"vue@^2.6.14 || ^3.3.0", "vue@^2.7.0 || ^3.2.25", "vue@^3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.2", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.3.4", "vue@>=2.7 || >=3", "vue@>=3.0.0", "vue@3.3.4":
+"vue@^2.6.14 || ^3.3.0", "vue@^2.7.0 || ^3.2.25", "vue@^3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.0.5", "vue@^3.2", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.3.4", "vue@>=2.7 || >=3", "vue@>=3.0.0", "vue@3.3.4":
   "version" "3.3.4"
   dependencies:
     "@vue/compiler-dom" "3.3.4"
@@ -5624,6 +5624,16 @@
     "@vue/runtime-dom" "3.3.4"
     "@vue/server-renderer" "3.3.4"
     "@vue/shared" "3.3.4"
+
+"vue3-autocounter@^1.0.6":
+  "integrity" "sha512-jOgCD2WaOjt/tOAAGKDm2DTyQRdKyfqJv5ElUz/vR0ZJgUd4yDd6UX6+2YU3LQpY4qoFNZkzLloAfALAqK041g=="
+  "resolved" "https://registry.npmjs.org/vue3-autocounter/-/vue3-autocounter-1.0.6.tgz"
+  "version" "1.0.6"
+
+"vue3-carousel@^0.3.1":
+  "integrity" "sha512-86vUkNPBzL2PVuR9w6hUsI90ccFjLp+K8cSFpRTISf+SjUQY3fMHc5CFF5MUL62v1xYYm27zEBmQupO9VQx9Kw=="
+  "resolved" "https://registry.npmjs.org/vue3-carousel/-/vue3-carousel-0.3.1.tgz"
+  "version" "0.3.1"
 
 "vue3-lottie@^3.0.0":
   "integrity" "sha512-1HZhpKyqlj5jOwO2JTERJOXuJBYqnz/wnkeHjAmn7yI95ize62XQImP226/0G3+c5T3Oj//vIwyMJ2Zhsd8fwg=="

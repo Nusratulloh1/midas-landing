@@ -53,4 +53,6 @@ import { MLogo } from '~/components/icons';
 
 
 </script>
-<style></style>
+<style scoped>
+
+</style>

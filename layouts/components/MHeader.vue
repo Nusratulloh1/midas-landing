@@ -16,7 +16,7 @@
                         </li>
                     </ul>
                 </div>
-                <button class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all">
+                <button class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy">
                     Request early access
                 </button>
             </div>
@@ -27,9 +27,9 @@
                     <h6>
                         Available in EU🇪🇺, UK🇬🇧, and USA🇺🇸! See it in action:
                     </h6>
-                    <button>
+                    <p>
                         Watch our Promo Video.
-                    </button>
+                    </p>
                 </button>
             </div>
         </div>
@@ -62,7 +62,7 @@ onMounted(() => {
         background: rgba(0, 0, 0, 0.90);
         backdrop-filter: blur(8px);
         height: 50px;
-        width: 90%;
+        width: 80%;
         margin: auto;
         margin-top: 24px;
         display: flex;
@@ -71,8 +71,8 @@ onMounted(() => {
 
         h6 {
             color: #FCFCFC;
-            font-family: 'Gilroy';
-            font-size: 16px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
             font-weight: 500;
             line-height: 18px;
             letter-spacing: 0.5px;
@@ -80,10 +80,10 @@ onMounted(() => {
             margin-right: 5px;
         }
 
-        button {
+        p {
             color: #FCFCFC;
-            font-family: 'Gilroy';
-            font-size: 16px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
             font-weight: 700;
             line-height: 18px;
             letter-spacing: 0.5px;
@@ -101,6 +101,7 @@ onMounted(() => {
         position: fixed;
         top: 0;
         z-index: 999;
+        box-shadow: inset;
     }
 }
 </style>

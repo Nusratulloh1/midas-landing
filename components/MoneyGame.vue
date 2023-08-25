@@ -1,6 +1,7 @@
 <template>
     <div
         class="bg-white pl-[30px] rounded-[32px] h-[594px] flex items-center justify-between mt-4 overflow-hidden relative">
+
         <div class="w-1/2">
             <h5 class=" text-[64px] text-[#1A1A1A] font-stapel font-medium leading-[normal]">
                 Stay Inspired with MoneyGame
@@ -17,13 +18,22 @@
                     You saved today
                 </h6>
                 <h5 class="text-[#A1BAA1] font-gilroy font-bold text-[106px]">
-                    $5
+                    <Vue3autocounter v-if="show" class='counter' :startAmount='0' :endAmount='5' :duration='2' prefix='$'
+                        :autoinit='true' />
+                    <span v-else>0</span>
                 </h5>
                 <hr class="bg-[#A1BAA1] border border-[#A1BAA1] mb-3.5" />
                 <p class="text-2xl font-gilroy">
-                    Spent today <span class=" font-semibold">:</span> <span class=" font-bold text-[#A1BAA1]">$30</span>
+                    Spent today <span class=" font-semibold">:</span> <span class=" font-bold text-[#A1BAA1]">
+                        <Vue3autocounter v-if="show" class='counter' :startAmount='0' :endAmount='30' :duration='2'
+                            prefix='$' :autoinit='true' />
+                        <span v-else>0</span>
+                    </span>
                     <span class="text-[#8C8C8C]">
-                        of 35
+                        of
+                        <Vue3autocounter v-if="show" class='counter' :startAmount='0' :endAmount='35' :duration='2'
+                            prefix='$' :autoinit='true' />
+                        <span v-else>0</span>
                     </span>
                 </p>
             </div>
@@ -335,9 +345,22 @@
 
         </div>
 
+
     </div>
 </template>
-  
+<script lang="ts" setup>
+import Vue3autocounter from 'vue3-autocounter';
+import { onMounted, ref, computed } from 'vue'
+const show = ref(false)
+onMounted(() => {
+    window.addEventListener('scroll', () => {
+        const verticalScrollPx = window.scrollY || window.pageYOffset;
+        if (verticalScrollPx > 3474 && verticalScrollPx < 4389) {
+            show.value = true
+        }
+    })
+})
+</script>
 <style lang="scss" scoped>
 .circle {
     border-radius: 777px;
