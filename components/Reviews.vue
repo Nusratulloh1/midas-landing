@@ -6,7 +6,28 @@
             </h3>
             <div class="reviews overflow-hidden">
                 <div class="left flex gap-9 w-1/2 box-border overflow-hidden justify-end">
-                    <div class="flex flex-col gap-8 mt-[-20px]">
+                    <Swiper :direction="'vertical'" class="h-[694px] w-[365.15px]" style="margin-left: -250px !important;" :modules="[SwiperAutoplay, SwiperEffectCreative]"
+                        :slides-per-view="3" :loop="true" :autoplay="{
+                            delay: 5000,
+                            disableOnInteraction: true,
+                        }">
+                        <SwiperSlide class="h-full w-full" v-for="rev in reviewsList" :key="rev.id">
+                            <div class="box">
+                                <p>
+                                    {{ rev.text }}
+                                </p>
+                                <div class="info">
+                                    <div class="avatar">
+                                        <img src="../assets/images/avatars/1.png" alt="avatar">
+                                    </div>
+                                    <h6>
+                                        {{ rev.name }}
+                                    </h6>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                    <!-- <div class="flex flex-col gap-8 mt-[-20px]">
                         <div class="box" v-for="rev in reviewsList" :key="rev.id">
                             <p>
                                 {{ rev.text }}
@@ -20,22 +41,28 @@
                                 </h6>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex flex-col gap-8 mt-[-20px]">
-                        <div class="box" v-for="rev in reviewsList" :key="rev.id">
-                            <p>
-                                {{ rev.text }}
-                            </p>
-                            <div class="info">
-                                <div class="avatar">
-                                    <img src="../assets/images/avatars/1.png" alt="avatar">
+                    </div> -->
+                    <Swiper :direction="'vertical'" class="h-[694px] w-[365.15px]" :modules="[SwiperAutoplay, SwiperEffectCreative]"
+                        :slides-per-view="3" :loop="true" :autoplay="{
+                            delay: 2000,
+                            disableOnInteraction: true,
+                        }">
+                        <SwiperSlide class="h-full w-full" v-for="rev in reviewsList" :key="rev.id">
+                            <div class="box">
+                                <p>
+                                    {{ rev.text }}
+                                </p>
+                                <div class="info">
+                                    <div class="avatar">
+                                        <img src="../assets/images/avatars/1.png" alt="avatar">
+                                    </div>
+                                    <h6>
+                                        {{ rev.name }}
+                                    </h6>
                                 </div>
-                                <h6>
-                                    {{ rev.name }}
-                                </h6>
                             </div>
-                        </div>
-                    </div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
                 <div class="flex flex-col justify-center items-center w-[52%]">
                     <div>
@@ -106,14 +133,106 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
+
 const reviewsList: any = ref(
     [
 
+        {
+            id: 1,
+            name: 'Arlene McCoy',
+            image: new URL('../assets/images/avatars/1.png', import.meta.url).href,
+            text: "Thanks to Midas, I've ditched my old budgeting spreadsheets. The app's tools and alerts ensure I never overspend, and I'm more financially aware."
+        },
+        {
+            id: 2,
+            name: 'Guy Hawkins',
+            image: new URL('../assets/images/avatars/2.png', import.meta.url).href,
+            text: "As someone who used to struggle with budgeting, Midas has been a lifesaver. It's so easy to input expenses and view spending trends. The budgeting tools and notifications keep me on track, and I've finally been able to gain control over my finances."
+        },
+        {
+            id: 2,
+            name: 'John Keep',
+            image: new URL('../assets/images/avatars/3.png', import.meta.url).href,
+            text: "Midas has transformed my financial life! Tracking expenses is a breeze, and the insights have helped me save more than ever."
+        },
+        {
+            id: 1,
+            name: 'Arlene McCoy',
+            image: new URL('../assets/images/avatars/1.png', import.meta.url).href,
+            text: "Thanks to Midas, I've ditched my old budgeting spreadsheets. The app's tools and alerts ensure I never overspend, and I'm more financially aware."
+        },
+        {
+            id: 2,
+            name: 'Guy Hawkins',
+            image: new URL('../assets/images/avatars/2.png', import.meta.url).href,
+            text: "As someone who used to struggle with budgeting, Midas has been a lifesaver. It's so easy to input expenses and view spending trends. The budgeting tools and notifications keep me on track, and I've finally been able to gain control over my finances."
+        },
+        {
+            id: 2,
+            name: 'John Keep',
+            image: new URL('../assets/images/avatars/3.png', import.meta.url).href,
+            text: "Midas has transformed my financial life! Tracking expenses is a breeze, and the insights have helped me save more than ever."
+        },
+        {
+            id: 1,
+            name: 'Arlene McCoy',
+            image: new URL('../assets/images/avatars/1.png', import.meta.url).href,
+            text: "Thanks to Midas, I've ditched my old budgeting spreadsheets. The app's tools and alerts ensure I never overspend, and I'm more financially aware."
+        },
+        {
+            id: 2,
+            name: 'Guy Hawkins',
+            image: new URL('../assets/images/avatars/2.png', import.meta.url).href,
+            text: "As someone who used to struggle with budgeting, Midas has been a lifesaver. It's so easy to input expenses and view spending trends. The budgeting tools and notifications keep me on track, and I've finally been able to gain control over my finances."
+        },
+        {
+            id: 2,
+            name: 'John Keep',
+            image: new URL('../assets/images/avatars/3.png', import.meta.url).href,
+            text: "Midas has transformed my financial life! Tracking expenses is a breeze, and the insights have helped me save more than ever."
+        },
+        {
+            id: 1,
+            name: 'Arlene McCoy',
+            image: new URL('../assets/images/avatars/1.png', import.meta.url).href,
+            text: "Thanks to Midas, I've ditched my old budgeting spreadsheets. The app's tools and alerts ensure I never overspend, and I'm more financially aware."
+        },
+        {
+            id: 2,
+            name: 'Guy Hawkins',
+            image: new URL('../assets/images/avatars/2.png', import.meta.url).href,
+            text: "As someone who used to struggle with budgeting, Midas has been a lifesaver. It's so easy to input expenses and view spending trends. The budgeting tools and notifications keep me on track, and I've finally been able to gain control over my finances."
+        },
+        {
+            id: 2,
+            name: 'John Keep',
+            image: new URL('../assets/images/avatars/3.png', import.meta.url).href,
+            text: "Midas has transformed my financial life! Tracking expenses is a breeze, and the insights have helped me save more than ever."
+        },
+        {
+            id: 1,
+            name: 'Arlene McCoy',
+            image: new URL('../assets/images/avatars/1.png', import.meta.url).href,
+            text: "Thanks to Midas, I've ditched my old budgeting spreadsheets. The app's tools and alerts ensure I never overspend, and I'm more financially aware."
+        },
+        {
+            id: 2,
+            name: 'Guy Hawkins',
+            image: new URL('../assets/images/avatars/2.png', import.meta.url).href,
+            text: "As someone who used to struggle with budgeting, Midas has been a lifesaver. It's so easy to input expenses and view spending trends. The budgeting tools and notifications keep me on track, and I've finally been able to gain control over my finances."
+        },
+        {
+            id: 2,
+            name: 'John Keep',
+            image: new URL('../assets/images/avatars/3.png', import.meta.url).href,
+            text: "Midas has transformed my financial life! Tracking expenses is a breeze, and the insights have helped me save more than ever."
+        },
         {
             id: 1,
             name: 'Arlene McCoy',
@@ -137,6 +256,10 @@ const reviewsList: any = ref(
 )
 </script>
 <style lang="scss" scoped>
+.swiper-wrapper {
+    gap: 40px;
+}
+
 .review {
     .reviews {
         margin-top: 40px;

@@ -16,7 +16,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/devtools',
     '@vueuse/nuxt',
-    '@vueuse/motion/nuxt'
+    '@vueuse/motion/nuxt',
+    'nuxt-swiper'
   ],
   css: [
     '~/assets/styles/css/tailwind.css',
