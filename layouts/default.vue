@@ -26,33 +26,33 @@ onMounted(() => {
   const dark = document.getElementsByClassName('dark')
   const money = document.getElementsByClassName('money-saving')
   const review = document.getElementsByClassName('review')
-
+  const sections = [...document.querySelectorAll('.section')]
+  document.body.style.background = sections[0].getAttribute('data-bg');
   window.addEventListener('scroll', () => {
-
-    const verticalScrollPx = window.scrollY || window.pageYOffset;
-    console.log(verticalScrollPx);
-
-    console.log(verticalScrollPx);
-    if (verticalScrollPx < 400) {
-      document.body.style.backgroundColor = '#FAFAFA';
+    const section = sections
+      .map(section => {
+        const el = section;
+        const rect = el.getBoundingClientRect();
+        return { el, rect };
+      })
+      .find(section => section.rect.bottom >= (window.innerHeight * 0.5));
+    document.body.style.background = section?.el.getAttribute('data-bg');
+    if (section?.el.getAttribute('first')) {
       dark[0].classList.remove('white')
-    } else if (verticalScrollPx > 400 && verticalScrollPx < 1649) {
-      document.body.style.backgroundColor = '#0D0D0D';
+    }
+    else if (section?.el.getAttribute('second')) {
       dark[0].classList.add('white')
       money[0].classList.remove('scrolled')
     }
-    else if (verticalScrollPx > 1649 && verticalScrollPx < 3486) {
+    else if (section?.el.getAttribute('third')) {
       dark[0].classList.remove('white')
       money[0].classList.add('scrolled')
-      document.body.style.backgroundColor = '#EAF6EA';
     }
-    else if (verticalScrollPx > 3486 && verticalScrollPx < 4795) {
-      document.body.style.backgroundColor = '#F6F6F6';
+    else if (section?.el.getAttribute('four')) {
       review[0].classList.remove('scrolled')
     }
     else {
       review[0].classList.add('scrolled')
-      document.body.style.backgroundColor = '#0D0D0D';
     }
   });
 })
