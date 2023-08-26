@@ -1,10 +1,10 @@
 <template>
-    <footer class=" py-16 pb-12 ">
+    <footer class=" py-16 pb-12 " style="zoom: 120%;">
         <div class=" container mx-auto">
             <div class="flex items-center justify-between">
                 <div class="">
                     <MLogo iconColor="#CBE8CA" textColor="#fff"></MLogo>
-                    <ul class="flex items-center text-[#EAECF0] font-semibold mt-6 gap-8 font-inter">
+                    <ul class="flex items-center text-[#EAECF0] font-semibold mt-6 gap-8">
                         <li>
                             <a href="#">Community</a>
                         </li>
@@ -30,10 +30,10 @@
             </div>
             <div class=" mt-16 mb-8 border-t border-[#475467]"></div>
             <div class="flex items-center justify-between">
-                <p class=" font-inter text-[#D0D5DD]">
+                <p class="  text-[#D0D5DD]">
                     © 2023 midas. All rights reserved.
                 </p>
-                <ul class="flex items-center gap-4 font-inter text-[#D0D5DD]">
+                <ul class="flex items-center gap-4  text-[#D0D5DD]">
                     <li>
                         <a href="#">Terms</a>
                     </li>
@@ -53,6 +53,16 @@ import { MLogo } from '~/components/icons';
 
 
 </script>
-<style scoped>
+<style lang="scss" scoped>
+ul {
+    li {
+        a {
+            font-family: 'Gilroy';
+        }
+    }
+}
 
+p {
+    font-family: 'Gilroy';
+}
 </style>

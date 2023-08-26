@@ -7,8 +7,8 @@
             <div class="reviews overflow-hidden">
                 <div class="left flex gap-9 w-1/2 box-border overflow-hidden justify-end">
                     <Swiper :direction="'vertical'" class="h-[694px] w-[365.15px]" style="margin-left: -250px !important;" :modules="[SwiperAutoplay, SwiperEffectCreative]"
-                        :slides-per-view="3" :loop="true" :autoplay="{
-                            delay: 5000,
+                        :slides-per-view="3" :loop="true" :speed="3000" :autoplay="{
+                            delay: 0,
                             disableOnInteraction: true,
                         }">
                         <SwiperSlide class="h-full w-full" v-for="rev in reviewsList" :key="rev.id">
@@ -43,8 +43,8 @@
                         </div>
                     </div> -->
                     <Swiper :direction="'vertical'" class="h-[694px] w-[365.15px]" :modules="[SwiperAutoplay, SwiperEffectCreative]"
-                        :slides-per-view="3" :loop="true" :autoplay="{
-                            delay: 2000,
+                        :slides-per-view="3" :speed="3000" :loop="true" :space-between="50" :autoplay="{
+                            delay: 0,
                             disableOnInteraction: true,
                         }">
                         <SwiperSlide class="h-full w-full" v-for="rev in reviewsList" :key="rev.id">
