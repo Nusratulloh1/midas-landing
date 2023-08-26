@@ -1,5 +1,6 @@
 <template>
-    <section data-bg="#EAF6EA" third="#EAF6EA" ref="container2" class="py-20  relative money-saving section" style="transition: .3s ease-out all">
+    <section data-bg="#EAF6EA" third="#EAF6EA" ref="container2" class="py-20  relative money-saving section"
+        style="transition: .3s ease-out all">
         <div class="container mx-auto">
             <div class="bg-icons">
                 <svg :style="layerr0" v-motion-roll-visible-once-left class="layerr0" width="142" height="212"
@@ -1043,7 +1044,7 @@
 import { useParallax } from '@vueuse/core'
 import MoneyGame from './MoneyGame.vue';
 import { MFinanceAnimeIcon, MTargetAnimeIcon } from './icons';
-import MoneyIcon from './icons/MoneyIcon.vue';
+// import MoneyIcon from './icons/MoneyIcon.vue';
 
 const container2 = ref(null)
 const parallax2 = reactive(useParallax(container2))
@@ -1199,12 +1200,13 @@ const enter = ref({
         border-radius: 32px;
         // background-color: red;
         background-color: #EAF6EA;
-        width: 632px;
+        width: 100%;
         height: 740px;
         overflow: hidden;
 
         img {
-            width: 100%;
+            margin: auto;
+            width: 632px;
         }
     }
 

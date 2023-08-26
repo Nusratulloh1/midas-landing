@@ -1,9 +1,9 @@
 <template>
   <div>
     <section data-bg="#FAFAFA" first="#FAFAFA" ref="container"
-      class="section pt-[90px] 2xl:pt-28 top-section h-[100vh] 2xl:h-[883px] relative overflow-hidden "
+      class="section pt-[80px] 2xl:pt-28 top-section h-[100vh] 2xl:h-[883px] relative overflow-hidden "
       style=" transition: .3s ease-out all; zoom: 120%;">
-      <div class=" max-w-screen-xl mx-auto relative">
+      <div class=" max-w-screen-xl mx-auto">
         <h1>
           Save money,
           <br>
@@ -19,15 +19,15 @@
           </button>
         </div>
         <p class="mt-[8%] !text-base">
-          Midas is a financial technology company and is not a bank.
+          Midas is a financial technology company, is not a bank. All activities are virtual and developed for analytical purposes only.
         </p>
-        <div class="svgs">
-          <MTargetIcon :style="layer0" class="left-0 bottom-[-40px] absolute z-50"></MTargetIcon>
-          <MPieIcon :style="layer1" class="right-[125px] top-[-80px] absolute z-50"></MPieIcon>
-          <!-- <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
+      </div>
+      <div class="svgs">
+        <MTargetIcon :style="layer0" class="left-5 bottom-[190px] absolute z-50"></MTargetIcon>
+        <MPieIcon :style="layer1" class="right-[70px] top-[50px] absolute z-50"></MPieIcon>
+        <!-- <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
         </MDiagramIcon>
         <MBankIcon :style="layer3" class=" right-9 bottom-0 absolute"> </MBankIcon> -->
-        </div>
       </div>
       <!-- <div>
         <button class="absolute right-[48.8%] bottom-4  text-[#343330] hover:text-[#CBE8CA] animate-bounce">
@@ -132,7 +132,7 @@
 </template>
 <script lang="ts" setup>
 import { useParallax } from '@vueuse/core'
-import { MBankIcon, MDiagramIcon, MPhoneIcon, MPieIcon, MTargetIcon } from '@/components/icons'
+import { MPhoneIcon, MPieIcon, MTargetIcon } from '@/components/icons'
 import type { AnimationItem } from 'lottie-web'
 import { ref, computed, reactive } from 'vue'
 import { Blottie, type BlottieExpose } from 'blottie'
@@ -150,23 +150,23 @@ function onReady(anim?: AnimationItem) {
 }
 const layer0 = computed(() => ({
   transform: `translateX(${parallax.tilt * 10}px) translateY(${parallax.roll * 70
-    }px) scale(1)`,
+    }px) scale(1.23)`,
 }))
 
 const layer1 = computed(() => ({
   transform: `translateX(${parallax.tilt * 20}px) translateY(${parallax.roll * 50
-    }px) scale(1)`,
+    }px) scale(1.23)`,
 }))
 
-const layer2 = computed(() => ({
-  transform: `translateX(${parallax.tilt * 30}px) translateY(${parallax.roll * 80
-    }px) scale(1)`,
-}))
+// const layer2 = computed(() => ({
+//   transform: `translateX(${parallax.tilt * 30}px) translateY(${parallax.roll * 80
+//     }px) scale(1.23)`,
+// }))
 
-const layer3 = computed(() => ({
-  transform: `translateX(${parallax.tilt * 40}px) translateY(${parallax.roll * 90
-    }px) scale(1)`,
-}))
+// const layer3 = computed(() => ({
+//   transform: `translateX(${parallax.tilt * 40}px) translateY(${parallax.roll * 90
+//     }px) scale(1.23)`,
+// }))
 </script>
 <style lang="scss">
 .top-section {
@@ -290,16 +290,12 @@ const layer3 = computed(() => ({
 }
 
 
-@media (max-width: 1536px) {
-  .top-section {
-    h1 {
-      font-size: 94px;
-    }
-
-    p {
-      max-width: 863px;
-      font-size: 22px;
-    }
-  }
-}
+// @media (max-width: 1536px) {
+//   .top-section {
+//     p {
+//       max-width: 863px;
+//       font-size: 22px;
+//     }
+//   }
+// }
 </style>

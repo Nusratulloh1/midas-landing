@@ -350,12 +350,14 @@
 </template>
 <script lang="ts" setup>
 import Vue3autocounter from 'vue3-autocounter';
-import { onMounted, ref, computed } from 'vue'
+import { onMounted, ref } from 'vue'
 const show = ref(false)
 onMounted(() => {
     window.addEventListener('scroll', () => {
         const verticalScrollPx = window.scrollY || window.pageYOffset;
-        if (verticalScrollPx > 3474 && verticalScrollPx < 4389) {
+        // console.log(verticalScrollPx);
+
+        if (verticalScrollPx > 2699 && verticalScrollPx < 3295) {
             show.value = true
         }
     })

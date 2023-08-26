@@ -1,6 +1,6 @@
 <template>
-    <footer class=" py-16 pb-12 " style="zoom: 120%;">
-        <div class=" container mx-auto">
+    <footer class=" py-16 pb-12 ">
+        <div class=" max-w-screen-2xl mx-auto">
             <div class="flex items-center justify-between">
                 <div class="">
                     <MLogo iconColor="#CBE8CA" textColor="#fff"></MLogo>

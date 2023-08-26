@@ -4,7 +4,7 @@
             <div class="flex items-center justify-between max-w-screen-2xl mx-auto">
                 <div class="flex items-center gap-8">
                     <MLogo></MLogo>
-                    <ul class="flex items-center gap-8 text-[#404040] text-sm font-medium font-gilroy pt-1">
+                    <ul class="flex items-center gap-8 text-[#404040] text-base font-medium font-gilroy pt-1">
                         <li>
                             <a href="#">Community</a>
                         </li>
@@ -25,10 +25,10 @@
             <div class="container mx-auto">
                 <button class="aviable">
                     <h6>
-                        Available in EU🇪🇺, UK🇬🇧, and USA🇺🇸! See it in action:
+                        Available in EU🇪🇺, UK🇬🇧,, USA🇺🇸!
                     </h6>
                     <p>
-                        Watch our Promo Video.
+                        Watch our promo video.
                     </p>
                 </button>
             </div>

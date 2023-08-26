@@ -21,9 +21,15 @@ a {
     color: #CBE8CA;
   }
 }
+
 .swiper-wrapper {
   transition-timing-function: linear !important;
 }
+
+.swiper-slide {
+  display: flex !important;
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 620px;
