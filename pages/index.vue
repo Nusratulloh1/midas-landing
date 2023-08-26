@@ -1,8 +1,9 @@
 <template>
   <div>
-    <section ref="container" class=" pt-[90px] 2xl:pt-28 top-section h-[100vh] 2xl:h-[883px] relative overflow-hidden "
+    <section data-bg="#FAFAFA" first="#FAFAFA" ref="container"
+      class="section pt-[90px] 2xl:pt-28 top-section h-[100vh] 2xl:h-[883px] relative overflow-hidden "
       style=" transition: .3s ease-out all; zoom: 120%;">
-      <div class=" max-w-screen-2xl mx-auto">
+      <div class=" max-w-screen-xl mx-auto relative">
         <h1>
           Save money,
           <br>
@@ -20,6 +21,13 @@
         <p class="mt-[8%] !text-base">
           Midas is a financial technology company and is not a bank.
         </p>
+        <div class="svgs">
+          <MTargetIcon :style="layer0" class="left-0 bottom-[-40px] absolute z-50"></MTargetIcon>
+          <MPieIcon :style="layer1" class="right-[125px] top-[-80px] absolute z-50"></MPieIcon>
+          <!-- <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
+        </MDiagramIcon>
+        <MBankIcon :style="layer3" class=" right-9 bottom-0 absolute"> </MBankIcon> -->
+        </div>
       </div>
       <!-- <div>
         <button class="absolute right-[48.8%] bottom-4  text-[#343330] hover:text-[#CBE8CA] animate-bounce">
@@ -29,15 +37,8 @@
           </svg>
         </button>
       </div> -->
-      <div class="svgs">
-        <MTargetIcon :style="layer0" class="left-2 top-20 absolute"></MTargetIcon>
-        <MPieIcon :style="layer1" class="right-7 top-[56px] absolute"></MPieIcon>
-        <!-- <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
-        </MDiagramIcon>
-        <MBankIcon :style="layer3" class=" right-9 bottom-0 absolute"> </MBankIcon> -->
-      </div>
     </section>
-    <section class=" pt-20 pb-10">
+    <section data-bg="#0D0D0D" second="#0D0D0D" class="section pt-20 pb-10">
       <div class="container mx-auto">
         <div class="dark">
           <h3 class=" text-7xl font-medium  font-stapel leading-[normal]">
@@ -112,7 +113,7 @@
             <Blottie ref="blottie" :loop="true" renderer="svg" :path="banka" @ready="onReady" />
           </div>
         </div> -->
-        <div class="flex justify-center mt-20">
+        <!-- <div class="flex justify-center mt-20">
           <button class=" text-[#343330] hover:text-[#CBE8CA] animate-bounce w-24 mx-auto">
             <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" class="mx-auto"
               xmlns="http://www.w3.org/2000/svg">
@@ -121,7 +122,7 @@
                 fill="white" />
             </svg>
           </button>
-        </div>
+        </div> -->
       </div>
     </section>
     <MoneySaving></MoneySaving>
@@ -292,7 +293,7 @@ const layer3 = computed(() => ({
 @media (max-width: 1536px) {
   .top-section {
     h1 {
-      font-size: 84px;
+      font-size: 94px;
     }
 
     p {

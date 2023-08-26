@@ -62,7 +62,7 @@ onMounted(() => {
         background: rgba(0, 0, 0, 0.90);
         backdrop-filter: blur(8px);
         height: 50px;
-        width: 80%;
+        width: 90%;
         margin: auto;
         margin-top: 24px;
         display: flex;

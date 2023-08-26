@@ -1,5 +1,5 @@
 <template>
-    <section ref="container2" class="py-20  relative money-saving" style="transition: .3s ease-out all">
+    <section data-bg="#EAF6EA" third="#EAF6EA" ref="container2" class="py-20  relative money-saving section" style="transition: .3s ease-out all">
         <div class="container mx-auto">
             <div class="bg-icons">
                 <svg :style="layerr0" v-motion-roll-visible-once-left class="layerr0" width="142" height="212"
@@ -1220,6 +1220,7 @@ const enter = ref({
     }
 
     .bg-icons {
+        display: none;
 
         svg {
             transition: .3s ease-out all;
@@ -1308,6 +1309,10 @@ const enter = ref({
 
         .desc {
             color: black;
+        }
+
+        .bg-icons {
+            display: block;
         }
     }
 }

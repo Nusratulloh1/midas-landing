@@ -1,5 +1,5 @@
 <template>
-    <section class="py-20">
+    <section data-bg="#F6F6F6" four="#F6F6F6" class="py-20 section">
         <div class="text-center">
             <p class=" font-stapel text-[#8C8C8C] text-[32px]">
                 Introducing Spaces

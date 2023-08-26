@@ -22,40 +22,37 @@
 import MHeader from './components/MHeader.vue'
 import MFooter from './components/MFooter.vue'
 import { onMounted, ref } from 'vue'
-const interval1: any = ref()
-const interval2: any = ref()
-const interval3: any = ref()
 onMounted(() => {
   const dark = document.getElementsByClassName('dark')
   const money = document.getElementsByClassName('money-saving')
   const review = document.getElementsByClassName('review')
+  const sections = [...document.querySelectorAll('.section')]
+  document.body.style.background = sections[0].getAttribute('data-bg');
   window.addEventListener('scroll', () => {
-
-    const verticalScrollPx = window.scrollY || window.pageYOffset;
-    console.log(verticalScrollPx);
-    if (verticalScrollPx < 400) {
-      document.body.style.backgroundColor = '#FAFAFA';
+    const section = sections
+      .map(section => {
+        const el = section;
+        const rect = el.getBoundingClientRect();
+        return { el, rect };
+      })
+      .find(section => section.rect.bottom >= (window.innerHeight * 0.5));
+    document.body.style.background = section?.el.getAttribute('data-bg');
+    if (section?.el.getAttribute('first')) {
       dark[0].classList.remove('white')
-    } else if (verticalScrollPx > 400 && verticalScrollPx < 1400) {
-      document.body.style.backgroundColor = '#0D0D0D';
+    }
+    else if (section?.el.getAttribute('second')) {
       dark[0].classList.add('white')
       money[0].classList.remove('scrolled')
     }
-    else if (verticalScrollPx > 1400 && verticalScrollPx < 3589) {
+    else if (section?.el.getAttribute('third')) {
       dark[0].classList.remove('white')
       money[0].classList.add('scrolled')
-      document.body.style.backgroundColor = '#EAF6EA';
     }
-    else if (verticalScrollPx > 3589 && verticalScrollPx < 4850) {
-      clearTimeout(interval1)
-      clearTimeout(interval2)
-      clearTimeout(interval3)
-      document.body.style.backgroundColor = '#F6F6F6';
+    else if (section?.el.getAttribute('four')) {
       review[0].classList.remove('scrolled')
     }
     else {
       review[0].classList.add('scrolled')
-      document.body.style.backgroundColor = '#0D0D0D';
     }
   });
 })
