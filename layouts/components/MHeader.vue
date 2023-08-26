@@ -25,7 +25,7 @@
             <div class="container mx-auto">
                 <button class="aviable">
                     <h6>
-                        Available in EU🇪🇺, UK🇬🇧,, USA🇺🇸!
+                        Available in EU🇪🇺, UK🇬🇧, USA🇺🇸!
                     </h6>
                     <p>
                         Watch our promo video.
@@ -72,23 +72,21 @@ onMounted(() => {
         h6 {
             color: #FCFCFC;
             font-family: Arial, sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 500;
             line-height: 18px;
             letter-spacing: 0.5px;
-            text-transform: uppercase;
             margin-right: 5px;
         }
 
         p {
             color: #FCFCFC;
             font-family: Arial, sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 700;
             line-height: 18px;
             letter-spacing: 0.5px;
             text-decoration-line: underline;
-            text-transform: uppercase;
             transition: 0.5s;
 
             &:hover {
