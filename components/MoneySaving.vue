@@ -992,19 +992,19 @@
                 </svg>
 
             </div>
-            <p class="text font-stapel text-[32px] text-center">
+            <p class="text font-stapel font-light text-[#666] text-[32px] text-center">
                 Introducing Money Game
             </p>
             <h4 class="desc text-[64px] font-medium font-stapel mt-3 text-center">
-                New Way of Money Saving
+                Revolutionise the way of saving money
             </h4>
-            <div class="borderedCard mx-auto">
+            <div class="borderedCard mx-auto" v-motion-slide-visible-once-bottom>
                 <img src="@/assets/images/phone.png" alt="phone">
             </div>
             <div class="flex items-center justify-center gap-4 mt-20 h-[535px]">
-                <div class="card ">
+                <div class="card " v-motion-slide-visible-once-bottom>
                     <h5>
-                        Automated Financial Insights
+                        Automated financial insights
                     </h5>
                     <div>
                         <img src="@/assets/images/icons/finance.svg" alt="finance">
@@ -1014,9 +1014,9 @@
                         Benefit from our system's automatic savings recommendations and future forecasting to stay ahead
                     </p>
                 </div>
-                <div class="card second !pr-0">
+                <div class="card second !pr-0" v-motion-slide-visible-once-bottom>
                     <h5>
-                        Targeted Savings Distribution
+                        Targeted savings distribution
                     </h5>
                     <div>
                         <img src="@/assets/images/icons/target.svg" alt="target">
@@ -1027,7 +1027,7 @@
                     </p>
                 </div>
             </div>
-            <money-game></money-game>
+            <money-game v-motion-slide-visible-once-bottom></money-game>
         </div>
         <!-- <div class="flex justify-center mt-24">
             <button class="  text-[#343330] hover:text-[#CBE8CA] animate-bounce">
@@ -1147,7 +1147,7 @@ const enter = ref({
         }
 
         p {
-            color: var(--secondary-200, #B3B3B3);
+            color: var(--secondary-200, #666);
             font-family: 'Gilroy';
             font-size: 18px;
             font-style: normal;
@@ -1206,7 +1206,7 @@ const enter = ref({
 
         img {
             margin: auto;
-            width: 632px;
+            width: 448px;
         }
     }
 
@@ -1227,6 +1227,7 @@ const enter = ref({
         svg {
             transition: .3s ease-out all;
             position: absolute;
+            z-index: 99;
 
             &.block {
                 display: block;

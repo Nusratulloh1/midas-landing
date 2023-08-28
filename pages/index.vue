@@ -1,7 +1,7 @@
 <template>
   <div>
     <section data-bg="#FAFAFA" first="#FAFAFA" ref="container"
-      class="section pt-[80px] 2xl:pt-28 top-section h-[100vh] 2xl:h-[883px] relative overflow-hidden "
+      class="section pt-[44px] 2xl:pt-20 top-section h-[100vh] 2xl:h-[883px] relative overflow-hidden "
       style=" transition: .3s ease-out all; zoom: 120%;">
       <div class=" max-w-screen-xl mx-auto">
         <h1>
@@ -19,12 +19,13 @@
           </button>
         </div>
         <p class="mt-[8%] !text-base">
-          Midas is a financial technology company, is not a bank. All activities are virtual and developed for analytical purposes only.
+          Midas is a financial technology company, is not a bank. All activities are virtual and developed for analytical
+          purposes only.
         </p>
       </div>
       <div class="svgs">
         <MTargetIcon :style="layer0" class="left-5 bottom-[190px] absolute z-50"></MTargetIcon>
-        <MPieIcon :style="layer1" class="right-[70px] top-[50px] absolute z-50"></MPieIcon>
+        <MPieIcon :style="layer1" class="right-[70px] top-[30px] absolute z-50"></MPieIcon>
         <!-- <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
         </MDiagramIcon>
         <MBankIcon :style="layer3" class=" right-9 bottom-0 absolute"> </MBankIcon> -->
@@ -42,28 +43,30 @@
       <div class="container mx-auto">
         <div class="dark">
           <h3 class=" text-7xl font-medium  font-stapel leading-[normal]">
-            Redefining Finance:
+            Redefining finance:
             <br>
             Dive into standout features
           </h3>
-          <div class="content  pt-10 px-24 rounded-[32px] w-full my-10 mb-16 h-[594px] flex items-center justify-between">
+          <div class="content  pt-10 px-24 rounded-[32px] w-full my-10 mb-16 h-[594px] flex items-center justify-between"
+            v-motion-slide-visible-once-bottom>
             <div>
               <h3 class=" text-7xl font-medium  font-stapel leading-[normal]">
-                One-stop <br> Finance Hub
+                All in one <br> Finance hub
               </h3>
-              <p class="mt-6 max-w-[512px] text-2xl font-gilroy leading-[normal]">
+              <p class="mt-6 max-w-[512px] text-2xl font-gilroy leading-[normal] text-[#404040]">
                 Manage, track, and optimize all your financial activities seamlessly in one intuitive app.
               </p>
             </div>
-            <div>
-              <MPhoneIcon></MPhoneIcon>
+            <div class="w-[35%] h-full">
+              <img class=" w-full h-full object-contain" src="@/assets/images/demo.gif">
             </div>
           </div>
         </div>
         <div class="grid grid-cols-3 gap-4">
-          <div class="advantage hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl">
+          <div class="advantage hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
+            v-motion-slide-visible-once-bottom>
             <h5>
-              Reach your <br> Financial Goals
+              Reach your <br> financial goals
 
             </h5>
             <div class="anime ">
@@ -74,9 +77,10 @@
               Set your financial goals and let our app guide you, step by step, to make them a reality.
             </p>
           </div>
-          <div class="advantage !bg-[#FAFAFA] hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl">
+          <div class="advantage !bg-[#FAFAFA] hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
+            v-motion-slide-visible-once-bottom>
             <h5 class="!text-[#0D0D0D]">
-              Smart Analytics <br> Insights
+              Smart analytics <br> insights
             </h5>
             <div class="anime">
               <img src="@/assets/images/icons/chart.svg" alt="chart">
@@ -86,9 +90,10 @@
               Dive into tailored transaction overviews, understand spending habits, and master finance easily.
             </p>
           </div>
-          <div class="advantage hover:translate-y-[-15px] transition-[0.12s] cursor-pointer hover:shadow-xl">
+          <div class="advantage hover:translate-y-[-15px] transition-[0.12s] cursor-pointer hover:shadow-xl"
+            v-motion-slide-visible-once-bottom>
             <h5>
-              Personalize your Experience
+              Personalize your experience
 
             </h5>
             <div class="anime">
@@ -183,7 +188,7 @@ const layer1 = computed(() => ({
     color: #404040;
     text-align: center;
     font-family: 'Gilroy';
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     max-width: 1064px;
     margin-left: auto;
@@ -297,5 +302,4 @@ const layer1 = computed(() => ({
 //       font-size: 22px;
 //     }
 //   }
-// }
-</style>
+// }</style>

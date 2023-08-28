@@ -6,17 +6,18 @@
                     <MLogo></MLogo>
                     <ul class="flex items-center gap-8 text-[#404040] text-base font-medium font-gilroy pt-1">
                         <li>
-                            <a href="#">Community</a>
+                            <a href="#">FAQs</a>
                         </li>
                         <li>
-                            <a href="#">Get Support</a>
+                            <a href="#">Community</a>
                         </li>
                         <li>
                             <a href="#">About us</a>
                         </li>
                     </ul>
                 </div>
-                <button class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy">
+                <button
+                    class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy">
                     Request early access
                 </button>
             </div>

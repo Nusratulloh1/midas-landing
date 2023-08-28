@@ -5,7 +5,7 @@
                 Introducing Spaces
             </p>
             <h4 class=" text-[64px] font-medium font-stapel mt-3">
-                Manage your Money Flow in 3 modes:
+                Manage your transactions in 3 modes:
             </h4>
         </div>
         <div class="grid grid-cols-3 mt-11">
@@ -17,7 +17,7 @@
                     <img src="@/assets/images/icons/sdefault.svg" alt="sdefault">
                 </div>
                 <p>
-                    Default - Manage all accounts  <br> in one place
+                    Default Space, track all your <br> finances in one app
                 </p>
             </div>
             <div class="serving second">
@@ -29,7 +29,7 @@
 
                 </div>
                 <p>
-                    Savings - Start Money Game, meet <br> the limits and save money
+                    Savings Space, limit your spendings <br> with Money Game, to save more money
                 </p>
             </div>
             <div class="serving third">
@@ -41,36 +41,34 @@
 
                 </div>
                 <p>
-                    Budget - Plan your activities and <br> track your budget
+                    Budget Space, create budgets and <br> manage your planned costs 
                 </p>
             </div>
         </div>
         <div class="container mx-auto mt-16">
             <div class="cards flex items-center gap-4 justify-center h-[535px]">
-                <div class="card !pr-2">
+                <div class="card !pr-2" v-motion-slide-visible-once-bottom>
                     <h5>
-                        Set Multiple Budgets with Ease
+                        Set multiple budgets with ease
                     </h5>
                     <div>
                         <img src="@/assets/images/icons/budget.svg" alt="budget">
                         <MBudgetAnimeIcon></MBudgetAnimeIcon>
                     </div>
                     <p>
-                        Set up diverse budgets with automatic start date recognition and integrated savings for a
-                        streamlined experience
+                        Set up diverse budgets with automatic start date recognition and integrated savings for a streamlined experience
                     </p>
                 </div>
-                <div class="card second">
+                <div class="card second" v-motion-slide-visible-once-bottom>
                     <h5>
-                        Unite in Shared Spaces
+                        Unite in shared spaces
                     </h5>
                     <div>
                         <img src="@/assets/images/icons/shared.svg" alt="shared">
                         <MSharedAnimeIcon></MSharedAnimeIcon>
                     </div>
                     <p>
-                        Collaborate and save: Dive into shared Spaces for collective budget planning and synchronized
-                        tracking.
+                        Collaborate and save: Dive into shared Spaces for collective budget planning and synchronized tracking.
                     </p>
                 </div>
             </div>

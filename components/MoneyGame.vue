@@ -4,7 +4,7 @@
 
         <div class="w-1/2">
             <h5 class=" text-[64px] text-[#1A1A1A] font-stapel font-medium leading-[normal]">
-                Stay Inspired with MoneyGame
+                Stay inspired with Money Game
             </h5>
             <p class="text-xl font-stapel text-[#666] font-light mt-5">
                 Harness the power of interactive notifications, stories, and widgets to ensure you stay within your

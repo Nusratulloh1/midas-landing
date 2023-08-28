@@ -2,9 +2,9 @@
     <section data-bg="#0D0D0D" five="#0D0D0D" class="section  py-20 review">
         <div class="container mx-auto">
             <h3 class=" text-7xl font-medium font-stapel">
-                Our Testers loves Midas:
+                Our testers loves Midas:
             </h3>
-            <div class="reviews overflow-hidden">
+            <div class="reviews overflow-hidden" v-motion-slide-visible-once-bottom>
                 <div class="left flex gap-3 w-1/2 box-border overflow-hidden justify-end">
                     <Swiper :direction="'vertical'" class="h-[694px] w-[385.15px]" :space-between="50" style="margin-left: -250px !important;" :modules="[SwiperAutoplay, SwiperEffectCreative]"
                         :slides-per-view="3" :loop="true" :speed="3000" :autoplay="{
