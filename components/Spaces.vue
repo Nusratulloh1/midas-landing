@@ -41,7 +41,7 @@
 
                 </div>
                 <p>
-                    Budget Space, create budgets and <br> manage your planned costs 
+                    Budget Space, create budgets and <br> manage your planned costs
                 </p>
             </div>
         </div>
@@ -56,7 +56,8 @@
                         <MBudgetAnimeIcon></MBudgetAnimeIcon>
                     </div>
                     <p>
-                        Set up diverse budgets with automatic start date recognition and integrated savings for a streamlined experience
+                        Set up diverse budgets with automatic start date recognition and integrated savings for a
+                        streamlined experience
                     </p>
                 </div>
                 <div class="card second" v-motion-slide-visible-once-bottom>
@@ -68,7 +69,8 @@
                         <MSharedAnimeIcon></MSharedAnimeIcon>
                     </div>
                     <p>
-                        Collaborate and save: Dive into shared Spaces for collective budget planning and synchronized tracking.
+                        Collaborate and save: Dive into shared Spaces for collective budget planning and synchronized
+                        tracking.
                     </p>
                 </div>
             </div>
@@ -153,7 +155,7 @@ import { MBudgetAnimeIcon, MSharedAnimeIcon } from './icons';
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 500ms ease-in-out;
+    transition: .5s ease-out all;
 
     h5 {
         color: var(--system-white-blocks-elements, #FFF);

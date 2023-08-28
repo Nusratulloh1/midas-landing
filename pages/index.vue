@@ -1,5 +1,17 @@
 <template>
   <div>
+    <div class="w-full more pt-[84px]" ref="headRef">
+      <div class="container mx-auto">
+        <button class="aviable">
+          <h6>
+            Available in EU🇪🇺, UK🇬🇧, USA🇺🇸!
+          </h6>
+          <p>
+            Watch our promo video.
+          </p>
+        </button>
+      </div>
+    </div>
     <section data-bg="#FAFAFA" first="#FAFAFA" ref="container"
       class="section pt-[44px] 2xl:pt-20 top-section h-[100vh] 2xl:h-[883px] relative overflow-hidden "
       style=" transition: .3s ease-out all; zoom: 120%;">
@@ -47,8 +59,9 @@
             <br>
             Dive into standout features
           </h3>
-          <div class="content  pt-10 px-24 rounded-[32px] w-full my-10 mb-16 h-[594px] flex items-center justify-between"
-            v-motion-slide-visible-once-bottom>
+          <div
+            class="content  pt-3 pb-3 px-24 rounded-[32px] w-full my-10 mb-16 h-[594px] flex items-center justify-between"
+            v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all;">
             <div>
               <h3 class=" text-7xl font-medium  font-stapel leading-[normal]">
                 All in one <br> Finance hub
@@ -58,13 +71,14 @@
               </p>
             </div>
             <div class="w-[35%] h-full">
-              <img class=" w-full h-full object-contain" src="@/assets/images/demo.gif">
+              <MPhoneIcon class="dark-svg object-contain px-5 mb-[75px]"></MPhoneIcon>
+              <img class=" w-full h-full rounded-[60px] object-contain dark-image" src="@/assets/images/demo.gif">
             </div>
           </div>
         </div>
         <div class="grid grid-cols-3 gap-4">
           <div class="advantage hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
-            v-motion-slide-visible-once-bottom>
+            v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all;">
             <h5>
               Reach your <br> financial goals
 
@@ -78,7 +92,7 @@
             </p>
           </div>
           <div class="advantage !bg-[#FAFAFA] hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
-            v-motion-slide-visible-once-bottom>
+            v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all;">
             <h5 class="!text-[#0D0D0D]">
               Smart analytics <br> insights
             </h5>
@@ -91,7 +105,7 @@
             </p>
           </div>
           <div class="advantage hover:translate-y-[-15px] transition-[0.12s] cursor-pointer hover:shadow-xl"
-            v-motion-slide-visible-once-bottom>
+            v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all;">
             <h5>
               Personalize your experience
 
@@ -258,9 +272,15 @@ const layer1 = computed(() => ({
   }
 }
 
+
 .dark {
   h3 {
     color: #0D0D0D;
+  }
+
+
+  .dark-image {
+    display: none;
   }
 
   .content {
@@ -280,6 +300,14 @@ const layer1 = computed(() => ({
       color: white;
     }
 
+    .dark-svg {
+      display: none;
+    }
+
+    .dark-image {
+      display: block;
+    }
+
     .content {
       background: white;
 
@@ -294,6 +322,53 @@ const layer1 = computed(() => ({
   }
 }
 
+.more {
+  .aviable {
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.01);
+    background: rgba(0, 0, 0, 0.90);
+    backdrop-filter: blur(8px);
+    height: 50px;
+    width: 90%;
+    margin: auto;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h6 {
+      color: #FCFCFC;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0.5px;
+      margin-right: 5px;
+    }
+
+    p {
+      color: #FCFCFC;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 0.5px;
+      text-decoration-line: underline;
+      transition: 0.5s;
+
+      &:hover {
+        color: #CBE8CA;
+      }
+    }
+  }
+
+  &.scrolled {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    box-shadow: inset;
+  }
+}
 
 // @media (max-width: 1536px) {
 //   .top-section {
@@ -302,4 +377,5 @@ const layer1 = computed(() => ({
 //       font-size: 22px;
 //     }
 //   }
-// }</style>
+// }
+</style>

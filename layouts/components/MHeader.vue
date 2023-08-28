@@ -1,18 +1,28 @@
 <template>
-    <header>
+    <header class="w-full absolute">
         <nav class=" py-5 w-full">
             <div class="flex items-center justify-between max-w-screen-2xl mx-auto">
                 <div class="flex items-center gap-8">
-                    <MLogo></MLogo>
+                    <nuxt-link to="/">
+                        <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
+                            :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
+                    </nuxt-link>
                     <ul class="flex items-center gap-8 text-[#404040] text-base font-medium font-gilroy pt-1">
-                        <li>
-                            <a href="#">FAQs</a>
-                        </li>
-                        <li>
-                            <a href="#">Community</a>
-                        </li>
-                        <li>
-                            <a href="#">About us</a>
+                        <li class="parent" v-for="link in links" :key="link.id">
+                            <nuxt-link class=" cursor-pointer" :to="link.to">{{ link.title }}</nuxt-link>
+                            <div class="dropdown" v-if="link.children">
+                                <ul class="flex flex-col gap-6">
+                                    <li class="item" v-for="child in link.children" :key="child.id">
+                                        <img :src="child.icon" alt="icon">
+                                        <template v-if="child.local">
+                                            <nuxt-link :to="child.to">{{ child.title }}</nuxt-link>
+                                        </template>
+                                        <template v-else>
+                                            <a :href="child.to">{{ child.title }}</a>
+                                        </template>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -22,24 +32,64 @@
                 </button>
             </div>
         </nav>
-        <div class="w-full more" ref="headRef">
-            <div class="container mx-auto">
-                <button class="aviable">
-                    <h6>
-                        Available in EU🇪🇺, UK🇬🇧, USA🇺🇸!
-                    </h6>
-                    <p>
-                        Watch our promo video.
-                    </p>
-                </button>
-            </div>
-        </div>
     </header>
 </template>
 <script lang="ts" setup>
 import { MLogo } from '../../components/icons'
 import { onMounted, ref } from 'vue'
+import { useRoute } from 'vue-router'
+const route = useRoute()
 const headRef: any = ref(null); // obtain the reference
+const links = ref([
+    {
+        id: 1,
+        title: 'FAQs',
+        to: "/faq",
+        local: true,
+    },
+    {
+        id: 2,
+        title: 'Community',
+        to: "",
+        local: true,
+        children: [
+            {
+                id: 1,
+                title: `Product Hunt`,
+                to: "#",
+                local: false,
+                icon: new URL('@/assets/images/icons/product-hunt.svg', import.meta.url).href
+            },
+            {
+                id: 2,
+                title: 'Reddit',
+                to: "#",
+                local: false,
+                icon: new URL('@/assets/images/icons/reddit.svg', import.meta.url).href
+            },
+            {
+                id: 3,
+                title: `Slack`,
+                to: "#",
+                local: false,
+                icon: new URL('@/assets/images/icons/slack.svg', import.meta.url).href
+            },
+            {
+                id: 4,
+                title: 'Medium',
+                to: "#",
+                local: false,
+                icon: new URL('@/assets/images/icons/medium.svg', import.meta.url).href
+            },
+        ]
+    },
+    {
+        id: 3,
+        title: 'About us',
+        to: "/about",
+        local: true,
+    }
+])
 onMounted(() => {
     if (headRef.value) {
         window.addEventListener("scroll", () => {
@@ -53,54 +103,64 @@ onMounted(() => {
         });
     }
 });
-
 </script>
 <style lang="scss" scoped>
-.more {
-    .aviable {
-        border-radius: 8px;
-        border: 2px solid rgba(0, 0, 0, 0.01);
-        background: rgba(0, 0, 0, 0.90);
-        backdrop-filter: blur(8px);
-        height: 50px;
-        width: 90%;
-        margin: auto;
-        margin-top: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+.parent {
+    display: flex;
+    justify-content: center;
 
-        h6 {
-            color: #FCFCFC;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 18px;
-            letter-spacing: 0.5px;
-            margin-right: 5px;
-        }
+    .dropdown {
+        position: absolute;
+        z-index: 999;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+        -webkit-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in;
+        border-radius: 12px;
+        border: 1px solid var(--gray-200, #EAECF0);
+        background: var(--system-white-blocks-elements, #FFF);
+        box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+        width: 339px;
+        padding: 24px;
+        margin-top: 30px;
 
-        p {
-            color: #FCFCFC;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 18px;
-            letter-spacing: 0.5px;
-            text-decoration-line: underline;
-            transition: 0.5s;
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
 
-            &:hover {
-                color: #CBE8CA;
+            a {
+                color: var(--secondary-900, #0D0D0D);
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
 
-    &.scrolled {
-        position: fixed;
-        top: 0;
-        z-index: 999;
-        box-shadow: inset;
+    &:hover {
+        .dropdown {
+            -webkit-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            transform: scaleY(1);
+            opacity: 1;
+            visibility: visible;
+        }
     }
+}
+
+.router-link-active {
+    color: #E8E8E8 !important;
 }
 </style>

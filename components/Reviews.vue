@@ -6,7 +6,8 @@
             </h3>
             <div class="reviews overflow-hidden" v-motion-slide-visible-once-bottom>
                 <div class="left flex gap-3 w-1/2 box-border overflow-hidden justify-end">
-                    <Swiper :direction="'vertical'" class="h-[694px] w-[385.15px]" :space-between="50" style="margin-left: -250px !important;" :modules="[SwiperAutoplay, SwiperEffectCreative]"
+                    <Swiper :direction="'vertical'" class="h-[694px] w-[385.15px]" :space-between="50"
+                        style="margin-left: -250px !important;" :modules="[SwiperAutoplay, SwiperEffectCreative]"
                         :slides-per-view="3" :loop="true" :speed="3000" :autoplay="{
                             delay: 0,
                             disableOnInteraction: true,
@@ -42,8 +43,9 @@
                             </div>
                         </div>
                     </div> -->
-                    <Swiper :direction="'vertical'" class="h-[694px] w-[365.15px]" :modules="[SwiperAutoplay, SwiperEffectCreative]"
-                        :slides-per-view="3" :speed="3000" :loop="true" :space-between="50" :autoplay="{
+                    <Swiper :direction="'vertical'" class="h-[694px] w-[365.15px]"
+                        :modules="[SwiperAutoplay, SwiperEffectCreative]" :slides-per-view="3" :speed="3000" :loop="true"
+                        :space-between="50" :autoplay="{
                             delay: 0,
                             disableOnInteraction: true,
                         }">
@@ -262,6 +264,7 @@ const reviewsList: any = ref(
 
 .review {
     .reviews {
+        transition: .5s ease-out all;
         margin-top: 40px;
         height: 594px;
         border-radius: 32px;

@@ -1135,7 +1135,7 @@ const enter = ref({
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        transition: all 500ms ease-in-out;
+        transition: .5s ease-out all;
 
         h5 {
             color: var(--system-white-blocks-elements, #FFF);
@@ -1196,8 +1196,9 @@ const enter = ref({
     }
 
     .borderedCard {
-        padding: 30px 0 30px 40px;
+        padding: 0px 0 30px 40px;
         border-radius: 32px;
+        transition: .5s ease-out all;
         // background-color: red;
         background-color: #EAF6EA;
         width: 100%;

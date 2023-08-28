@@ -891,6 +891,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@formkit/auto-animate@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "@formkit/auto-animate@npm:0.7.0"
+  checksum: c714bf960946eddd3abbe339e43dcfc972a193fa2717d1c9c3d89a3acc6590dc68ee3e366ed473f5e9f359d4ef6daa46d75649d963c795ab06da8bbadb5d71a3
+  languageName: node
+  linkType: hard
+
 "@hapi/hoek@npm:^9.0.0":
   version: 9.3.0
   resolution: "@hapi/hoek@npm:9.3.0"
@@ -7577,6 +7584,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    "@formkit/auto-animate": ^0.7.0
     "@nuxt/devtools": ^0.3.2
     "@pinia/nuxt": ^0.4.8
     "@types/js-yaml": ^4.0.5

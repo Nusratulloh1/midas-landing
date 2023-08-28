@@ -2,9 +2,11 @@
   <div>
     <MHeader></MHeader>
     <main>
-      <slot />
       <div>
-        <div class="container flex justify-end mx-auto">
+        <slot />
+      </div>
+      <div>
+        <div class=" max-w-screen-2xl flex justify-end mx-auto">
           <button class="h-16 w-16 bg-[#F5F5F5] rounded-2xl px-4 py-4 hover:bg-[#CBE8CA] transition-all">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -22,39 +24,57 @@
 import MHeader from './components/MHeader.vue'
 import MFooter from './components/MFooter.vue'
 import { onMounted, ref } from 'vue'
+import { useRoute } from 'vue-router'
+const route = useRoute()
 onMounted(() => {
   const dark = document.getElementsByClassName('dark')
   const money = document.getElementsByClassName('money-saving')
   const review = document.getElementsByClassName('review')
   const sections = [...document.querySelectorAll('.section')]
-  document.body.style.background = sections[0].getAttribute('data-bg');
-  window.addEventListener('scroll', () => {
-    const section = sections
-      .map(section => {
-        const el = section;
-        const rect = el.getBoundingClientRect();
-        return { el, rect };
-      })
-      .find(section => section.rect.bottom >= (window.innerHeight * 0.5));
-    document.body.style.background = section?.el.getAttribute('data-bg');
-    if (section?.el.getAttribute('first')) {
-      dark[0].classList.remove('white')
-    }
-    else if (section?.el.getAttribute('second')) {
-      dark[0].classList.add('white')
-      money[0].classList.remove('scrolled')
-    }
-    else if (section?.el.getAttribute('third')) {
-      dark[0].classList.remove('white')
-      money[0].classList.add('scrolled')
-    }
-    else if (section?.el.getAttribute('four')) {
-      review[0].classList.remove('scrolled')
-    }
-    else {
-      review[0].classList.add('scrolled')
-    }
-  });
+  if (route.path == '/') {
+    document.body.style.background = sections[0]?.getAttribute('data-bg');
+    window.addEventListener('scroll', () => {
+      const section = sections
+        .map(section => {
+          const el = section;
+          // console.log(el.getBoundingClientRect());
+          const rect = el.getBoundingClientRect();
+          return { el, rect };
+        })
+        .find(section => section.rect.bottom >= (window.innerHeight * 0.4));
+      // console.log(section?.rect.bottom, 'size');
+
+      document.body.style.background = section?.el.getAttribute('data-bg');
+      if (section?.el.getAttribute('first')) {
+        dark[0].classList.remove('white')
+      }
+      else if (section?.el.getAttribute('second')) {
+        dark[0].classList.add('white')
+        money[0].classList.remove('scrolled')
+      }
+      else if (section?.el.getAttribute('third')) {
+        dark[0].classList.remove('white')
+        money[0].classList.add('scrolled')
+      }
+      else if (section?.el.getAttribute('four')) {
+        review[0].classList.remove('scrolled')
+      }
+      else {
+        review[0].classList.add('scrolled')
+      }
+    });
+  }
 })
 
 </script>
+<style>
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.4s;
+}
+
+.layout-enter-from,
+.layout-leave-to {
+  filter: grayscale(1);
+}
+</style>
