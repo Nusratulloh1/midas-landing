@@ -1,10 +1,10 @@
 <template>
     <div data-bg="">
-        <div class="bg-[#0D0D0D] pt-[148px] h-[424px] header">
+        <div class="bg-[#0D0D0D] pt-[128px] h-[424px] header">
             <div class="container mx-auto">
                 <img src="@/assets/images/icons/bold.svg" class="mx-auto" alt="bold">
                 <h2>
-                    Get Support
+                    FAQs
                 </h2>
                 <p>
                     Everything you need to know about the product
@@ -13,44 +13,43 @@
         </div>
         <section class=" py-16">
             <div class="container mx-auto">
-                <h4 class=" font-medium font-stapel text-[40px] leading-[44px] tracking-[-0.8px] text-center">
+                <!-- <h4 class=" font-medium font-stapel text-[40px] leading-[44px] tracking-[-0.8px] text-center">
                     Frequently asked questions
-                </h4>
-                <div class="collapses" ref="parentr">
-                    <div class=" collaps" v-for="(item, i) in questions" :key="item.id">
-                        <div class="head">
+                </h4> -->
+                <div class="collapses">
+                    <collapse class=" collaps" v-for="(item, i) in questions" :key="item.id">
+                        <header class="head">
                             <h6>
                                 {{ item.title }}
                             </h6>
                             <button @click="toggleExpand(i, item)">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-                                        stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-
+                                <p v-if="item.isExpand">-</p>
+                                <p v-else>+</p>
                             </button>
-                        </div>
-                        <div class="body" v-if="item.isExpand">
+                        </header>
+
+                        <body class="body" :id="`content${item.id}`" :style="item.isExpand
+                            ? `height: ${item.computedHeight}; padding: 8px 0px;`
+                            : 'height: 0'
+                            ">
                             <p>
                                 {{ item.content }}
                             </p>
-                        </div>
-                    </div>
+                        </body>
+                    </collapse>
                 </div>
             </div>
         </section>
         <section class=" pt-8 pb-16">
             <div class="container mx-auto">
-                <img src="@/assets/images/icons/question.svg" class="mx-auto" alt="question">
-                <h4 class="text-2xl font-stapel leading-[44px] tracking-[-0.8px] text-center font-medium mt-8">
+                <img src="@/assets/images/icons/question.svg" class="mx-auto" alt="question" v-motion-slide-visible-once-bottom>
+                <h4 class="text-2xl font-stapel leading-[44px] tracking-[-0.8px] text-center font-medium mt-8" v-motion-slide-visible-once-bottom>
                     Still have questions?
                 </h4>
-                <p class="mt-2 text-lg font-gilroy text-[#475467] text-center">
+                <p class="mt-2 text-lg font-gilroy text-[#475467] text-center" v-motion-slide-visible-once-bottom>
                     Can’t find the answer you’re looking for? Please send the request to our friendly team.
                 </p>
-                <div class="flex items-center justify-center mt-8">
+                <div class="flex items-center justify-center mt-8" v-motion-slide-visible-once-bottom>
                     <button
                         class=" font-semibold h-14 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy mx-auto">
                         Get in touch
@@ -62,9 +61,7 @@
 </template>
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useAutoAnimate } from '@formkit/auto-animate/vue'
 const content = ref(null);
-const [parentr] = useAutoAnimate({ duration: 1000 })
 const questions = ref([
     {
         id: 1,
@@ -97,7 +94,7 @@ const questions = ref([
     {
         id: 5,
         title: "Why is there no integration with banks?",
-        content: `Our main goal is to test the hypothesis that people are interested in saving money for their own purposes. Moreover, we sincerely believe that entering each expense manually will encourage you to more carefully track and understand how you spend your money.  P.S If people are really interested, we will establish integration with banks.`,
+        content: `Our main goal is to test the hypothesis that people are interested in saving money for their own purposes. Moreover, we sincerely believe that entering each expense manually will encourage you to more carefully track and understand how you spend your money.P.S If people are really interested, we will establish integration with banks.`,
         isExpand: false,
         computedHeight: 0,
     },
@@ -157,6 +154,32 @@ const toggleExpand = (i) => {
     // })
     questions.value[i].isExpand = !questions.value[i].isExpand;
 };
+const getComputedHeight = () => {
+    questions.value.forEach((item) => {
+        var elem = document.getElementById("content" + item.id);
+        if (elem !== null) {
+            var content = [elem][0];
+
+            content.style.height = "auto";
+            content.style.position = "absolute";
+            content.style.visibility = "hidden";
+            content.style.display = "block";
+            var height = getComputedStyle(content).height;
+            item.computedHeight = parseInt(height);
+
+            content.style.height = 0;
+            content.style.position = null;
+            content.style.visibility = null;
+            content.style.display = null;
+        }
+
+    });
+};
+onMounted(() => {
+    setTimeout(() => {
+        getComputedHeight();
+    }, 1000);
+})
 </script>
 <style scoped lang="scss">
 .header {
@@ -196,6 +219,7 @@ const toggleExpand = (i) => {
     .collaps {
         padding-top: 24px;
         border-top: 1px solid var(--gray-200, #EAECF0);
+        overflow: hidden;
 
         &:first-child {
             border: none;
@@ -215,10 +239,27 @@ const toggleExpand = (i) => {
                 font-weight: 500;
                 line-height: 28px;
             }
+
+            button {
+                border: 2px solid #98A2B3;
+                width: 24px;
+                height: 24px;
+                border-radius: 99px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    color: #98A2B3;
+                    font-size: 20px;
+                    margin-bottom: 1.5px;
+                }
+
+            }
         }
 
         .body {
-            padding: 8px 0px;
+            transition: 250ms ease-out;
 
             p {
                 color: var(--gray-600, #475467);

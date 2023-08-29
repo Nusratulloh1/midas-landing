@@ -6,7 +6,7 @@
         <slot />
       </div>
       <div>
-        <div class=" max-w-screen-2xl flex justify-end mx-auto">
+        <div class=" max-w-screen-2xl flex justify-end mx-auto  mb-3">
           <button class="h-16 w-16 bg-[#F5F5F5] rounded-2xl px-4 py-4 hover:bg-[#CBE8CA] transition-all">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -23,15 +23,15 @@
 <script lang="ts" setup>
 import MHeader from './components/MHeader.vue'
 import MFooter from './components/MFooter.vue'
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 const route = useRoute()
 onMounted(() => {
-  const dark = document.getElementsByClassName('dark')
-  const money = document.getElementsByClassName('money-saving')
-  const review = document.getElementsByClassName('review')
-  const sections = [...document.querySelectorAll('.section')]
-  if (route.path == '/') {
+  if (route.name === 'index') {
+    const dark = document.getElementsByClassName('dark')
+    const money = document.getElementsByClassName('money-saving')
+    const review = document.getElementsByClassName('review')
+    const sections = [...document.querySelectorAll('.section')]
     document.body.style.background = sections[0]?.getAttribute('data-bg');
     window.addEventListener('scroll', () => {
       const section = sections
@@ -64,8 +64,8 @@ onMounted(() => {
       }
     });
   }
-})
 
+})
 </script>
 <style>
 .layout-enter-active,

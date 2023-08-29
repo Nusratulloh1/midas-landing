@@ -17,7 +17,7 @@ body {
 a {
 
   &:hover {
-    color: #CBE8CA;
+    text-decoration: underline;
   }
 }
 
@@ -48,18 +48,20 @@ a {
 }
 
 @media (min-width: 1280px) {
-  body{
+  body {
     zoom: 80%;
   }
+
   .container {
     max-width: 1120px;
   }
 }
 
 @media (min-width: 1536px) {
-  body{
+  body {
     zoom: 100%;
   }
+
   .container {
     max-width: 1120px;
   }

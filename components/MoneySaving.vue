@@ -1223,7 +1223,7 @@ const enter = ref({
     }
 
     .bg-icons {
-        display: none;
+        // display: none;
 
         svg {
             transition: .3s ease-out all;

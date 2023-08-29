@@ -26,19 +26,27 @@
                         </li>
                     </ul>
                 </div>
-                <button
+                <button @click="sendRequest"
                     class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy">
                     Request early access
                 </button>
             </div>
         </nav>
     </header>
+    <Teleport to="body">
+        <Transition name="fade">
+            <GetEarlyAccessModal v-if="showModal"></GetEarlyAccessModal>
+        </Transition>
+    </Teleport>
 </template>
 <script lang="ts" setup>
+import { useModal } from "@/composables";
 import { MLogo } from '../../components/icons'
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
+import GetEarlyAccessModal from '@/components/EarlyAccessModal.vue'
 const route = useRoute()
+const modal = useModal();
 const headRef: any = ref(null); // obtain the reference
 const links = ref([
     {
@@ -90,6 +98,7 @@ const links = ref([
         local: true,
     }
 ])
+const showModal = computed(() => modal.show.value);
 onMounted(() => {
     if (headRef.value) {
         window.addEventListener("scroll", () => {
@@ -103,6 +112,11 @@ onMounted(() => {
         });
     }
 });
+const sendRequest = () => {
+    modal.setTitle('');
+    modal.setWidth("60%");
+    modal.showModal();
+}
 </script>
 <style lang="scss" scoped>
 .parent {
@@ -162,5 +176,23 @@ onMounted(() => {
 
 .router-link-active {
     color: #E8E8E8 !important;
+}
+.modal-enter, .modal-leave {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

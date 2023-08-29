@@ -19,7 +19,8 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@vueuse/nuxt',
     '@vueuse/motion/nuxt',
-    'nuxt-swiper'
+    'nuxt-swiper',
+    '@vee-validate/nuxt'
   ],
   css: [
     '~/assets/styles/css/tailwind.css',
