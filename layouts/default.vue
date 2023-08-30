@@ -7,7 +7,8 @@
       </div>
       <div>
         <div class=" max-w-screen-2xl flex justify-end mx-auto  mb-3">
-          <button class="h-16 w-16 bg-[#F5F5F5] rounded-2xl px-4 py-4 hover:bg-[#CBE8CA] transition-all">
+          <button @click="scrollTop"
+            class="h-16 w-16 bg-[#F5F5F5] rounded-2xl px-4 py-4 hover:bg-[#CBE8CA] transition-all">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M25.7075 14.7076C25.6146 14.8005 25.5043 14.8743 25.3829 14.9246C25.2615 14.9749 25.1314 15.0008 25 15.0008C24.8686 15.0008 24.7385 14.9749 24.6171 14.9246C24.4957 14.8743 24.3854 14.8005 24.2925 14.7076L17 7.4138V27.0001C17 27.2653 16.8947 27.5196 16.7071 27.7072C16.5196 27.8947 16.2652 28.0001 16 28.0001C15.7348 28.0001 15.4804 27.8947 15.2929 27.7072C15.1054 27.5196 15 27.2653 15 27.0001V7.4138L7.70751 14.7076C7.51987 14.8952 7.26537 15.0006 7.00001 15.0006C6.73464 15.0006 6.48015 14.8952 6.29251 14.7076C6.10487 14.5199 5.99945 14.2654 5.99945 14.0001C5.99945 13.7347 6.10487 13.4802 6.29251 13.2926L15.2925 4.29255C15.3854 4.19958 15.4957 4.12582 15.6171 4.07549C15.7385 4.02517 15.8686 3.99927 16 3.99927C16.1314 3.99927 16.2615 4.02517 16.3829 4.07549C16.5043 4.12582 16.6146 4.19958 16.7075 4.29255L25.7075 13.2926C25.8005 13.3854 25.8742 13.4957 25.9246 13.6171C25.9749 13.7385 26.0008 13.8686 26.0008 14.0001C26.0008 14.1315 25.9749 14.2616 25.9246 14.383C25.8742 14.5044 25.8005 14.6147 25.7075 14.7076Z"
@@ -23,49 +24,12 @@
 <script lang="ts" setup>
 import MHeader from './components/MHeader.vue'
 import MFooter from './components/MFooter.vue'
-import { onMounted } from 'vue'
-import { useRoute } from 'vue-router'
-const route = useRoute()
-onMounted(() => {
-  if (route.name === 'index') {
-    const dark = document.getElementsByClassName('dark')
-    const money = document.getElementsByClassName('money-saving')
-    const review = document.getElementsByClassName('review')
-    const sections = [...document.querySelectorAll('.section')]
-    document.body.style.background = sections[0]?.getAttribute('data-bg');
-    window.addEventListener('scroll', () => {
-      const section = sections
-        .map(section => {
-          const el = section;
-          // console.log(el.getBoundingClientRect());
-          const rect = el.getBoundingClientRect();
-          return { el, rect };
-        })
-        .find(section => section.rect.bottom >= (window.innerHeight * 0.4));
-      // console.log(section?.rect.bottom, 'size');
-
-      document.body.style.background = section?.el.getAttribute('data-bg');
-      if (section?.el.getAttribute('first')) {
-        dark[0].classList.remove('white')
-      }
-      else if (section?.el.getAttribute('second')) {
-        dark[0].classList.add('white')
-        money[0].classList.remove('scrolled')
-      }
-      else if (section?.el.getAttribute('third')) {
-        dark[0].classList.remove('white')
-        money[0].classList.add('scrolled')
-      }
-      else if (section?.el.getAttribute('four')) {
-        review[0].classList.remove('scrolled')
-      }
-      else {
-        review[0].classList.add('scrolled')
-      }
-    });
-  }
-
-})
+const scrollTop = () => {
+  setTimeout(() => window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  }), 0);
+};
 </script>
 <style>
 .layout-enter-active,
