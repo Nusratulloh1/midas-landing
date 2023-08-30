@@ -2,7 +2,7 @@
     <div>
         <div class="modal-mask">
 
-            <div class="modal-wrapper" >
+            <div class="modal-wrapper">
                 <div class="modal-container relative overflow-hidden" ref="anim2">
                     <button @click="modal.hideModal()" class="float-right m-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,8 @@
                             <label>Location*</label>
                             <select placeholder="Please select" v-model="form.location">
                                 <option value="Please select" selected disabled>Please select</option>
-                                <option value="sjbsd">Tashkent</option>
+                                <option value="sjbsd" v-for="county in countryList" :key="county.id">{{
+                                    county?.name.common }}</option>
                                 <option value="sjbsd">Buxoro</option>
                             </select>
                             <span>
@@ -47,12 +48,12 @@
                             </span>
                         </div>
                         <!-- <Transition name="fade"> -->
-                            <div class="form-item" v-if="form.user_type == 'investor'">
-                                <label>Suggestion*</label>
-                                <textarea v-model="form.suggestion"
-                                    placeholder="e.g. I've come across your application and am genuinely impressed with its potential. I'm interested in exploring investment opportunities. Could we schedule a discussion?" />
+                        <div class="form-item" v-if="form.user_type == 'investor'">
+                            <label>Suggestion*</label>
+                            <textarea v-model="form.suggestion"
+                                placeholder="e.g. I've come across your application and am genuinely impressed with its potential. I'm interested in exploring investment opportunities. Could we schedule a discussion?" />
 
-                            </div>
+                        </div>
                         <!-- </Transition> -->
                         <button type="button" @click="nextStep">
                             Get early access
@@ -139,15 +140,15 @@
 </template>
 <script lang="ts" setup>
 import { useModal } from "@/composables";
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { useAutoAnimate } from '@formkit/auto-animate/vue'
-const showModal = computed(() => modal.show.value);
 import useClipboard from 'vue-clipboard3'
 const modal = useModal();
 const step = ref(1)
 const copied = ref(false)
 const copyUrl = ref('https://midas/reffer')
 const { toClipboard } = useClipboard()
+const { data: countryList }: any = await useFetch('https://restcountries.com/v3.1/all')
 const [anim] = useAutoAnimate()
 const [anim2] = useAutoAnimate()
 const copy = async () => {

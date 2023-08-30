@@ -162,6 +162,7 @@
 </template>
 <script lang="ts" setup>
 import { useParallax } from '@vueuse/core'
+import { useAutoAnimate } from '@formkit/auto-animate/vue'
 import { MPhoneIcon, MPieIcon, MTargetIcon } from '@/components/icons'
 import GetEarlyAccessModal from '@/components/EarlyAccessModal.vue'
 import { useModal } from "@/composables";
@@ -172,6 +173,7 @@ import Spaces from '~/components/Spaces.vue';
 import MoneySaving from '~/components/MoneySaving.vue';
 import Reviews from '~/components/Reviews.vue';
 const container = ref(null)
+const [animex] = useAutoAnimate()
 const parallax = reactive(useParallax(container))
 const mishen = new URL('../assets/lottie/mishen.json', import.meta.url).href
 const diagram = new URL('../assets/lottie/diagrama_kv.json', import.meta.url).href
