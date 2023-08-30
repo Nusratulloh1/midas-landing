@@ -26,7 +26,8 @@
           and turn saving from a necessity, into an ingrained way of your life.
         </p>
         <div class="flex justify-center mt-9">
-          <button class="  h-16 px-8 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-stapel">
+          <button @click="sendRequest"
+            class="  h-16 px-8 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-stapel">
             Request early access
           </button>
         </div>
@@ -149,11 +150,18 @@
     <MoneySaving></MoneySaving>
     <Spaces></Spaces>
     <Reviews></Reviews>
+    <Teleport to="body">
+      <Transition name="fade">
+        <GetEarlyAccessModal v-if="showModal"></GetEarlyAccessModal>
+      </Transition>
+    </Teleport>
   </div>
 </template>
 <script lang="ts" setup>
 import { useParallax } from '@vueuse/core'
 import { MPhoneIcon, MPieIcon, MTargetIcon } from '@/components/icons'
+import GetEarlyAccessModal from '@/components/EarlyAccessModal.vue'
+import { useModal } from "@/composables";
 import type { AnimationItem } from 'lottie-web'
 import { ref, computed, reactive, onMounted } from 'vue'
 import { Blottie, type BlottieExpose } from 'blottie'
@@ -178,6 +186,13 @@ const layer1 = computed(() => ({
   transform: `translateX(${parallax.tilt * 20}px) translateY(${parallax.roll * 50
     }px) scale(1.23)`,
 }))
+const modal = useModal();
+const showModal = computed(() => modal.show.value);
+const sendRequest = () => {
+  modal.setTitle('');
+  modal.setWidth("60%");
+  modal.showModal();
+}
 onMounted(() => {
   window.addEventListener('scroll', () => {
     const dark = document.getElementsByClassName('dark')

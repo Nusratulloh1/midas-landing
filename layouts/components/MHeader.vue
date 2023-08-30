@@ -177,22 +177,4 @@ const sendRequest = () => {
 .router-link-active {
     color: #E8E8E8 !important;
 }
-.modal-enter, .modal-leave {
-  opacity: 0;
-}
-
-.modal-enter .modal-container,
-.modal-leave .modal-container {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
 </style>
