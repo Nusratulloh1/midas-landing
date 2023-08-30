@@ -47,7 +47,7 @@
         </div>
         <div class="container mx-auto mt-16">
             <div class="cards flex items-center gap-4 justify-center h-[535px]">
-                <div class="card !pr-2" v-motion-slide-visible-once-bottom>
+                <div @click="$emit('send')" class="card !pr-2" v-motion-slide-visible-once-bottom>
                     <h5>
                         Set multiple budgets with ease
                     </h5>
@@ -60,7 +60,7 @@
                         streamlined experience
                     </p>
                 </div>
-                <div class="card second" v-motion-slide-visible-once-bottom>
+                <div @click="$emit('send')" class="card second" v-motion-slide-visible-once-bottom>
                     <h5>
                         Unite in shared spaces
                     </h5>

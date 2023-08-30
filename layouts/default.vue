@@ -2,7 +2,7 @@
   <div>
     <MHeader></MHeader>
     <main>
-      <div>
+      <div class=" overflow-hidden">
         <slot />
       </div>
       <div>

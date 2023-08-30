@@ -79,7 +79,8 @@
           </div>
         </div>
         <div class="grid grid-cols-3 gap-4">
-          <div class="advantage hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
+          <div @click="sendRequest"
+            class="advantage hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
             v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all;">
             <h5>
               Reach your <br> financial goals
@@ -93,7 +94,8 @@
               Set your financial goals and let our app guide you, step by step, to make them a reality.
             </p>
           </div>
-          <div class="advantage !bg-[#FAFAFA] hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
+          <div @click="sendRequest"
+            class="advantage !bg-[#FAFAFA] hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
             v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all;">
             <h5 class="!text-[#0D0D0D]">
               Smart analytics <br> insights
@@ -106,7 +108,8 @@
               Dive into tailored transaction overviews, understand spending habits, and master finance easily.
             </p>
           </div>
-          <div class="advantage hover:translate-y-[-15px] transition-[0.12s] cursor-pointer hover:shadow-xl"
+          <div @click="sendRequest"
+            class="advantage hover:translate-y-[-15px] transition-[0.12s] cursor-pointer hover:shadow-xl"
             v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all;">
             <h5>
               Personalize your experience
@@ -147,8 +150,8 @@
         </div>
       </div>
     </section>
-    <MoneySaving></MoneySaving>
-    <Spaces></Spaces>
+    <MoneySaving @send="sendRequest"></MoneySaving>
+    <Spaces @send="sendRequest"></Spaces>
     <Reviews></Reviews>
     <Teleport to="body">
       <Transition name="fade">

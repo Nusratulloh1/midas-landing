@@ -1,8 +1,9 @@
 <template>
     <div>
         <div class="modal-mask">
-            <div class="modal-wrapper">
-                <div class="modal-container relative">
+
+            <div class="modal-wrapper" >
+                <div class="modal-container relative overflow-hidden" ref="anim2">
                     <button @click="modal.hideModal()" class="float-right m-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 6L6 18M6 6L18 18" stroke="#667085" stroke-width="2" stroke-linecap="round"
@@ -14,7 +15,7 @@
                             {{ step == 1 ? 'Get Early Access' : 'Thank you!' }}
                         </h6>
                     </div>
-                    <form class="modal-body" v-if="step == 1">
+                    <form class="modal-body" v-if="step == 1" ref="anim">
                         <div class="form-item">
                             <label>Who are you?*</label>
                             <select placeholder="Please select" v-model="form.user_type">
@@ -45,12 +46,14 @@
                                 Location only used to determine early access availability in your country.
                             </span>
                         </div>
-                        <div class="form-item" v-if="form.user_type == 'investor'">
-                            <label>Suggestion*</label>
-                            <textarea v-model="form.suggestion"
-                                placeholder="e.g. I've come across your application and am genuinely impressed with its potential. I'm interested in exploring investment opportunities. Could we schedule a discussion?" />
+                        <!-- <Transition name="fade"> -->
+                            <div class="form-item" v-if="form.user_type == 'investor'">
+                                <label>Suggestion*</label>
+                                <textarea v-model="form.suggestion"
+                                    placeholder="e.g. I've come across your application and am genuinely impressed with its potential. I'm interested in exploring investment opportunities. Could we schedule a discussion?" />
 
-                        </div>
+                            </div>
+                        <!-- </Transition> -->
                         <button type="button" @click="nextStep">
                             Get early access
                         </button>
@@ -137,6 +140,7 @@
 <script lang="ts" setup>
 import { useModal } from "@/composables";
 import { ref, computed } from 'vue'
+import { useAutoAnimate } from '@formkit/auto-animate/vue'
 const showModal = computed(() => modal.show.value);
 import useClipboard from 'vue-clipboard3'
 const modal = useModal();
@@ -144,7 +148,8 @@ const step = ref(1)
 const copied = ref(false)
 const copyUrl = ref('https://midas/reffer')
 const { toClipboard } = useClipboard()
-
+const [anim] = useAutoAnimate()
+const [anim2] = useAutoAnimate()
 const copy = async () => {
     try {
         await toClipboard(copyUrl.value)
