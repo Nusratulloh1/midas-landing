@@ -24,6 +24,8 @@
 <script lang="ts" setup>
 import MHeader from './components/MHeader.vue'
 import MFooter from './components/MFooter.vue'
+import { useRoute } from 'vue-router'
+const route = useRoute()
 const scrollTop = () => {
   setTimeout(() => window.scrollTo({
     top: 0,
