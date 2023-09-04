@@ -1,7 +1,7 @@
 <template>
     <section class=" py-16 bg-[#0D0D0D]">
         <div class=" max-w-screen-xl mx-auto">
-            <p class="text-[#A1BAA1] text-xl font-semibold font-gilroy text-center">
+            <p class="text-[#A1BAA1] font-gilroy text-lg text-center">
                 Our History
             </p>
             <h5 class=" text-white font-inter text-4xl font-semibold text-center mt-2 tracking-[-0.72px]">
@@ -12,7 +12,7 @@
                     <h5 class=" font-stapel font-medium text-2xl text-white">
                         The Story Behind the Name: <span class="text-[#CBE8CA]">Why "midas"?</span>
                     </h5>
-                    <p class=" font-gilroy text-[#E8E8E8] max-w-[529px] mt-4">
+                    <p class=" font-gilroy text-lg text-[#E8E8E8] max-w-[529px] mt-4">
                         Inspired by King Midas, the mythical figure who turned everything he touched into gold, we aim to
                         give you the golden touch in financial management. While gold symbolizes wealth, our signature light
                         green hue represents real, tangible cash. Just like Midas, our app is designed to multiply your
@@ -25,7 +25,7 @@
                     <h5 class=" font-stapel font-medium text-2xl text-white">
                         Decoding the <span class="text-[#CBE8CA]">Logo “M”</span>
                     </h5>
-                    <p class=" font-gilroy text-[#E8E8E8] max-w-[529px] mt-4">
+                    <p class=" font-gilroy text-lg text-[#E8E8E8] max-w-[529px] mt-4">
                         Our logo's <span class="text-[#CBE8CA] font-bold">"M"</span> is more than a letter; it's a narrative. It harks back to the age-old concept of
                         treasure chests filled with gold coins. When you look closely, you'll see a trio of coins forming a
                         symmetrical pattern, encapsulating our holistic approach to financial wellness.

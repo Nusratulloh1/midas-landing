@@ -1,13 +1,13 @@
 <template>
     <section class=" py-16 bg-[#262626]">
         <div class=" max-w-screen-xl mx-auto">
-            <p class="text-[#A1BAA1] text-xl font-semibold font-gilroy text-center">
+            <p class="text-[#A1BAA1] font-gilroy text-lg text-center">
                 Shape the future of midas
             </p>
             <h4 class=" text-5xl font-medium font-stapel text-white text-center my-3">
                 Be the changer of midas' future
             </h4>
-            <p class="max-w-[762px] text-[#E8E8E8] font-gilroy text-xl text-center mx-auto">
+            <p class="max-w-[762px] text-[#E8E8E8] font-gilroy text-lg text-center mx-auto">
                 Midas is more than just an app; it's a community. We're committed to transparency and inclusivity, which is
                 why
                 our roadmap is open for your input. Help us prioritize features that matter most to you.
@@ -22,7 +22,7 @@
                     <h6 class=" font-stapel text-[#D9D9D9] font-medium text-5xl my-6">
                         Current
                     </h6>
-                    <ul class="text-[#EAECF0] font-gilroy text-xl flex flex-col gap-6">
+                    <ul class="text-[#EAECF0] font-gilroy text-lg flex flex-col gap-6">
                         <li>
                             Bank synchronization
                         </li>
@@ -46,7 +46,7 @@
                     <h6 class=" font-stapel text-[#A1BAA1] font-medium text-5xl my-6">
                         Q4 2023
                     </h6>
-                    <ul class="text-[#EAECF0] font-gilroy text-xl flex flex-col gap-6">
+                    <ul class="text-[#EAECF0] font-gilroy text-lg flex flex-col gap-6">
                         <li>
                             Bank synchronization
                         </li>
@@ -70,7 +70,7 @@
                     <h6 class=" font-stapel text-[#A1BAA1] font-medium text-5xl my-6">
                         Q1 2024
                     </h6>
-                    <ul class="text-[#EAECF0] font-gilroy text-xl flex flex-col gap-6">
+                    <ul class="text-[#EAECF0] font-gilroy text-lg flex flex-col gap-6">
                         <li>
                             Auto-rebalance
                         </li>
@@ -91,7 +91,7 @@
                     <h6 class=" font-stapel text-[#A1BAA1] font-medium text-5xl my-6">
                         Q2 2024
                     </h6>
-                    <ul class="text-[#EAECF0] font-gilroy text-xl flex flex-col gap-6">
+                    <ul class="text-[#EAECF0] font-gilroy text-lg flex flex-col gap-6">
                         <li>
                             Finance Feed
                         </li>

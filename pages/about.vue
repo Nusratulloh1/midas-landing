@@ -79,7 +79,7 @@
         <Binefits></Binefits>
         <section class=" py-20 bg-[#0D0D0D]">
             <div class="container mx-auto">
-                <p class="text-[#A1BAA1] text-xl font-semibold font-gilroy text-center">
+                <p class="text-[#A1BAA1] font-gilroy text-lg text-center">
                     What are you waiting for?
                 </p>
                 <h4 class=" text-5xl font-medium font-stapel text-white text-center mt-2">

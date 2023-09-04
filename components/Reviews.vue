@@ -4,7 +4,7 @@
             <h3 class=" text-7xl font-medium font-stapel">
                 Our testers loves Midas:
             </h3>
-            <div class="reviews overflow-hidden mb-20" v-motion-slide-visible-once-bottom>
+            <div class="reviews overflow-hidden mb-56" v-motion-slide-visible-once-bottom>
                 <div class="left flex gap-3 w-1/2 box-border overflow-hidden justify-end">
                     <Swiper :direction="'vertical'" class="h-[694px] w-[385.15px]" :space-between="50"
                         style="margin-left: -250px !important;" :modules="[SwiperAutoplay, SwiperEffectCreative]"

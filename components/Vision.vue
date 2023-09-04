@@ -6,7 +6,7 @@
                 <h5 class=" font-medium font-stapel text-[64px]">
                     Our mission
                 </h5>
-                <p class=" font-gilroy text-[#404040] text-xl font-light max-w-[550px]">
+                <p class=" font-gilroy text-[#404040]  text-lg  max-w-[550px]">
                     Our mission is to revolutionise people's perspectives on saving money and achieving goals. We strive to
                     develop innovative technological solutions that allow people to make savings like a their way of life
                 </p>
@@ -19,7 +19,7 @@
                 <h5 class=" font-medium font-stapel text-[64px]">
                     Our vision
                 </h5>
-                <p class=" font-gilroy text-[#404040] text-xl font-light max-w-[600px]">
+                <p class=" font-gilroy text-lg text-[#404040] max-w-[600px]">
                     We envision a world where people effortlessly save money, develop healthy financial habits, and
                     contribute to a sustainable future that enhances their well-being and allows them to explore new
                     possibilities and achievements without limits.
@@ -35,7 +35,7 @@
                 <h5 class=" font-medium font-stapel text-[64px] text-white">
                     Our values
                 </h5>
-                <p class="text-[#D9D9D9] text-xl leading-[45px] font-medium max-w-[643px]">
+                <p class="text-[#D9D9D9] font-gilroy text-lg max-w-[643px]">
                     <span class=" font-semibold">Excelling in continuous improvement.</span>
                     <br>
                     <span class=" font-semibold">Customer obsession:</span> We always put the needs of our customers first
