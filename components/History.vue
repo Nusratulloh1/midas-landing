@@ -2,7 +2,7 @@
     <section class=" py-16 bg-[#0D0D0D]">
         <div class=" max-w-screen-xl mx-auto">
             <p class="text-[#A1BAA1] font-gilroy text-lg text-center">
-                Our History
+                Our history
             </p>
             <h5 class=" text-white font-inter text-4xl font-semibold text-center mt-2 tracking-[-0.72px]">
                 The history of creating midas

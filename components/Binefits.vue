@@ -5,7 +5,7 @@
                 Shape the future of midas
             </p>
             <h4 class=" text-5xl font-medium font-stapel text-white text-center my-3">
-                Be the changer of midas' future
+                Be the changer of midas future
             </h4>
             <p class="max-w-[762px] text-[#E8E8E8] font-gilroy text-lg text-center mx-auto">
                 Midas is more than just an app; it's a community. We're committed to transparency and inclusivity, which is

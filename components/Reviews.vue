@@ -139,7 +139,7 @@
                 Shape the future of midas
             </p>
             <h4 class=" text-5xl font-medium font-stapel text-white text-center my-3" v-motion-slide-visible-once-bottom>
-                Be the changer of midas' future
+                Be the changer of midas future
             </h4>
             <p class="max-w-[762px] text-[#E8E8E8] font-gilroy text-xl text-center mx-auto"
                 v-motion-slide-visible-once-bottom>
