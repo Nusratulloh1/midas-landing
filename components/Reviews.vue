@@ -4,7 +4,7 @@
             <h3 class=" text-7xl font-medium font-stapel">
                 Our testers loves Midas:
             </h3>
-            <div class="reviews overflow-hidden" v-motion-slide-visible-once-bottom>
+            <div class="reviews overflow-hidden mb-20" v-motion-slide-visible-once-bottom>
                 <div class="left flex gap-3 w-1/2 box-border overflow-hidden justify-end">
                     <Swiper :direction="'vertical'" class="h-[694px] w-[385.15px]" :space-between="50"
                         style="margin-left: -250px !important;" :modules="[SwiperAutoplay, SwiperEffectCreative]"
@@ -135,7 +135,24 @@
                     </div>
                 </div>
             </div>
-
+            <p class="text-[#A1BAA1] text-xl font-semibold font-gilroy text-center" v-motion-slide-visible-once-bottom>
+                Shape the future of midas
+            </p>
+            <h4 class=" text-5xl font-medium font-stapel text-white text-center my-3" v-motion-slide-visible-once-bottom>
+                Be the changer of midas' future
+            </h4>
+            <p class="max-w-[762px] text-[#E8E8E8] font-gilroy text-xl text-center mx-auto"
+                v-motion-slide-visible-once-bottom>
+                Midas is more than just an app; it's a community. We're committed to transparency and inclusivity, which is
+                why
+                our roadmap is open for your input. Help us prioritize features that matter most to you.
+            </p>
+            <div class="flex items-center justify-center mt-6" v-motion-slide-visible-once-bottom>
+                <button
+                    class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy mx-auto">
+                    Submit your feedback on our roadmap!
+                </button>
+            </div>
         </div>
     </section>
 </template>
