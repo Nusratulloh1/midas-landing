@@ -5,7 +5,7 @@
       <div class=" overflow-hidden">
         <slot />
       </div>
-      <div class="w-full" :class="{ 'bg-[#0D0D0D]': route.path == '/about' }">
+      <div class="w-full zoom" :class="{ 'bg-[#0D0D0D]': route.path == '/about' }">
         <div class=" max-w-screen-2xl flex justify-end mx-auto h-20">
           <button @click="scrollTop"
             class="h-16 w-16 bg-[#F5F5F5] rounded-2xl px-4 py-4 hover:bg-[#CBE8CA] transition-all">

@@ -1,5 +1,5 @@
 <template>
-    <footer class=" py-16 pb-12  bg-[#0D0D0D]">
+    <footer class=" py-16 pb-12  bg-[#0D0D0D] zoom">
         <div class=" max-w-screen-2xl mx-auto">
             <div class="flex items-center justify-between">
                 <div class="">

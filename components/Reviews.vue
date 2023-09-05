@@ -1,6 +1,6 @@
 <template>
     <section data-bg="#0D0D0D" five="#0D0D0D" class="section  py-20 review">
-        <div class="container mx-auto">
+        <div class="container mx-auto zoom">
             <h3 class=" text-7xl font-medium font-stapel">
                 Our testers loves Midas:
             </h3>

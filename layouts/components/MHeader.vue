@@ -1,5 +1,5 @@
 <template>
-    <header class="w-full absolute">
+    <header class="w-full absolute zoom">
         <nav class=" py-5 w-full">
             <div class="flex items-center justify-between max-w-screen-2xl mx-auto">
                 <div class="flex items-center gap-8">

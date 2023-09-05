@@ -1,5 +1,5 @@
 <template>
-    <section class=" py-16 bg-[#262626]">
+    <section class=" py-16 bg-[#262626] zoom">
         <div class=" max-w-screen-xl mx-auto">
             <p class="text-[#A1BAA1] font-gilroy text-lg text-center">
                 Shape the future of midas

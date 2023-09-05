@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="modal-mask">
+        <div class="modal-mask zoom">
 
             <div class="modal-wrapper">
                 <div class="modal-container relative overflow-hidden" ref="anim2">

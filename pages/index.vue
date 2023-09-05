@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="w-full more pt-[84px]" ref="headRef">
-      <div class="container mx-auto">
+      <div class="container mx-auto zoom">
         <button class="aviable">
           <h6>
             Available in EU🇪🇺, UK🇬🇧, USA🇺🇸!
@@ -15,7 +15,7 @@
     <section data-bg="#FAFAFA" first="#FAFAFA" ref="container"
       class="section pt-[44px] 2xl:pt-20 top-section h-[100vh] 2xl:h-[883px] relative overflow-hidden "
       style=" transition: .3s ease-out all; zoom: 120%;">
-      <div class=" max-w-screen-xl mx-auto">
+      <div class=" max-w-screen-xl mx-auto zoom">
         <h1>
           Save money,
           <br>
@@ -37,7 +37,7 @@
           purposes only.
         </p>
       </div>
-      <div class="svgs">
+      <div class="svgs zoom">
         <MTargetIcon :style="layer0" class="left-5 bottom-[190px] absolute z-50"></MTargetIcon>
         <MPieIcon :style="layer1" class="right-[70px] top-[30px] absolute z-50"></MPieIcon>
         <!-- <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
@@ -54,7 +54,7 @@
         </div> -->
     </section>
     <section data-bg="#0D0D0D" second="#0D0D0D" class="section pt-20 pb-10">
-      <div class="container mx-auto">
+      <div class="container mx-auto zoom">
         <div class="dark">
           <h3 class=" text-7xl font-medium  font-stapel leading-[normal]">
             Redefining finance:
@@ -231,9 +231,31 @@ onMounted(() => {
       review[0].classList.add('scrolled')
     }
     else {
-
-
+      console.log('last');
     }
+    // const verticalScrollPx = window.scrollY || window.pageYOffset;
+    // console.log(verticalScrollPx);
+    // if (verticalScrollPx < 400) {
+    //   document.body.style.backgroundColor = '#FAFAFA';
+    //   dark[0].classList.remove('white')
+    // } else if (verticalScrollPx > 400 && verticalScrollPx < 1400) {
+    //   document.body.style.backgroundColor = '#0D0D0D';
+    //   dark[0].classList.add('white')
+    //   money[0].classList.remove('scrolled')
+    // }
+    // else if (verticalScrollPx > 1400 && verticalScrollPx < 3589) {
+    //   dark[0].classList.remove('white')
+    //   money[0].classList.add('scrolled')
+    //   document.body.style.backgroundColor = '#EAF6EA';
+    // }
+    // else if (verticalScrollPx > 3589 && verticalScrollPx < 4850) {
+    //   document.body.style.backgroundColor = '#F6F6F6';
+    //   review[0].classList.remove('scrolled')
+    // }
+    // else {
+    //   review[0].classList.add('scrolled')
+    //   document.body.style.backgroundColor = '#0D0D0D';
+    // }
   });
 })
 // const layer2 = computed(() => ({

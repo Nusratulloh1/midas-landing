@@ -1,6 +1,6 @@
 <template>
     <section data-bg="#F6F6F6" four="#F6F6F6" class="py-20 section">
-        <div class="text-center">
+        <div class="text-center zooom">
             <p class=" font-stapel text-[#8C8C8C] text-[32px] font-light">
                 Introducing Spaces
             </p>
@@ -8,7 +8,7 @@
                 Manage your transactions in 3 modes:
             </h4>
         </div>
-        <div class="grid grid-cols-3 mt-11">
+        <div class="grid grid-cols-3 mt-11 zoom">
             <div class="serving">
                 <h6>
                     Default
@@ -45,7 +45,7 @@
                 </p>
             </div>
         </div>
-        <div class="container mx-auto mt-16">
+        <div class="container mx-auto mt-16 zoom">
             <div class="cards flex items-center gap-4 justify-center h-[535px]">
                 <div @click="$emit('send')" class="card !pr-2" v-motion-slide-visible-once-bottom>
                     <h5>

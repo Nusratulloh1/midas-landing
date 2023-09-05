@@ -1,5 +1,5 @@
 <template>
-    <div data-bg="">
+    <div class="zoom">
         <div class="bg-[#0D0D0D] pt-[128px] h-[424px] header">
             <div class="container mx-auto">
                 <img src="@/assets/images/icons/bold.svg" class="mx-auto" alt="bold">

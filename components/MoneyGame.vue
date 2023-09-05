@@ -1,6 +1,6 @@
 <template>
     <div style="transition: .5s ease-out all;"
-        class="bg-white pl-[30px] rounded-[32px] h-[594px] flex items-center justify-between mt-4 overflow-hidden relative">
+        class="bg-white pl-[30px] rounded-[32px] h-[594px] flex items-center justify-between mt-4 overflow-hidden relative" >
 
         <div class="w-1/2">
             <h5 class=" text-[64px] text-[#1A1A1A] font-stapel font-medium leading-[normal]">

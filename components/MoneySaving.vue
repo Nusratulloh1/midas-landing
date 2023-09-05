@@ -1,7 +1,7 @@
 <template>
     <section data-bg="#EAF6EA" third="#EAF6EA" ref="container2" class="py-20  relative money-saving section"
         style="transition: .3s ease-out all">
-        <div class="container mx-auto">
+        <div class="container mx-auto zoom">
             <div class="bg-icons">
                 <svg :style="layerr0" v-motion-roll-visible-left class="layerr0" width="142" height="212"
                     viewBox="0 0 142 212" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1029,7 +1029,7 @@
             </div>
             <money-game v-motion-slide-visible-once-bottom></money-game>
         </div>
-        <div class="flex justify-center mt-24">
+        <div class="flex justify-center mt-24 zoom">
             <button class="  text-[#343330] hover:text-[#CBE8CA] animate-bounce">
                 <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path

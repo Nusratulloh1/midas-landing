@@ -1,5 +1,5 @@
 <template>
-    <section class=" max-w-screen-xl  mx-auto py-16">
+    <section class=" max-w-screen-xl  mx-auto py-16 zoom">
         <div class="flex items-center gap-6">
             <img src="@/assets/images/icons/vision.svg" alt="vision">
             <div>
@@ -13,7 +13,7 @@
             </div>
         </div>
     </section>
-    <section class=" py-16 bg-[#F5FAF4]">
+    <section class=" py-16 bg-[#F5FAF4] zoom">
         <div class="max-w-screen-xl mx-auto flex items-center justify-between gap-6">
             <div>
                 <h5 class=" font-medium font-stapel text-[64px]">
@@ -28,7 +28,7 @@
             <img src="@/assets/images/icons/mission.svg" alt="vision">
         </div>
     </section>
-    <section class="bg-[#0D0D0D] py-16">
+    <section class="bg-[#0D0D0D] py-16 zoom">
         <div class="max-w-screen-xl mx-auto flex items-center justify-between px-8 gap-16">
             <img src="@/assets/images/icons/values.svg" alt="values">
             <div>
