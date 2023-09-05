@@ -1,5 +1,5 @@
 <template>
-    <section data-bg="#EAF6EA" third="#EAF6EA" ref="container2" class="py-20  relative money-saving section"
+    <section data-bg="#EAF6EA" third="#EAF6EA" ref="container2" class=" py-16 md:py-20  relative money-saving section"
         style="transition: .3s ease-out all">
         <div class="container mx-auto zoom">
             <div class="bg-icons">
@@ -992,16 +992,16 @@
                 </svg>
 
             </div>
-            <p class="text font-stapel font-light text-[#666] text-[32px] text-center">
+            <p class="text font-stapel font-light text-[#666] text-xl md:text-[32px] text-center">
                 Introducing Money Game
             </p>
-            <h4 class="desc text-[64px] font-medium font-stapel mt-3 text-center">
+            <h4 class="desc text-[32px] md:text-[64px] font-medium font-stapel mt-3 text-center">
                 Revolutionise the way of saving money
             </h4>
             <div class="borderedCard mx-auto">
                 <img src="@/assets/images/phone.png" v-motion-slide-visible-bottom alt="phone">
             </div>
-            <div class="flex items-center justify-center gap-4 mt-20 h-[535px]">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-20 md:h-[535px]">
                 <div @click="$emit('send')" class="card " v-motion-slide-visible-once-bottom>
                     <h5>
                         Automated financial insights
@@ -1323,6 +1323,150 @@ const enter = ref({
 
         .bg-icons {
             display: block;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .borderedCard {
+            height: 200px;
+
+            img {
+                width: 128.125px;
+            }
+        }
+
+        .card {
+            width: 100%;
+            height: 395px;
+            padding: 24px 16px;
+
+            h5 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+                color: #B3B3B3;
+            }
+
+            img,
+            svg {
+                height: 165px;
+            }
+
+            &.second {
+                width: 100%;
+            }
+        }
+
+        .bg-icons {
+
+            svg {
+
+
+                &:first-child {
+                    width: 43.646px;
+                    height: 26.229px;
+                    top: 85px;
+                    left: 0px;
+                }
+
+                &:nth-child(2) {
+                    width: 61.177px;
+                    height: 36.386px;
+                    top: 202px;
+                    left: 20px;
+                }
+
+                &:nth-child(3) {
+                    width: 29.484px;
+                    height: 17.532px;
+                    top: 257px;
+                    left: 72px;
+                }
+
+                &:nth-child(4) {
+                    width: 24.997px;
+                    height: 14.86px;
+                    top: 298px;
+                    left: 20px;
+                }
+
+                &:nth-child(5) {
+                    width: 43.687px;
+                    height: 25.977px;
+                    top: 326px;
+                    left: 58px;
+                }
+
+                &:nth-child(6) {
+                    width: 31.026px;
+                    height: 18.455px;
+                    top: 354px;
+                    left: 16px;
+                }
+
+                &:nth-child(7) {
+                    width: 47.603px;
+                    height: 41.859px;
+                    top: 81px;
+                    right: 3px;
+                }
+
+                &:nth-child(8) {
+                    width: 25.719px;
+                    height: 22.668px;
+                    top: 226px;
+                    right: 43px;
+                }
+
+                &:nth-child(9) {
+                    top: 350px;
+                    right: 24px;
+                    width: 25.053px;
+                    height: 22.065px;
+                }
+
+                &:nth-child(10) {
+                    width: 22.885px;
+                    height: 20.17px;
+                    top: 253px;
+                    right: 23px;
+                }
+
+                &:nth-child(11) {
+                    width: 32.069px;
+                    height: 28.25px;
+                    top: 260px;
+                    right: 75px;
+                }
+
+                &:nth-child(12) {
+                    width: 28.021px;
+                    height: 24.678px;
+                    top: 284px;
+                    right: 25px;
+                }
+
+                &:nth-child(13) {
+                    width: 62.501px;
+                    height: 55.085px;
+                    top: 317px;
+                    right: 61px;
+                }
+
+                &:nth-child(14) {
+                    width: 17.448px;
+                    height: 15.367px;
+                    top: 325px;
+                    right: 10px;
+                }
+
+                &:last-child {
+                    width: 25.053px;
+                    height: 22.065px;
+                }
+            }
         }
     }
 }

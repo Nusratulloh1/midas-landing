@@ -13,25 +13,25 @@
       </div>
     </div>
     <section data-bg="#FAFAFA" first="#FAFAFA" ref="container"
-      class="section pt-[44px] 2xl:pt-20 top-section h-[100vh] 2xl:h-[883px] relative overflow-hidden "
-      style=" transition: .3s ease-out all; zoom: 120%;">
-      <div class=" max-w-screen-xl mx-auto zoom">
+      class="section pt-[44px] 2xl:pt-20 top-section pb-40 md:pb-0 md:h-[100vh] 2xl:h-[883px] relative overflow-hidden "
+      style=" transition: .3s ease-out all; ">
+      <div class=" container md:max-w-screen-xl mx-auto zoom">
         <h1>
           Save money,
           <br>
           with money, for money
         </h1>
-        <p class=" mt-6">
+        <p>
           We aim to shift your prism of association with savings, by developing our solutions,
           and turn saving from a necessity, into an ingrained way of your life.
         </p>
-        <div class="flex justify-center mt-9">
+        <div class="flex justify-center mt-8 md:mt-9">
           <button @click="sendRequest"
             class="  h-16 px-8 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-stapel">
             Request early access
           </button>
         </div>
-        <p class="mt-[8%] !text-base">
+        <p class="mt-[8%] text-sm md:!text-base">
           Midas is a financial technology company, is not a bank. All activities are virtual and developed for
           analytical
           purposes only.
@@ -44,41 +44,43 @@
         </MDiagramIcon>
         <MBankIcon :style="layer3" class=" right-9 bottom-0 absolute"> </MBankIcon> -->
       </div>
-      <!-- <div>
-          <button class="absolute right-[48.8%] bottom-4  text-[#343330] hover:text-[#CBE8CA] animate-bounce">
+      <div>
+          <button class="absolute right-[46%] md:right-[48.8%] bottom-10 md:bottom-4  text-[#343330] hover:text-[#CBE8CA] animate-bounce">
             <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M33.7411 24.5536L21.9286 36.3661C21.8067 36.4881 21.6619 36.5849 21.5026 36.651C21.3433 36.717 21.1725 36.751 21 36.751C20.8275 36.751 20.6567 36.717 20.4974 36.651C20.3381 36.5849 20.1933 36.4881 20.0714 36.3661L8.25891 24.5536C8.01263 24.3073 7.87427 23.9733 7.87427 23.625C7.87427 23.2767 8.01263 22.9427 8.25891 22.6964C8.50518 22.4501 8.83921 22.3118 9.1875 22.3118C9.53579 22.3118 9.86982 22.4501 10.1161 22.6964L19.6875 32.2695V6.5625C19.6875 6.2144 19.8258 5.88056 20.0719 5.63442C20.3181 5.38828 20.6519 5.25 21 5.25C21.3481 5.25 21.6819 5.38828 21.9281 5.63442C22.1742 5.88056 22.3125 6.2144 22.3125 6.5625V32.2695L31.8839 22.6964C32.1302 22.4501 32.4642 22.3118 32.8125 22.3118C33.1608 22.3118 33.4948 22.4501 33.7411 22.6964C33.9874 22.9427 34.1257 23.2767 34.1257 23.625C34.1257 23.9733 33.9874 24.3073 33.7411 24.5536Z" />
             </svg>
           </button>
-        </div> -->
+        </div>
     </section>
-    <section data-bg="#0D0D0D" second="#0D0D0D" class="section pt-20 pb-10">
+    <section data-bg="#0D0D0D" second="#0D0D0D" class="section pt-10 md:pt-20 pb-10">
       <div class="container mx-auto zoom">
         <div class="dark">
-          <h3 class=" text-7xl font-medium  font-stapel leading-[normal]">
+          <h3 class=" text-[32px] md:text-7xl font-medium  font-stapel leading-[normal]">
             Redefining finance:
             <br>
             Dive into standout features
           </h3>
           <div
-            class="content  pt-3 pb-3 px-24 rounded-[32px] w-full my-10 mb-16 h-[594px] flex items-center justify-between"
-            v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all;">
+            class="content py-3 px-4 md:px-24 rounded-[32px] w-full my-10 mb-16 h-[530px] overflow-hidden md:h-[594px] flex flex-col md:flex-row items-center justify-between"
+            v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all">
             <div>
-              <h3 class=" text-7xl font-medium  font-stapel leading-[normal]">
+              <h3 class="text-[32px] md:text-7xl font-medium  font-stapel leading-[normal]">
                 All in one <br> Finance hub
               </h3>
-              <p class="mt-6 max-w-[512px] text-2xl font-gilroy leading-[normal] text-[#404040]">
+              <p class=" mt-4 md:mt-6 max-w-[512px] text-base md:text-2xl font-gilroy leading-[normal] text-[#404040]">
                 Manage, track, and optimize all your financial activities seamlessly in one intuitive app.
               </p>
             </div>
-            <div class="w-[35%] h-full">
-              <MPhoneIcon class="dark-svg object-contain px-5 mb-[75px]"></MPhoneIcon>
-              <img class=" w-full h-full rounded-[60px] object-contain dark-image" src="@/assets/images/demo.gif">
+            <div class=" w-[193px] md:w-[35%] mt-6 md:mt-0 h-full">
+              <MPhoneIcon class="w-full h-full md:w-auto md:h-auto dark-svg object-contain md:px-5 md:mb-[75px]">
+              </MPhoneIcon>
+              <img class=" w-full h-full rounded-[30px] md:rounded-[60px] object-contain dark-image"
+                src="@/assets/images/demo.gif" />
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div @click="sendRequest"
             class="advantage hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
             v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all;">
@@ -231,6 +233,7 @@ onMounted(() => {
       review[0].classList.add('scrolled')
     }
     else {
+      document.body.style.backgroundColor = '#0D0D0D';
       console.log('last');
     }
     // const verticalScrollPx = window.scrollY || window.pageYOffset;
@@ -289,6 +292,7 @@ onMounted(() => {
     margin-left: auto;
     margin-right: auto;
     line-height: normal;
+    margin-top: 24px;
   }
 }
 
@@ -451,12 +455,59 @@ onMounted(() => {
   }
 }
 
-// @media (max-width: 1536px) {
-//   .top-section {
-//     p {
-//       max-width: 863px;
-//       font-size: 22px;
-//     }
-//   }
-// }
+@media (max-width: 768px) {
+  .top-section {
+    h1 {
+      font-size: 40px;
+      line-height: 105%;
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 16px;
+    }
+  }
+
+  .svgs {
+    display: none;
+  }
+
+  .more {
+
+    .aviable {
+      flex-direction: column;
+
+      h6,
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .advantage {
+    height: 373px;
+    padding: 16px;
+
+    h5 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .anime {
+      width: 144.445px;
+      height: 161px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .top-section {
+    .zoom {
+      zoom: 100%;
+    }
+  }
+}
 </style>

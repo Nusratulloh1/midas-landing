@@ -1,14 +1,14 @@
 <template>
-    <section data-bg="#F6F6F6" four="#F6F6F6" class="py-20 section">
+    <section data-bg="#F6F6F6" four="#F6F6F6" class=" py-5 md:py-20 section">
         <div class="text-center zooom">
-            <p class=" font-stapel text-[#8C8C8C] text-[32px] font-light">
+            <p class=" font-stapel text-[#8C8C8C] text-xl md:text-[32px] font-light">
                 Introducing Spaces
             </p>
-            <h4 class=" text-[64px] font-medium font-stapel mt-3">
+            <h4 class=" text-[32px] md:text-[64px] font-medium font-stapel mt-3">
                 Manage your transactions in 3 modes:
             </h4>
         </div>
-        <div class="grid grid-cols-3 mt-11 zoom">
+        <div class="grid grid-cols-1 md:grid-cols-3 mt-11 zoom">
             <div class="serving">
                 <h6>
                     Default
@@ -17,7 +17,7 @@
                     <img src="@/assets/images/icons/sdefault.svg" alt="sdefault">
                 </div>
                 <p>
-                    Default Space, track all your <br> finances in one app
+                    Default Space, track all your <br class=" hidden md:block"> finances in one app
                 </p>
             </div>
             <div class="serving second">
@@ -29,7 +29,7 @@
 
                 </div>
                 <p>
-                    Savings Space, limit your spendings <br> with Money Game, to save more money
+                    Savings Space, limit your spendings <br class=" hidden md:block"> with Money Game, to save more money
                 </p>
             </div>
             <div class="serving third">
@@ -41,12 +41,12 @@
 
                 </div>
                 <p>
-                    Budget Space, create budgets and <br> manage your planned costs
+                    Budget Space, create budgets and <br class=" hidden md:block"> manage your planned costs
                 </p>
             </div>
         </div>
         <div class="container mx-auto mt-16 zoom">
-            <div class="cards flex items-center gap-4 justify-center h-[535px]">
+            <div class="cards flex flex-col md:flex-row items-center gap-10 md:gap-4 justify-center">
                 <div @click="$emit('send')" class="card !pr-2" v-motion-slide-visible-once-bottom>
                     <h5>
                         Set multiple budgets with ease
@@ -208,4 +208,42 @@ import { MBudgetAnimeIcon, MSharedAnimeIcon } from './icons';
         transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
     }
 }
-</style>
+
+@media (max-width: 768px) {
+    .serving {
+        height: 400px;
+        padding: 32px 16px;
+
+        h6 {
+            font-size: 20px;
+        }
+
+        p {
+            text-align: start;
+            font-size: 16px;
+        }
+
+        img {
+            height: 148px;
+        }
+    }
+
+    .card {
+        width: 100%;
+        height: 379px;
+        padding: 24px 16px;
+
+        h5 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        img,
+        svg {
+            height: 170.687px;
+        }
+    }
+}</style>

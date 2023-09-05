@@ -1,29 +1,29 @@
 <template>
     <div style="transition: .5s ease-out all;"
-        class="bg-white pl-[30px] rounded-[32px] h-[594px] flex items-center justify-between mt-4 overflow-hidden relative" >
+        class="bg-white pt-8 md:pl-[30px] rounded-[32px] h-[594px] md:flex items-center justify-between mt-4 overflow-hidden relative">
 
-        <div class="w-1/2">
-            <h5 class=" text-[64px] text-[#1A1A1A] font-stapel font-medium leading-[normal]">
+        <div class="w-full md:w-1/2 px-4 md:px-0 h-[185px] md:h-auto">
+            <h5 class=" text-2xl md:text-[64px] text-[#1A1A1A] font-stapel font-medium leading-[normal]">
                 Stay inspired with Money Game
             </h5>
-            <p class="text-xl font-stapel text-[#666] font-light mt-5">
+            <p class=" text-base md:text-xl font-stapel text-[#666] font-light mt-4 md:mt-5">
                 Harness the power of interactive notifications, stories, and widgets to ensure you stay within your
                 financial limits and keep your savings journey on track.
             </p>
         </div>
-        <div class="w-[40%] flex justify-center pl-4">
+        <div class="w-full md:w-[40%] h-[388px] md:h-auto flex justify-end items-center md:justify-center pl-4">
             <div class="circle"></div>
-            <div class="content relative text-center pt-9">
-                <h6 class=" font-gilroy text-[32px] text-[#404040] mb-2">
+            <div class="content relative text-center pt-14 md:pt-9 pr-4">
+                <h6 class=" font-gilroy text-sm md:text-[32px] text-[#404040] mb-2">
                     You saved today
                 </h6>
-                <h5 class="text-[#A1BAA1] font-gilroy font-bold text-[106px]">
+                <h5 class="text-[#A1BAA1] font-gilroy font-bold text-5xl md:text-[106px]">
                     <Vue3autocounter v-if="show" class='counter' :startAmount='0' :endAmount='5' :duration='2' prefix='$'
                         :autoinit='true' />
                     <span v-else>0</span>
                 </h5>
                 <hr class="bg-[#A1BAA1] border border-[#A1BAA1] mb-3.5" />
-                <p class="text-2xl font-gilroy">
+                <p class=" text-sm md:text-2xl font-gilroy">
                     Spent today <span class=" font-semibold">:</span> <span class=" font-bold text-[#A1BAA1]">
                         <Vue3autocounter v-if="show" class='counter' :startAmount='0' :endAmount='30' :duration='2'
                             prefix='$' :autoinit='true' />
@@ -38,8 +38,8 @@
                 </p>
             </div>
         </div>
-        <div class=" absolute right-7 top-0">
-            <svg width="76" height="73" viewBox="0 0 76 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class=" absolute right-9 top-[263px] md:right-7 md:top-0">
+            <svg width="76" height="73" class=" w-12 h-12 md:w-auto md:h-auto" viewBox="0 0 76 73" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M74.5216 5.50577L74.5167 5.53637L74.5167 5.56736L74.5677 64.2391L74.5677 64.2504L74.5684 64.2618C74.5715 64.3153 74.5769 64.3705 74.5814 64.4164C74.5826 64.4289 74.5837 64.4407 74.5847 64.4515C74.59 64.5076 74.5931 64.5517 74.5931 64.5925C74.5931 66.6793 73.3709 68.6102 71.3101 70.0359C69.2509 71.4605 66.385 72.3541 63.2008 72.3541C60.0166 72.3541 57.1506 71.4605 55.0914 70.0359C53.0307 68.6102 51.8084 66.6793 51.8084 64.5925V4.66283C51.8084 2.57603 53.0307 0.645146 55.0914 -0.780519C57.1506 -2.20511 60.0166 -3.09869 63.2008 -3.09869C66.385 -3.09869 69.2509 -2.20511 71.3101 -0.780519C73.3709 0.645146 74.5931 2.57603 74.5931 4.66283C74.5931 4.94374 74.5665 5.22397 74.5216 5.50577Z"
                     fill="#EAF6EA" stroke="#1A1A1A" stroke-width="0.77881" />
@@ -87,8 +87,8 @@
                     stroke="#1A1A1A" stroke-width="0.77881" stroke-miterlimit="10" stroke-linejoin="round" />
             </svg>
         </div>
-        <div class="absolute right-[205px] top-[35px]">
-            <svg width="112" height="78" viewBox="0 0 112 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="absolute right-[115px] top-[303px] md:right-[205px] md:top-[35px]">
+            <svg width="112" height="78" class=" h-11 w-16 md:w-auto md:h-auto" viewBox="0 0 112 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M47.5266 6.35203L47.5266 6.352C48.7161 5.6591 50.187 5.65817 51.3784 6.34861C51.3784 6.34862 51.3784 6.34863 51.3784 6.34863L110.34 40.5324C111.153 41.0037 111.448 41.9198 111.228 42.7245L111.209 42.7927L111.228 42.8608C111.45 43.6606 111.159 44.5741 110.351 45.0479L106.135 47.5212L105.756 47.7438L106.136 47.9642L107.091 48.5168C107.903 48.9873 108.197 49.903 107.975 50.7062L107.956 50.7748L107.975 50.8434C108.197 51.6433 107.907 52.5567 107.099 53.0304L107.228 53.2516L107.098 53.0305L66.0165 77.1245C64.6122 77.9478 62.8728 77.9504 61.4659 77.1305L1.89345 42.4105L1.89331 42.4104C1.3066 42.069 1.1319 41.3763 1.36695 40.8107L1.40782 40.7123L1.36695 40.6139C1.13187 40.0482 1.30667 39.3547 1.89331 39.0133L1.89336 39.0133L7.07597 35.9956L7.45623 35.7741L7.07608 35.5525L5.14537 34.4271L5.1452 34.427C4.55851 34.0856 4.38385 33.3929 4.6189 32.8272L4.65978 32.7289L4.6189 32.6305C4.38381 32.0647 4.55858 31.3712 5.1452 31.0298L5.14526 31.0298L47.5266 6.35203Z"
                     fill="#EAF6EA" stroke="#1A1A1A" stroke-width="0.512713" />
@@ -167,8 +167,8 @@
             </svg>
 
         </div>
-        <div class="absolute right-[371px] top-[168px]">
-            <svg width="61" height="71" viewBox="0 0 61 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="absolute right-[192px] top-[384px] md:right-[371px] md:top-[168px]">
+            <svg width="61" height="71" class=" h-11 w-16 md:w-auto md:h-auto" viewBox="0 0 61 71" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M42.6913 68.1075C38.2751 70.645 32.173 70.2713 25.4396 66.3824C11.9573 58.5978 1.02271 39.6789 1.02441 24.1251C1.02441 16.3507 3.76319 10.8851 8.18617 8.3426L18.0492 2.64664C18.0492 2.64664 18.0543 2.64664 18.0577 2.64152L18.0662 2.6364C22.4841 0.104105 28.5811 0.477803 35.3179 4.36157C48.8036 12.1462 59.7331 31.065 59.7331 46.6189C59.7331 54.3983 56.9943 59.8588 52.5713 62.4013L42.6913 68.1075Z"
                     fill="#D0EACF" />
@@ -195,8 +195,8 @@
                     fill="#2E2E2E" />
             </svg>
         </div>
-        <div class="absolute right-[419px] bottom-[187px]">
-            <svg width="88" height="55" viewBox="0 0 88 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="absolute right-[203px] bottom-[80px] md:right-[419px] md:bottom-[187px]">
+            <svg width="88" height="55" class=" h-11 w-16 md:w-auto md:h-auto" viewBox="0 0 88 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M86.7499 35.2491L26.4664 0.444458L0.444813 15.4683V19.7007L60.7284 54.5068L86.7499 39.4822V35.2491Z"
                     fill="#CBE8CA" />
@@ -229,8 +229,8 @@
             </svg>
 
         </div>
-        <div class="absolute right-[411px] bottom-[19px]">
-            <svg width="72" height="62" viewBox="0 0 72 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="absolute right-[198px] bottom-[6px] md:right-[411px] md:bottom-[19px]">
+            <svg width="72" height="62" class=" h-11 w-16 md:w-auto md:h-auto" viewBox="0 0 72 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M43.9399 6.63793C43.9399 5.38895 43.1149 4.13939 41.4626 3.18669C38.1627 1.28071 32.8147 1.27898 29.5176 3.18209C27.8682 4.13421 27.045 5.38377 27.0484 6.63275H27.0473V19.7473H27.0484C27.0513 20.994 27.8763 22.2413 29.5257 23.1934C32.8262 25.0994 38.1736 25.1011 41.4695 23.198C43.1189 22.2453 43.9422 20.9963 43.9393 19.7473V6.6385L43.9399 6.63793Z"
                     fill="#CBE8CA" />
@@ -373,5 +373,13 @@ onMounted(() => {
     position: absolute;
     right: -28%;
     bottom: -35%;
+
+    @media (max-width: 768px) {
+        border-radius: 443px;
+        width: 443px;
+        height: 419px;
+        right: -170px;
+        bottom: -20%;
+    }
 }
 </style>

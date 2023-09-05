@@ -1,11 +1,11 @@
 <template>
     <section data-bg="#0D0D0D" five="#0D0D0D" class="section  py-20 review">
         <div class="container mx-auto zoom">
-            <h3 class=" text-7xl font-medium font-stapel">
+            <h3 class=" text-[32px] md:text-7xl font-medium font-stapel">
                 Our testers loves Midas:
             </h3>
-            <div class="reviews overflow-hidden mb-56" v-motion-slide-visible-once-bottom>
-                <div class="left flex gap-3 w-1/2 box-border overflow-hidden justify-end">
+            <div class="reviews overflow-hidden mb-16 md:mb-56" v-motion-slide-visible-once-bottom>
+                <div class="left flex gap-3 md:w-1/2 box-border overflow-hidden justify-end">
                     <Swiper :direction="'vertical'" class="h-[694px] w-[385.15px]" :space-between="50"
                         style="margin-left: -250px !important;" :modules="[SwiperAutoplay, SwiperEffectCreative]"
                         :slides-per-view="3" :loop="true" :speed="3000" :autoplay="{
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                     </div> -->
-                    <Swiper :direction="'vertical'" class="h-[694px] w-[365.15px]"
+                    <Swiper :direction="'vertical'" class="h-[694px] md:w-[365.15px]"
                         :modules="[SwiperAutoplay, SwiperEffectCreative]" :slides-per-view="3" :speed="3000" :loop="true"
                         :space-between="50" :autoplay="{
                             delay: 0,
@@ -66,7 +66,7 @@
                         </SwiperSlide>
                     </Swiper>
                 </div>
-                <div class="flex flex-col justify-center items-center w-[52%]">
+                <div class=" hidden md:flex flex-col justify-center items-center w-[52%]">
                     <div>
                         <div class="flex items-center gap-4">
                             <div class=" bg-[#A1BAA1] flex items-center rounded-[10px] py-2 px-4 gap-[6px]">
@@ -135,13 +135,15 @@
                     </div>
                 </div>
             </div>
-            <p class="text-[#A1BAA1] text-xl font-semibold font-gilroy text-center" v-motion-slide-visible-once-bottom>
+            <p class="text-[#A1BAA1] text-base md:text-xl font-semibold font-gilroy text-center"
+                v-motion-slide-visible-once-bottom>
                 Shape the future of midas
             </p>
-            <h4 class=" text-5xl font-medium font-stapel text-white text-center my-3" v-motion-slide-visible-once-bottom>
+            <h4 class=" text-[32px] md:text-5xl font-medium font-stapel text-white text-center my-2 md:my-3"
+                v-motion-slide-visible-once-bottom>
                 Be the changer of midas future
             </h4>
-            <p class="max-w-[762px] text-[#E8E8E8] font-gilroy text-xl text-center mx-auto"
+            <p class="max-w-[762px] text-[#E8E8E8] font-gilroy text-base md:text-xl text-center mx-auto"
                 v-motion-slide-visible-once-bottom>
                 Midas is more than just an app; it's a community. We're committed to transparency and inclusivity, which is
                 why
@@ -337,6 +339,18 @@ const reviewsList: any = ref(
         .reviews {
             background: white;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .review {
+        .reviews {
+            display: block;
+        }
+    }
+
+    .swiper-wrapper {
+        gap: 20px;
     }
 }
 </style>

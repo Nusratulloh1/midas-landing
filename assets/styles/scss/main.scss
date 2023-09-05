@@ -29,6 +29,10 @@ a {
   display: flex !important;
 }
 
+.container {
+  padding: 0 16px;
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 620px;
@@ -38,6 +42,10 @@ a {
 @media (min-width: 768px) {
   .container {
     max-width: 748px;
+  }
+
+  .zoom {
+    zoom: 100%;
   }
 }
 
