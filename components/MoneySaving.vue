@@ -1,5 +1,5 @@
 <template>
-    <section data-bg="#EAF6EA" third="#EAF6EA" :ref="isMobile ? 'container2' : 'container2'"
+    <section data-bg="#EAF6EA" third="#EAF6EA" :ref="isMobile ? 'contai' : 'container2'"
         class=" py-16 md:py-20  relative money-saving section" style="transition: .3s ease-out all">
         <div class="container mx-auto zoom">
             <div class="bg-icons">

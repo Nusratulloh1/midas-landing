@@ -12,7 +12,7 @@
         </button>
       </div>
     </div>
-    <section data-bg="#FAFAFA" first="#FAFAFA" ref="container"
+    <section data-bg="#FAFAFA" first="#FAFAFA" :ref="isMobile ? 'jfhwi' : 'container'"
       class="section pt-[200px] md:pt-[44px] 2xl:pt-20 top-section pb-40 md:pb-0 md:h-[100vh] 2xl:h-[883px] relative overflow-hidden "
       style=" transition: .3s ease-out all; ">
       <div class=" container md:max-w-screen-xl mx-auto zoom">
@@ -38,8 +38,10 @@
         </p>
       </div>
       <div class="svgs zoom">
-        <MTargetIcon :style="layer0" class="w-[85px] md:w-auto md:left-5 bottom-4 md:bottom-[190px] absolute z-50"></MTargetIcon>
-        <MPieIcon :style="layer1" class=" w-[85px] md:w-auto right-7 top-[70px] md:right-[70px] md:top-[30px] absolute z-50">
+        <MTargetIcon :style="layer0" class="w-[85px] md:w-auto md:left-5 bottom-0 md:bottom-[190px] absolute z-50">
+        </MTargetIcon>
+        <MPieIcon :style="layer1"
+          class=" w-[85px] md:w-auto right-7 top-[70px] md:right-[70px] md:top-[30px] absolute z-50">
         </MPieIcon>
         <!-- <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
         </MDiagramIcon>
@@ -176,6 +178,7 @@ import Spaces from '~/components/Spaces.vue';
 import MoneySaving from '~/components/MoneySaving.vue';
 import Reviews from '~/components/Reviews.vue';
 const container = ref(null)
+const isMobile = useMediaQuery('(max-width: 768px)')
 const [animex] = useAutoAnimate()
 const parallax = reactive(useParallax(container))
 const mishen = new URL('../assets/lottie/mishen.json', import.meta.url).href

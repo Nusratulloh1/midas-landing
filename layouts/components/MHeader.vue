@@ -1,7 +1,7 @@
 <template>
     <header
-        class="w-full fixed top-[0%] bg-[#0D0D0D] md:top-0 md:absolute zoom  md:bg-transparent z-[999] shadow-md md:shadow-none"
-        :class="{ '!top-[5%] bg-white': route.path === '/' }">
+        class="w-full fixed top-[0%] bg-[#0D0D0D] md:top-0 md:absolute zoom  md:bg-transparent z-[9999] shadow-md md:shadow-none"
+        :class="{ '!top-[5%] md:!top-0 bg-white': route.path === '/' }">
         <nav class=" py-3 md:py-5 w-full">
             <div class="flex items-center justify-between container md:max-w-screen-2xl mx-auto">
                 <div class="flex items-center gap-8">
