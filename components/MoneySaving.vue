@@ -1,6 +1,6 @@
 <template>
-    <section data-bg="#EAF6EA" third="#EAF6EA" ref="container2" class=" py-16 md:py-20  relative money-saving section"
-        style="transition: .3s ease-out all">
+    <section data-bg="#EAF6EA" third="#EAF6EA" :ref="isMobile ? 'container2' : 'container2'"
+        class=" py-16 md:py-20  relative money-saving section" style="transition: .3s ease-out all">
         <div class="container mx-auto zoom">
             <div class="bg-icons">
                 <svg :style="layerr0" v-motion-roll-visible-left class="layerr0" width="142" height="212"
@@ -1029,7 +1029,7 @@
             </div>
             <money-game v-motion-slide-visible-once-bottom></money-game>
         </div>
-        <div class="flex justify-center mt-24 zoom">
+        <div class=" hidden md:flex justify-center mt-24 zoom">
             <button class="  text-[#343330] hover:text-[#CBE8CA] animate-bounce">
                 <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -1041,11 +1041,11 @@
 </template>
   
 <script lang="ts" setup>
-import { useParallax } from '@vueuse/core'
+import { useParallax, useMediaQuery } from '@vueuse/core'
 import MoneyGame from './MoneyGame.vue';
 import { MFinanceAnimeIcon, MTargetAnimeIcon } from './icons';
 // import MoneyIcon from './icons/MoneyIcon.vue';
-
+const isMobile = useMediaQuery('(max-width: 768px)')
 const container2 = ref(null)
 const parallax2 = reactive(useParallax(container2))
 const layerr0 = computed(() => ({
@@ -1114,15 +1114,6 @@ const layerr13 = computed(() => ({
     transform: `translateX(${parallax2.tilt * 140}px) translateY(${parallax2.roll * 140
         }px) scale(1)`,
 }))
-const initial = ref({
-    y: 100,
-    opacity: 0,
-})
-
-const enter = ref({
-    y: 0,
-    opacity: 1,
-})
 </script>
 <style lang="scss" scoped>
 .money-saving {
@@ -1365,57 +1356,57 @@ const enter = ref({
 
 
                 &:first-child {
-                    width: 43.646px;
-                    height: 26.229px;
+                    width: 53.646px;
+                    height: 36.229px;
                     top: 85px;
                     left: 0px;
                 }
 
                 &:nth-child(2) {
-                    width: 61.177px;
-                    height: 36.386px;
+                    width: 71.177px;
+                    height: 46.386px;
                     top: 202px;
                     left: 20px;
                 }
 
                 &:nth-child(3) {
-                    width: 29.484px;
-                    height: 17.532px;
+                    width: 39.484px;
+                    height: 27.532px;
                     top: 257px;
                     left: 72px;
                 }
 
                 &:nth-child(4) {
-                    width: 24.997px;
-                    height: 14.86px;
+                    width: 34.997px;
+                    height: 24.86px;
                     top: 298px;
                     left: 20px;
                 }
 
                 &:nth-child(5) {
-                    width: 43.687px;
-                    height: 25.977px;
+                    width: 53.687px;
+                    height: 35.977px;
                     top: 326px;
                     left: 58px;
                 }
 
                 &:nth-child(6) {
-                    width: 31.026px;
-                    height: 18.455px;
+                    width: 41.026px;
+                    height: 28.455px;
                     top: 354px;
                     left: 16px;
                 }
 
                 &:nth-child(7) {
-                    width: 47.603px;
-                    height: 41.859px;
+                    width: 57.603px;
+                    height: 51.859px;
                     top: 81px;
                     right: 3px;
                 }
 
                 &:nth-child(8) {
-                    width: 25.719px;
-                    height: 22.668px;
+                    width: 35.719px;
+                    height: 32.668px;
                     top: 226px;
                     right: 43px;
                 }
@@ -1423,48 +1414,48 @@ const enter = ref({
                 &:nth-child(9) {
                     top: 350px;
                     right: 24px;
-                    width: 25.053px;
-                    height: 22.065px;
+                    width: 35.053px;
+                    height: 32.065px;
                 }
 
                 &:nth-child(10) {
-                    width: 22.885px;
-                    height: 20.17px;
+                    width: 32.885px;
+                    height: 30.17px;
                     top: 253px;
                     right: 23px;
                 }
 
                 &:nth-child(11) {
-                    width: 32.069px;
-                    height: 28.25px;
+                    width: 42.069px;
+                    height: 38.25px;
                     top: 260px;
                     right: 75px;
                 }
 
                 &:nth-child(12) {
-                    width: 28.021px;
-                    height: 24.678px;
+                    width: 38.021px;
+                    height: 34.678px;
                     top: 284px;
                     right: 25px;
                 }
 
                 &:nth-child(13) {
-                    width: 62.501px;
-                    height: 55.085px;
+                    width: 72.501px;
+                    height: 65.085px;
                     top: 317px;
                     right: 61px;
                 }
 
                 &:nth-child(14) {
-                    width: 17.448px;
-                    height: 15.367px;
+                    width: 27.448px;
+                    height: 25.367px;
                     top: 325px;
                     right: 10px;
                 }
 
                 &:last-child {
-                    width: 25.053px;
-                    height: 22.065px;
+                    width: 35.053px;
+                    height: 32.065px;
                 }
             }
         }

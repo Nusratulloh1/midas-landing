@@ -74,7 +74,7 @@
                     </p>
                 </div>
             </div>
-            <div class="flex justify-center mt-24">
+            <div class=" hidden md:flex justify-center mt-24">
                 <button class="text-[#343330] hover:text-[#CBE8CA] animate-bounce">
                     <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path
