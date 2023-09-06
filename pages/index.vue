@@ -172,11 +172,14 @@ import { MPhoneIcon, MPieIcon, MTargetIcon } from '@/components/icons'
 import GetEarlyAccessModal from '@/components/EarlyAccessModal.vue'
 import { useModal } from "@/composables";
 import type { AnimationItem } from 'lottie-web'
-import { ref, computed, reactive, onMounted } from 'vue'
+import { ref, computed, reactive, onMounted, onBeforeUnmount } from 'vue'
 import { Blottie, type BlottieExpose } from 'blottie'
 import Spaces from '~/components/Spaces.vue';
 import MoneySaving from '~/components/MoneySaving.vue';
 import Reviews from '~/components/Reviews.vue';
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 const container = ref(null)
 const isMobile = useMediaQuery('(max-width: 768px)')
 const [animex] = useAutoAnimate()
@@ -219,26 +222,28 @@ onMounted(() => {
       })
       .find(section => section.rect.bottom >= (window.innerHeight * 0.4));
     document.body.style.background = section?.el.getAttribute('data-bg');
-    if (section?.el.getAttribute('first')) {
-      dark[0].classList.remove('white')
-    }
-    else if (section?.el.getAttribute('second')) {
-      dark[0].classList.add('white')
-      money[0].classList.remove('scrolled')
-    }
-    else if (section?.el.getAttribute('third')) {
-      dark[0].classList.remove('white')
-      money[0].classList.add('scrolled')
-    }
-    else if (section?.el.getAttribute('four')) {
-      review[0].classList.remove('scrolled')
-    }
-    else if (section?.el.getAttribute('five')) {
-      review[0].classList.add('scrolled')
-    }
-    else {
-      document.body.style.backgroundColor = '#0D0D0D';
-      console.log('last');
+    if (route.path === '/') {
+      if (section?.el.getAttribute('first')) {
+        dark[0].classList.remove('white')
+      }
+      else if (section?.el.getAttribute('second')) {
+        dark[0].classList.add('white')
+        money[0].classList.remove('scrolled')
+      }
+      else if (section?.el.getAttribute('third')) {
+        dark[0].classList.remove('white')
+        money[0].classList.add('scrolled')
+      }
+      else if (section?.el.getAttribute('four')) {
+        review[0].classList.remove('scrolled')
+      }
+      else if (section?.el.getAttribute('five')) {
+        review[0].classList.add('scrolled')
+      }
+      else {
+        document.body.style.backgroundColor = '#0D0D0D';
+        console.log('last');
+      }
     }
     // const verticalScrollPx = window.scrollY || window.pageYOffset;
     // console.log(verticalScrollPx);
@@ -264,6 +269,10 @@ onMounted(() => {
     //   document.body.style.backgroundColor = '#0D0D0D';
     // }
   });
+})
+onBeforeUnmount(() => {
+
+  document.body.style.backgroundColor = 'white';
 })
 // const layer2 = computed(() => ({
 //   transform: `translateX(${parallax.tilt * 30}px) translateY(${parallax.roll * 80
