@@ -1348,6 +1348,10 @@ const layerr13 = computed(() => ({
             &.second {
                 width: 100%;
             }
+
+            &:hover {
+                margin-top: -10px;
+            }
         }
 
         .bg-icons {
