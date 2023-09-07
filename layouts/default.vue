@@ -5,8 +5,8 @@
       <div class=" overflow-hidden">
         <slot />
       </div>
-      <div>
-        <div class=" max-w-screen-2xl flex justify-end mx-auto  mb-3">
+      <div class="w-full zoom" :class="{ 'bg-[#0D0D0D]': route.path.includes('about') }">
+        <div class=" container md:max-w-screen-2xl flex justify-end mx-auto h-20">
           <button @click="scrollTop"
             class="h-16 w-16 bg-[#F5F5F5] rounded-2xl px-4 py-4 hover:bg-[#CBE8CA] transition-all">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,6 +1,5 @@
 @tailwind components;
 @tailwind utilities;
-
 @layer components {}
 
 @import '~/assets/fonts/index.css';
@@ -29,6 +28,10 @@ a {
   display: flex !important;
 }
 
+.container {
+  padding: 0 16px;
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 620px;
@@ -39,6 +42,10 @@ a {
   .container {
     max-width: 748px;
   }
+
+  .zoom {
+    zoom: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -48,7 +55,7 @@ a {
 }
 
 @media (min-width: 1280px) {
-  body {
+  .zoom {
     zoom: 80%;
   }
 
@@ -58,7 +65,7 @@ a {
 }
 
 @media (min-width: 1536px) {
-  body {
+  .zoom {
     zoom: 100%;
   }
 
@@ -66,7 +73,9 @@ a {
     max-width: 1120px;
   }
 }
-.modal-enter, .modal-leave {
+
+.modal-enter,
+.modal-leave {
   opacity: 0;
 }
 
@@ -75,9 +84,11 @@ a {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity .5s ease-out all;
+  
 }
 
 .fade-enter-from,

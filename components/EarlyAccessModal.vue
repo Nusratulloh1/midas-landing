@@ -1,10 +1,9 @@
 <template>
-    <div>
-        <div class="modal-mask">
-
+    <div >
+        <div class="modal-mask zoom">
             <div class="modal-wrapper">
                 <div class="modal-container relative overflow-hidden" ref="anim2">
-                    <button @click="modal.hideModal()" class="float-right m-6">
+                    <button @click="modal.hideModal()" class="float-right m-4 md:m-6">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 6L6 18M6 6L18 18" stroke="#667085" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
@@ -59,7 +58,7 @@
                         </button>
                     </form>
                     <div v-else class="success">
-                        <div class="p-6 pt-0">
+                        <div class=" p-4 md:p-6 pt-0">
                             <img src="@/assets/images/icons/tor.svg" class=" absolute top-0 left-0" alt="tor">
                             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -73,7 +72,7 @@
                             </p>
                         </div>
                         <hr />
-                        <div class="p-6 mt-4">
+                        <div class="p-4 md:p-6 mt-4">
                             <img src="@/assets/images/icons/avatars.svg" class="h-[56px]" alt="avatars">
                             <h5>
                                 1,511 People ahead of you
@@ -83,7 +82,7 @@
                                 you’ll
                                 get access
                             </p>
-                            <div class="flex justify-center items-center gap-8 mt-8 mb-4 external-links">
+                            <div class="flex justify-center items-center gap-5 md:gap-8 mt-4 md:mt-8 mb-2 md:mb-4 external-links">
                                 <a href="http://" target="_blank" rel="noopener noreferrer">
                                     <img class=" w-16 h-16" src="@/assets/images/icons/facebook.svg" alt="facebook">
                                 </a>
@@ -100,10 +99,10 @@
                                     <img class=" w-16 h-16" src="@/assets/images/icons/reddit.svg" alt="reddit">
                                 </a>
                             </div>
-                            <p class="my-4">
+                            <p class=" my-2 md:my-4">
                                 Or share this unique link:
                             </p>
-                            <div class="link mb-14">
+                            <div class="link mb-7 md:mb-14">
                                 <input v-model="copyUrl" type="text">
                                 <button @click="copy">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -137,7 +136,7 @@
         </div>
     </div>
 </template>
-<script lang="ts" setup>
+<script setup>
 import { useModal } from "@/composables";
 import { ref } from 'vue'
 import { useAutoAnimate } from '@formkit/auto-animate/vue'
@@ -147,7 +146,7 @@ const step = ref(1)
 const copied = ref(false)
 const copyUrl = ref('https://midas/reffer')
 // const { toClipboard } = useClipboard()
-const { data: countryList }: any = await useFetch('https://restcountries.com/v3.1/all')
+const { data: countryList } = await useFetch('https://restcountries.com/v3.1/all')
 const [anim] = useAutoAnimate()
 const [anim2] = useAutoAnimate()
 const copy = async () => {
@@ -157,7 +156,7 @@ const copy = async () => {
         setTimeout(() => {
             copied.value = false
         }, 1000);
-        console.log('Copied to clipboard')
+        // console.log('Copied to clipboard')
     } catch (e) {
         console.error(e)
     }
@@ -176,14 +175,14 @@ const nextStep = () => {
 <style lang="scss" scoped>
 .modal-mask {
     position: fixed;
-    z-index: 9998;
+    z-index: 99998;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     display: table;
-    transition: opacity .3s ease;
+    transition: opacity .6s ease;
 }
 
 .modal-wrapper {
@@ -409,6 +408,101 @@ const nextStep = () => {
                 border-radius: 10px;
             }
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-container {
+        width: 90%;
+
+        .modal-header {
+            padding: 16px;
+
+            h6 {
+                font-size: 26px;
+            }
+        }
+
+        .modal-body {
+            padding: 16px;
+            gap: 10px;
+            button{
+                padding: 8px 14px;
+            }
+            .form-item {
+
+            label {
+                font-size: 12px;
+                line-height: normal;
+                /* 142.857% */
+            }
+
+            textarea,
+            select,
+            input {
+                font-size: 14px;
+                line-height: normal;
+                height: 40px;
+
+                /* 150% */
+            }
+
+            span {
+                font-size: 12px;
+                line-height: normal;
+                /* 142.857% */
+            }
+        }
+        }
+        .success {
+
+        img {
+            width: 80px;
+        }
+
+        svg {
+            width: 40px;
+        }
+
+        .email {
+            font-size: 14px;
+            line-height: normal;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 12px;
+            line-height: normal;
+            /* 125% */
+        }
+
+        h5 {
+            font-size: 24px;
+            margin-top: 14px;
+        }
+
+        .link {
+
+            input {
+                font-size: 12px;
+                height: 40px;
+            }
+
+            button {
+                padding: 8.5px;
+                right: 14px;
+            }
+
+            span {
+                right: 20px;
+                bottom: 10px;
+                font-size: 12px;
+                padding: 4px;
+            }
+        }
+    }
+
     }
 }
 </style>

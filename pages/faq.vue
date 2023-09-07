@@ -1,8 +1,8 @@
 <template>
-    <div data-bg="">
+    <div class="zoom">
         <div class="bg-[#0D0D0D] pt-[128px] h-[424px] header">
             <div class="container mx-auto">
-                <img src="@/assets/images/icons/bold.svg" class="mx-auto" alt="bold">
+                <img src="@/assets/images/icons/bold.svg" class="w-[52px] md:w-auto mx-auto" alt="bold">
                 <h2>
                     FAQs
                 </h2>
@@ -11,7 +11,7 @@
                 </p>
             </div>
         </div>
-        <section class=" py-16">
+        <section class=" py-8 md:py-16">
             <div class="container mx-auto">
                 <!-- <h4 class=" font-medium font-stapel text-[40px] leading-[44px] tracking-[-0.8px] text-center">
                     Frequently asked questions
@@ -42,16 +42,18 @@
         </section>
         <section class=" pt-8 pb-16">
             <div class="container mx-auto">
-                <img src="@/assets/images/icons/question.svg" class="mx-auto" alt="question" v-motion-slide-visible-once-bottom>
-                <h4 class="text-2xl font-stapel leading-[44px] tracking-[-0.8px] text-center font-medium mt-8" v-motion-slide-visible-once-bottom>
+                <img src="@/assets/images/icons/question.svg" class="mx-auto" alt="question"
+                    v-motion-slide-visible-once-bottom>
+                <h4 class=" text-lg md:text-2xl font-stapel md:leading-[44px] md:tracking-[-0.8px] text-center font-medium mt-8"
+                    v-motion-slide-visible-once-bottom>
                     Still have questions?
                 </h4>
-                <p class="mt-2 text-lg font-gilroy text-[#475467] text-center" v-motion-slide-visible-once-bottom>
+                <p class="mt-2 text-base md:text-lg font-gilroy text-[#475467] text-center" v-motion-slide-visible-once-bottom>
                     Can’t find the answer you’re looking for? Please send the request to our friendly team.
                 </p>
                 <div class="flex items-center justify-center mt-8" v-motion-slide-visible-once-bottom>
                     <button
-                        class=" font-semibold h-14 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy mx-auto">
+                        class=" font-semibold h-12 md:h-14 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy mx-auto">
                         Get in touch
                     </button>
                 </div>
@@ -238,6 +240,7 @@ onMounted(() => {
                 font-style: normal;
                 font-weight: 500;
                 line-height: 28px;
+                width: 90%;
             }
 
             button {
@@ -273,4 +276,39 @@ onMounted(() => {
         }
     }
 }
-</style>
+
+@media (max-width: 768px) {
+    .header {
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: normal;
+        }
+    }
+
+    .collapses {
+        gap: 24px;
+
+        .head {
+            h6 {
+                font-size: 16px !important;
+                line-height: normal;
+            }
+
+            button {
+                p {
+                    font-size: 16px !important;
+                }
+            }
+        }
+
+        .body {
+            p {
+                font-size: 14px !important;
+            }
+        }
+    }
+}</style>
