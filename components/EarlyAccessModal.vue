@@ -41,7 +41,6 @@
                                 <option value="Please select" selected disabled>Please select</option>
                                 <option value="sjbsd" v-for="county in countryList" :key="county.id">{{
                                     county?.name.common }}</option>
-                                <option value="sjbsd">Buxoro</option>
                             </select>
                             <span>
                                 Location only used to determine early access availability in your country.
@@ -142,18 +141,18 @@
 import { useModal } from "@/composables";
 import { ref } from 'vue'
 import { useAutoAnimate } from '@formkit/auto-animate/vue'
-import useClipboard from 'vue-clipboard3'
+// import useClipboard from 'vue-clipboard3'
 const modal = useModal();
 const step = ref(1)
 const copied = ref(false)
 const copyUrl = ref('https://midas/reffer')
-const { toClipboard } = useClipboard()
+// const { toClipboard } = useClipboard()
 const { data: countryList }: any = await useFetch('https://restcountries.com/v3.1/all')
 const [anim] = useAutoAnimate()
 const [anim2] = useAutoAnimate()
 const copy = async () => {
     try {
-        await toClipboard(copyUrl.value)
+        // await toClipboard(copyUrl.value)
         copied.value = true
         setTimeout(() => {
             copied.value = false
