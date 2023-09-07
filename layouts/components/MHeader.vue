@@ -1,6 +1,5 @@
 <template>
-    <header
-        class="w-full fixed top-0 bg-[#0D0D0D] md:top-0 md:absolute zoom  md:bg-transparent z-[9999] shadow-md md:shadow-none"
+    <header class="w-full fixed top-0 bg-[#0D0D0D] md:absolute zoom  md:bg-transparent z-[9999] shadow-md md:shadow-none"
         :class="{ '!top-[40px] md:!top-0 bg-white': route.path === '/' }">
         <nav class=" py-3 md:py-5 w-full">
             <div class="flex items-center justify-between container md:max-w-screen-2xl mx-auto">
@@ -80,6 +79,10 @@ import { MLogo } from '../../components/icons'
 import { onMounted, ref, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import GetEarlyAccessModal from '@/components/EarlyAccessModal.vue'
+import hunt from '@/assets/images/icons/product-hunt.svg'
+import reddit from '@/assets/images/icons/reddit.svg'
+import slack from '@/assets/images/icons/slack.svg'
+import medium from '@/assets/images/icons/medium.svg'
 const route = useRoute()
 const modal = useModal();
 const iSmobileMenu = ref(false)
@@ -102,28 +105,28 @@ const links = ref([
                 title: `Product Hunt`,
                 to: "#",
                 local: false,
-                icon: new URL('@/assets/images/icons/product-hunt.svg', import.meta.url).href
+                icon: hunt
             },
             {
                 id: 2,
                 title: 'Reddit',
                 to: "#",
                 local: false,
-                icon: new URL('@/assets/images/icons/reddit.svg', import.meta.url).href
+                icon: reddit
             },
             {
                 id: 3,
                 title: `Slack`,
                 to: "#",
                 local: false,
-                icon: new URL('@/assets/images/icons/slack.svg', import.meta.url).href
+                icon: slack
             },
             {
                 id: 4,
                 title: 'Medium',
                 to: "#",
                 local: false,
-                icon: new URL('@/assets/images/icons/medium.svg', import.meta.url).href
+                icon: medium
             },
         ]
     },

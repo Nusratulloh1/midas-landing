@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-full more md:pt-[84px] fixed md:relative z-[999] top-0" ref="headRef">
+    <div class="w-full more md:pt-[84px] fixed md:relative z-[999] md:z-[-99] top-0" ref="headRef">
       <div class=" md:container mx-auto zoom">
         <button class="aviable !rounded-none md:!rounded-lg !mt-0 md:!mt-6 !w-full md:!w-[65%] !h-10 md:!h-[50px]">
           <h6>
@@ -12,10 +12,10 @@
         </button>
       </div>
     </div>
-    <section data-bg="#FAFAFA" first="#FAFAFA" ref=" container"
+    <section data-bg="#FAFAFA" first="#FAFAFA" ref="container"
       class="section pt-[200px] md:pt-[44px] 2xl:pt-20 top-section pb-40 md:pb-0 md:h-[100vh] 2xl:h-[883px] relative overflow-hidden "
       style=" transition: .3s ease-out all; ">
-      <div class=" container md:max-w-screen-xl mx-auto zoom">
+      <div class=" container md:max-w-screen-xl mx-auto zoom ">
         <h1>
           Save money,
           <br>
@@ -39,10 +39,10 @@
       </div>
       <div class="svgs zoom">
         <MTargetIcon :style="isMobile ? '' : layer0"
-          class="w-[125px] md:w-auto md:left-5 bottom-[-20px] md:bottom-[190px] absolute z-50">
+          class="w-[125px] md:w-auto md:left-5 bottom-[-20px] z-[-99] md:bottom-[190px] absolute">
         </MTargetIcon>
         <MPieIcon :style="isMobile ? '' : layer1"
-          class=" w-[125px] md:w-auto right-7 top-[85px] md:right-[70px] md:top-[30px] absolute z-50">
+          class=" w-[125px] md:w-auto right-7 top-[85px] z-[-99] md:right-[70px] md:top-[30px] absolute">
         </MPieIcon>
         <!-- <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
         </MDiagramIcon>
@@ -78,7 +78,7 @@
               </p>
             </div>
             <div class=" w-[193px] md:w-[35%] mt-6 md:mt-0 h-full">
-              <MPhoneIcon class="w-full h-full md:w-auto md:h-auto dark-svg object-contain md:px-5 md:mb-[75px]">
+              <MPhoneIcon class="w-full h-full md:w-full md:h-auto dark-svg object-contain md:px-4 md:mb-[75px]">
               </MPhoneIcon>
               <img class=" w-full h-full rounded-[30px] md:rounded-[60px] object-contain dark-image"
                 src="@/assets/images/demo.gif" />
@@ -168,22 +168,20 @@
 </template>
 <script lang="ts" setup>
 import { useParallax } from '@vueuse/core'
-import { useAutoAnimate } from '@formkit/auto-animate/vue'
 import { MPhoneIcon, MPieIcon, MTargetIcon } from '@/components/icons'
 import GetEarlyAccessModal from '@/components/EarlyAccessModal.vue'
 import { useModal } from "@/composables";
 import type { AnimationItem } from 'lottie-web'
-import { ref, computed, reactive, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, reactive, onMounted } from 'vue'
 import { Blottie, type BlottieExpose } from 'blottie'
-import Spaces from '~/components/Spaces.vue';
-import MoneySaving from '~/components/MoneySaving.vue';
-import Reviews from '~/components/Reviews.vue';
+import Spaces from '~/components/home/Spaces.vue';
+import MoneySaving from '~/components/home/MoneySaving.vue';
+import Reviews from '~/components/home/Reviews.vue';
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const container = ref(null)
 const isMobile = useMediaQuery('(max-width: 768px)')
-const [animex] = useAutoAnimate()
 const parallax = reactive(useParallax(container))
 const mishen = new URL('../assets/lottie/mishen.json', import.meta.url).href
 const diagram = new URL('../assets/lottie/diagrama_kv.json', import.meta.url).href
@@ -270,10 +268,6 @@ onMounted(() => {
     //   document.body.style.backgroundColor = '#0D0D0D';
     // }
   });
-})
-onBeforeUnmount(() => {
-
-  document.body.style.backgroundColor = 'white';
 })
 // const layer2 = computed(() => ({
 //   transform: `translateX(${parallax.tilt * 30}px) translateY(${parallax.roll * 80
@@ -370,8 +364,6 @@ onBeforeUnmount(() => {
     // transition: .3s ease-out all;
   }
 }
-
-
 .dark {
   h3 {
     color: #0D0D0D;

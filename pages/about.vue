@@ -2,7 +2,7 @@
     <div>
         <div class="bg-[#0D0D0D] pt-24 md:pt-[144px] h-[673px] md:h-[995px] header">
             <div class="container mx-auto text-center">
-                <h6 class=" text-[#A1BAA1] font-gilroy font-semibold text-lg md:text-xl">
+                <h6 class=" text-[#A1BAA1] font-gilroy text-lg md:text-xl">
                     About us
                 </h6>
                 <h2 class=" text-[32px] leading-normal md:text-5xl font-medium font-stapel text-white">
@@ -16,7 +16,7 @@
             </div>
         </div>
         <Vision></Vision>
-        <section class=" !py-16 container mx-auto">
+        <section class=" !py-16 container mx-auto zoom">
             <h4 class=" text-[40px] md:text-[64px] font-medium font-stapel text-center">
                 Three pilars we believe about <br> saving money
             </h4>
@@ -33,7 +33,7 @@
                         <h6 class=" text-xl md:text-[30px] font-medium font-stapel">
                             Automated savings
                         </h6>
-                        <p class=" font-gilroy text-base md:text-lg text-[#404040]">
+                        <p class=" font-gilroy text-sm md:text-lg text-[#404040] mt-2">
                             The best way to save is when you don't have to think about it.
                         </p>
                     </div>
@@ -50,7 +50,7 @@
                         <h6 class=" text-xl md:text-[30px] font-medium font-stapel">
                             Goal-oriented
                         </h6>
-                        <p class=" font-gilroy text-base md:text-lg text-[#404040]">
+                        <p class=" font-gilroy text-sm md:text-lg text-[#404040] mt-2">
                             Every penny saved should have a purpose, whether it's for an emergency fund or a dream vacation.
                         </p>
                     </div>
@@ -67,7 +67,7 @@
                         <h6 class=" text-xl md:text-[30px] font-medium font-stapel">
                             Informed decision
                         </h6>
-                        <p class=" font-gilroy text-base md:text-lg text-[#404040]">
+                        <p class=" font-gilroy text-sm md:text-lg text-[#404040] mt-2">
                             Knowledge is power, and understanding your spending habits can lead to significant savings.
                         </p>
                     </div>
@@ -96,11 +96,8 @@
     </div>
 </template>
 <script lang="ts" setup>
-import Vision from '~/components/Vision.vue';
-import History from '~/components/History.vue';
-import Binefits from '~/components/Binefits.vue';
-
-
-
+import Vision from '~/components/about/Vision.vue';
+import History from '~/components/about/History.vue';
+import Binefits from '~/components/about/Binefits.vue';
 
 </script>

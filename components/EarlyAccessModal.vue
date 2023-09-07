@@ -1,7 +1,6 @@
 <template>
-    <div>
+    <div >
         <div class="modal-mask zoom">
-
             <div class="modal-wrapper">
                 <div class="modal-container relative overflow-hidden" ref="anim2">
                     <button @click="modal.hideModal()" class="float-right m-4 md:m-6">
@@ -138,27 +137,27 @@
         </div>
     </div>
 </template>
-<script lang="ts" setup>
+<script setup>
 import { useModal } from "@/composables";
 import { ref } from 'vue'
 import { useAutoAnimate } from '@formkit/auto-animate/vue'
-import useClipboard from 'vue-clipboard3'
+// import useClipboard from 'vue-clipboard3'
 const modal = useModal();
 const step = ref(1)
 const copied = ref(false)
 const copyUrl = ref('https://midas/reffer')
-const { toClipboard } = useClipboard()
-const { data: countryList }: any = await useFetch('https://restcountries.com/v3.1/all')
+// const { toClipboard } = useClipboard()
+const { data: countryList } = await useFetch('https://restcountries.com/v3.1/all')
 const [anim] = useAutoAnimate()
 const [anim2] = useAutoAnimate()
 const copy = async () => {
     try {
-        await toClipboard(copyUrl.value)
+        // await toClipboard(copyUrl.value)
         copied.value = true
         setTimeout(() => {
             copied.value = false
         }, 1000);
-        console.log('Copied to clipboard')
+        // console.log('Copied to clipboard')
     } catch (e) {
         console.error(e)
     }
@@ -182,9 +181,9 @@ const nextStep = () => {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     display: table;
-    transition: opacity .3s ease;
+    transition: opacity .6s ease;
 }
 
 .modal-wrapper {

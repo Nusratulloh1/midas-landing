@@ -56,7 +56,7 @@
                                 </p>
                                 <div class="info">
                                     <div class="avatar">
-                                        <img src="../assets/images/avatars/1.png" alt="avatar">
+                                        <img src="@/assets/images/avatars/1.png" alt="avatar">
                                     </div>
                                     <h6>
                                         {{ rev.name }}

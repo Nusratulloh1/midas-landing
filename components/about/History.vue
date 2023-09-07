@@ -10,7 +10,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-24 mt-24">
                 <div class="flex justify-center flex-col">
                     <h5 class=" font-stapel font-medium text-lg md:text-2xl text-white">
-                        The Story Behind the Name: <span class="text-[#CBE8CA]">Why "midas"?</span>
+                        The Story Behind the Name: <span class="text-[#CBE8CA]"> "Midas"?</span>
                     </h5>
                     <p class=" font-gilroy text-sm md:text-lg text-[#E8E8E8] max-w-[529px] mt-4">
                         Inspired by King Midas, the mythical figure who turned everything he touched into gold, we aim to

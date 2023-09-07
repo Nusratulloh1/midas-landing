@@ -87,7 +87,7 @@
 </template>
   
 <script lang="ts" setup>
-import { MBudgetAnimeIcon, MSharedAnimeIcon } from './icons';
+import { MBudgetAnimeIcon, MSharedAnimeIcon } from '../icons';
 
 
 </script>

@@ -1043,7 +1043,7 @@
 <script lang="ts" setup>
 import { useParallax, useMediaQuery } from '@vueuse/core'
 import MoneyGame from './MoneyGame.vue';
-import { MFinanceAnimeIcon, MTargetAnimeIcon } from './icons';
+import { MFinanceAnimeIcon, MTargetAnimeIcon } from '../icons';
 // import MoneyIcon from './icons/MoneyIcon.vue';
 const isMobile = useMediaQuery('(max-width: 768px)')
 const container2 = ref(null)
