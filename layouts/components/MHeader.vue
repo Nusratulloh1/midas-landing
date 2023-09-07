@@ -3,13 +3,13 @@
         :class="{ '!top-[40px] md:!top-0 bg-white': route.path === '/' }">
         <nav class=" py-3 md:py-5 w-full">
             <div class="flex items-center justify-between container md:max-w-screen-2xl mx-auto">
-                <div class="flex items-center gap-8">
+                <div class="hidden md:flex items-center gap-8">
                     <nuxt-link to="/">
                         <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
                             :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
                     </nuxt-link>
-                    <ul class="hidden md:flex items-center gap-8 text-[#404040] text-base font-medium font-gilroy pt-1">
-                        <li class="parent" v-for="link in links" :key="link.id">
+                    <ul class="flex items-center gap-8 text-[#404040] text-base font-medium font-gilroy pt-1">
+                        <li class="parent desktop" v-for="link in links" :key="link.id">
                             <nuxt-link class=" cursor-pointer" :to="link.to">{{ link.title }}</nuxt-link>
                             <div class="dropdown" v-if="link.children">
                                 <ul class="flex flex-col gap-6">
@@ -27,8 +27,12 @@
                         </li>
                     </ul>
                 </div>
-                <ul class=" md:hidden items-center gap-8 text-[#404040] text-base font-medium font-gilroy pt-1">
-                    <li class="parent">
+                <ul class="flex items-center gap-8 justify-between md:hidden w-full">
+                    <nuxt-link to="/">
+                        <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
+                            :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
+                    </nuxt-link>
+                    <li class="parent w-full items-end text-[#404040]  text-base font-medium font-gilroy pt-1">
                         <button @click="iSmobileMenu = !iSmobileMenu" class=" md:hidden bg-[#262626] p-1 rounded-lg">
                             <svg class=" w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#eee"
                                 stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
@@ -51,10 +55,25 @@
                                 </rect>
                             </svg>
                         </button>
-                        <div class="dropdown !visible w-full !mt-14" v-show="iSmobileMenu">
+                        <div class="dropdown !w-[92%] !mx-auto top-10" :class="{ 'active': iSmobileMenu, '!top-20': route.path === '/' }">
                             <ul class="flex flex-col gap-6">
-                                <li class="item" v-for="link in links">
-                                    <nuxt-link class=" cursor-pointer" :to="link.to">{{ link.title }}</nuxt-link>
+                                <li class="item flex flex-col !items-start" v-for="link in links">
+                                    <nuxt-link class=" cursor-pointer flex justify-start w-full" :to="link.to">{{ link.title
+                                    }}</nuxt-link>
+                                    <ul class="flex gap-6" v-if="link.children">
+                                        <li v-for="child in link.children" :key="child.id">
+                                            <img class=" w-12" :src="child.icon" alt="icon">
+                                            <template v-if="child.local">
+                                                <nuxt-link :to="child.to">{{ child.title }}</nuxt-link>
+                                            </template>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class=" mt-10">
+                                    <button @click="sendRequest"
+                    class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy md:hidden">
+                    Request early access
+                </button>
                                 </li>
                             </ul>
                         </div>
@@ -154,7 +173,7 @@ onMounted(() => {
 watch(
     () => route.fullPath,
     async () => {
-        iSmobileMenu.value = false
+        // iSmobileMenu.value = false
     }
 );
 const sendRequest = () => {
@@ -166,13 +185,33 @@ const sendRequest = () => {
 <style lang="scss" scoped>
 .parent {
     display: flex;
-    justify-content: center;
+    justify-content: end;
+
+    &.desktop {
+        display: flex;
+        justify-content: center;
+
+        .dropdown {
+            position: absolute !important;
+
+        }
+
+        &:hover {
+            .dropdown {
+                -webkit-transform: scaleY(1);
+                -ms-transform: scaleY(1);
+                transform: scaleY(1);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
 
     .dropdown {
-        position: absolute;
+        position: fixed;
         z-index: 999;
-        display: block;
         visibility: hidden;
+        display: block;
         opacity: 0;
         -webkit-transform: translateY(20px);
         -ms-transform: translateY(20px);
@@ -187,6 +226,15 @@ const sendRequest = () => {
         width: 339px;
         padding: 24px;
         margin-top: 30px;
+
+        &.active {
+            -webkit-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            transform: scaleY(1);
+            opacity: 1;
+            visibility: visible;
+        }
+
 
         .item {
             display: flex;
@@ -208,15 +256,6 @@ const sendRequest = () => {
         }
     }
 
-    &:hover {
-        .dropdown {
-            -webkit-transform: scaleY(1);
-            -ms-transform: scaleY(1);
-            transform: scaleY(1);
-            opacity: 1;
-            visibility: visible;
-        }
-    }
 }
 
 .router-link-active {

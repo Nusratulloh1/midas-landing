@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-full more md:pt-[84px] fixed md:relative z-[999] md:z-[-99] top-0" ref="headRef">
+    <div class="w-full more md:pt-[84px] fixed md:relative z-[999] top-0" ref="headRef">
       <div class=" md:container mx-auto zoom">
         <button class="aviable !rounded-none md:!rounded-lg !mt-0 md:!mt-6 !w-full md:!w-[65%] !h-10 md:!h-[50px]">
           <h6>
