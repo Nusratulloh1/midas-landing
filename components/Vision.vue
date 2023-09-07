@@ -32,7 +32,7 @@
     <section class="bg-[#0D0D0D] py-16 zoom">
         <div
             class=" container md:max-w-screen-xl mx-auto flex flex-wrap md:flex-nowrap items-center justify-between px-8 gap-16">
-            <img src="@/assets/images/icons/values.svg" alt="values">
+            <img src="@/assets/images/icons/values.svg" class=" w-[80%] mx-auto md:w-auto" alt="values">
             <div>
                 <h5 class=" font-medium font-stapel text-[40px] md:text-[64px] text-white">
                     Our values

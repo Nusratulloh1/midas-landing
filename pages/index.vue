@@ -12,7 +12,7 @@
         </button>
       </div>
     </div>
-    <section data-bg="#FAFAFA" first="#FAFAFA" :ref="isMobile ? 'jfhwi' : 'container'"
+    <section data-bg="#FAFAFA" first="#FAFAFA" ref=" container"
       class="section pt-[200px] md:pt-[44px] 2xl:pt-20 top-section pb-40 md:pb-0 md:h-[100vh] 2xl:h-[883px] relative overflow-hidden "
       style=" transition: .3s ease-out all; ">
       <div class=" container md:max-w-screen-xl mx-auto zoom">
@@ -38,10 +38,11 @@
         </p>
       </div>
       <div class="svgs zoom">
-        <MTargetIcon :style="layer0" class="w-[85px] md:w-auto md:left-5 bottom-0 md:bottom-[190px] absolute z-50">
+        <MTargetIcon :style="isMobile ? '' : layer0"
+          class="w-[125px] md:w-auto md:left-5 bottom-[-20px] md:bottom-[190px] absolute z-50">
         </MTargetIcon>
-        <MPieIcon :style="layer1"
-          class=" w-[85px] md:w-auto right-7 top-[70px] md:right-[70px] md:top-[30px] absolute z-50">
+        <MPieIcon :style="isMobile ? '' : layer1"
+          class=" w-[125px] md:w-auto right-7 top-[85px] md:right-[70px] md:top-[30px] absolute z-50">
         </MPieIcon>
         <!-- <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
         </MDiagramIcon>
