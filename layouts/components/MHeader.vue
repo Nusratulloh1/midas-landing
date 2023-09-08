@@ -4,7 +4,7 @@
         <nav class=" py-3 md:py-5 w-full">
             <div class="flex items-center justify-between container md:max-w-screen-2xl mx-auto">
                 <div class="hidden md:flex items-center gap-8">
-                    <nuxt-link to="/" class=" !no-underline">
+                    <nuxt-link to="/" class=" !no-underline !bg-transparent">
                         <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
                             :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
                     </nuxt-link>
@@ -28,14 +28,14 @@
                     </ul>
                 </div>
                 <ul class="flex items-center gap-8 justify-between md:hidden w-full">
-                    <nuxt-link class=" !no-underline" to="/">
+                    <nuxt-link class=" !no-underline !bg-transparent" to="/">
                         <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
                             :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
                     </nuxt-link>
                     <li class="parent w-full items-end text-[#404040]  text-base font-medium font-gilroy pt-1">
                         <button @click="iSmobileMenu = !iSmobileMenu"
-                            class=" md:hidden bg-[#262626] rounded-lg relative w-7 h-7">
-                            <a class="hamburger" href="#" :class="{ 'active': iSmobileMenu }"><span></span></a>
+                            class=" md:hidden bg-[#262626] rounded-lg relative w-7 h-7 menu-opener" id="menuButton" title="menu-Button">
+                            <a class="hamburger" aria-label="swipe" href="#" :class="{ 'active': iSmobileMenu }"><span></span></a>
                             <!-- <svg class=" w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#eee"
                                 stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
                                 <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
