@@ -345,6 +345,7 @@ const reviewsList: any = ref(
 @media (max-width: 768px) {
     .review {
         .reviews {
+            transition: .2s ease-out all;
             display: block;
         }
     }

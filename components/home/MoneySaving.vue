@@ -1326,6 +1326,7 @@ const layerr13 = computed(() => ({
             padding-left: 0;
 
             img {
+                transition: .2s ease-out all;
                 width: 208.125px;
             }
         }
@@ -1334,6 +1335,7 @@ const layerr13 = computed(() => ({
             width: 100%;
             height: 395px;
             padding: 24px 16px;
+            transition: .2s ease-out all;
 
             h5 {
                 font-size: 20px;

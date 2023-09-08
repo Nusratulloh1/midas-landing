@@ -68,7 +68,7 @@
             </h3>
             <div
               class="content py-3 px-4 md:px-24 rounded-[32px] w-full my-10 mb-16 h-[530px] overflow-hidden md:h-[594px] flex flex-col md:flex-row items-center justify-between"
-              v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all">
+              v-motion-slide-visible-once-bottom>
               <div>
                 <h3 class="text-[32px] md:text-7xl font-medium  font-stapel leading-[normal]">
                   All in one <br> Finance hub
@@ -90,7 +90,7 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div @click="sendRequest"
               class="advantage hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
-              v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all;">
+              v-motion-slide-visible-once-bottom>
               <h5>
                 Reach your <br> financial goals
               </h5>
@@ -104,7 +104,7 @@
             </div>
             <div @click="sendRequest"
               class="advantage !bg-[#FAFAFA] hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
-              v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all;">
+              v-motion-slide-visible-once-bottom>
               <h5 class="!text-[#0D0D0D]">
                 Smart analytics <br> insights
               </h5>
@@ -118,7 +118,7 @@
             </div>
             <div @click="sendRequest"
               class="advantage hover:translate-y-[-15px] transition-[0.12s] cursor-pointer hover:shadow-xl"
-              v-motion-slide-visible-once-bottom style=" transition: .5s ease-out all;">
+              v-motion-slide-visible-once-bottom>
               <h5>
                 Personalize your experience
   
@@ -308,7 +308,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 500ms ease-in-out;
+    transition: .5s ease-out all;
   
     h5 {
       color: #FFF;
@@ -372,6 +372,7 @@
     }
   
     .content {
+      transition: .5s ease-out all;
       background: #0D0D0D;
   
       h3 {
@@ -470,7 +471,9 @@
         margin-top: 16px;
       }
     }
-  
+  .content{
+    transition: .2s ease-out all !important;
+  }
     .more {
   
       .aviable {
@@ -485,6 +488,7 @@
     .advantage {
       height: 373px;
       padding: 16px;
+      transition: .2s ease-out all;
   
       h5 {
         font-size: 24px;

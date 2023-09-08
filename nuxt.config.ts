@@ -1,6 +1,6 @@
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   spaLoadingTemplate: './app-loading.html',
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },

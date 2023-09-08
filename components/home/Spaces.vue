@@ -236,6 +236,7 @@ import shared from "@/assets/images/icons/shared.svg"
         width: 100%;
         height: 379px;
         padding: 24px 16px;
+        transition: .2s ease-out all;
 
         h5 {
             font-size: 20px;

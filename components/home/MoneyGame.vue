@@ -1,6 +1,6 @@
 <template>
-    <div style="transition: .5s ease-out all;"
-        class="bg-white pt-8 md:pl-[30px] rounded-[32px] h-[594px] md:flex items-center justify-between mt-4 overflow-hidden relative">
+    <div 
+        class="bg-white pt-8 md:pl-[30px] bg-main rounded-[32px] h-[594px] md:flex items-center justify-between mt-4 overflow-hidden relative">
 
         <div class="w-full md:w-1/2 px-4 md:px-0 h-[185px] md:h-auto">
             <h5 class=" text-2xl md:text-[64px] text-[#1A1A1A] font-stapel font-medium leading-[normal]">
@@ -370,6 +370,12 @@ onMounted(() => {
 })
 </script>
 <style lang="scss" scoped>
+.bg-main{
+    transition: .5s ease-out all;
+    @media (max-width: 768px) {
+        transition: .2s ease-out all;
+    }
+}
 .circle {
     border-radius: 777px;
     border: 1px solid var(--secondary-200, #B3B3B3);
