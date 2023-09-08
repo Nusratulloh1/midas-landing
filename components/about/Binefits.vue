@@ -12,7 +12,7 @@
                 why
                 our roadmap is open for your input. Help us prioritize features that matter most to you.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-24 my-16 max-w-[237px] mx-auto md:max-w-none">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-24 my-16">
                 <div >
                     <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path

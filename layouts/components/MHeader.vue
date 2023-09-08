@@ -33,8 +33,9 @@
                             :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
                     </nuxt-link>
                     <li class="parent w-full items-end text-[#404040]  text-base font-medium font-gilroy pt-1">
-                        <button @click="iSmobileMenu = !iSmobileMenu" class=" md:hidden bg-[#262626] p-1 rounded-lg">
-                            <svg class=" w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#eee"
+                        <button @click="iSmobileMenu = !iSmobileMenu" class=" md:hidden bg-[#262626] rounded-lg relative w-7 h-7">
+                            <a class="hamburger" href="#" :class="{ 'active': iSmobileMenu }"><span></span></a>
+                            <!-- <svg class=" w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#eee"
                                 stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
                                 <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
                                     <animate dur="0.2s" attributeName="d"
@@ -53,9 +54,10 @@
                                     <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze"
                                         begin="reverse.begin" />
                                 </rect>
-                            </svg>
+                            </svg> -->
                         </button>
-                        <div class="dropdown !w-[92%] !mx-auto top-10" :class="{ 'active': iSmobileMenu, '!top-20': route.path === '/' }">
+                        <div class="dropdown !w-[92%] !mx-auto top-10 !shadow-2xl"
+                            :class="{ 'active': iSmobileMenu, '!top-20': route.path === '/' }">
                             <ul class="flex flex-col gap-6">
                                 <li class="item flex flex-col !items-start" v-for="link in links">
                                     <nuxt-link class=" cursor-pointer flex justify-start w-full" :to="link.to">{{ link.title
@@ -69,11 +71,11 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class=" mt-5">
+                                <li class=" mt-4">
                                     <button @click="sendRequest"
-                    class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy md:hidden">
-                    Request early access
-                </button>
+                                        class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy md:hidden">
+                                        Request early access
+                                    </button>
                                 </li>
                             </ul>
                         </div>
@@ -173,7 +175,7 @@ onMounted(() => {
 watch(
     () => route.fullPath,
     async () => {
-        // iSmobileMenu.value = false
+        iSmobileMenu.value = false
     }
 );
 const sendRequest = () => {
@@ -261,4 +263,68 @@ const sendRequest = () => {
 .router-link-active {
     color: #E8E8E8 !important;
 }
-</style>
+
+.hamburger {
+    position: absolute;
+    left: 18%;
+    top: 48%;
+}
+
+.hamburger {
+    cursor: pointer;
+    // padding: 10px 35px 16px 0px;
+}
+
+.hamburger span,
+.hamburger span:before,
+.hamburger span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 18px;
+    background: white;
+    position: absolute;
+    display: flex;
+    content: "";
+}
+
+.hamburger span:before {
+    top: -5px;
+}
+
+.hamburger span:after {
+    bottom: -5px;
+}
+
+/*
+#hamburger span, #hamburger span:before, #hamburger span:after {
+  transition: all 200ms ease-in-out;
+}
+*/
+.hamburger span,
+.hamburger span:before,
+.hamburger span:after {
+    -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    /* easeInOutCubic */
+}
+
+.hamburger.active span {
+    background-color: transparent;
+}
+
+.hamburger.active span:before,
+.hamburger.active span:after {
+    top: 0;
+}
+
+.hamburger.active span:before {
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:after {
+    transform: translateY(-10px) rotate(-45deg);
+    top: 10px;
+}</style>
