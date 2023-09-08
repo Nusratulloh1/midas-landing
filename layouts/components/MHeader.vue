@@ -4,7 +4,7 @@
         <nav class=" py-3 md:py-5 w-full">
             <div class="flex items-center justify-between container md:max-w-screen-2xl mx-auto">
                 <div class="hidden md:flex items-center gap-8">
-                    <nuxt-link to="/">
+                    <nuxt-link to="/" class=" !no-underline">
                         <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
                             :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
                     </nuxt-link>
