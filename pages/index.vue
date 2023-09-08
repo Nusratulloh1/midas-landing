@@ -80,8 +80,11 @@
             <div class=" w-[193px] md:w-[35%] mt-6 md:mt-0 h-full">
               <MPhoneIcon class="w-full h-full md:w-full md:h-auto dark-svg object-contain md:px-4 md:mb-[75px]">
               </MPhoneIcon>
-              <img class=" w-full h-full rounded-[30px] md:rounded-[60px] object-contain dark-image"
-                src="@/assets/images/demo.gif" />
+              <video class=" w-full h-full rounded-[30px] md:rounded-[60px] object-contain dark-image" autoplay muted loop>
+                <source src="@/assets/images/demo.webm" type="video/webm">
+                <source src="@/assets/images/demo.webm" type="video/webm">
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
@@ -364,6 +367,7 @@ onMounted(() => {
     // transition: .3s ease-out all;
   }
 }
+
 .dark {
   h3 {
     color: #0D0D0D;

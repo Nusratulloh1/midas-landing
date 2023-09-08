@@ -28,12 +28,13 @@
                     </ul>
                 </div>
                 <ul class="flex items-center gap-8 justify-between md:hidden w-full">
-                    <nuxt-link to="/">
+                    <nuxt-link class=" !no-underline" to="/">
                         <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
                             :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
                     </nuxt-link>
                     <li class="parent w-full items-end text-[#404040]  text-base font-medium font-gilroy pt-1">
-                        <button @click="iSmobileMenu = !iSmobileMenu" class=" md:hidden bg-[#262626] rounded-lg relative w-7 h-7">
+                        <button @click="iSmobileMenu = !iSmobileMenu"
+                            class=" md:hidden bg-[#262626] rounded-lg relative w-7 h-7">
                             <a class="hamburger" href="#" :class="{ 'active': iSmobileMenu }"><span></span></a>
                             <!-- <svg class=" w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#eee"
                                 stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
@@ -58,22 +59,43 @@
                         </button>
                         <div class="dropdown !w-[92%] !mx-auto top-10 !shadow-2xl"
                             :class="{ 'active': iSmobileMenu, '!top-20': route.path === '/' }">
-                            <ul class="flex flex-col gap-6">
+                            <ul class="flex flex-col gap-4">
+                                <li class="item flex flex-col !items-start">
+                                    <nuxt-link to="/"
+                                        class="cursor-pointer flex items-center gap-4 justify-start w-full !text-sm">
+                                        <div class=" w-10 h-10 rounded-full">
+                                            <img class="w-full h-full" :src="midass" alt="icon">
+                                        </div>
+                                        Home
+                                    </nuxt-link>
+                                </li>
                                 <li class="item flex flex-col !items-start" v-for="link in links">
-                                    <nuxt-link class=" cursor-pointer flex justify-start w-full" :to="link.to">{{ link.title
-                                    }}</nuxt-link>
-                                    <ul class="flex gap-6" v-if="link.children">
-                                        <li v-for="child in link.children" :key="child.id">
-                                            <img class=" w-12" :src="child.icon" alt="icon">
+                                    <nuxt-link :to="link.to"
+                                        class="cursor-pointer flex items-center gap-4 justify-start w-full !text-sm"
+                                        v-if="!link.children">
+                                        <div class=" w-10 h-10 rounded-full  p-0.5">
+                                            <img class="w-full h-full" :src="link.icon" alt="icon">
+                                        </div>
+                                        {{ link.title
+                                        }}
+                                    </nuxt-link>
+                                    <ul class="flex flex-col gap-4 w-full" v-if="link.children">
+                                        <li v-for="child in link.children" class="w-full" :key="child.id">
                                             <template v-if="child.local">
-                                                <nuxt-link :to="child.to">{{ child.title }}</nuxt-link>
+                                                <nuxt-link :to="child.to" class="flex items-center gap-4 !text-sm"><img
+                                                        class=" w-10" :src="child.icon" alt="icon"> {{ child.title
+                                                        }}</nuxt-link>
+                                            </template>
+                                            <template v-else>
+                                                <a :href="child.to" class="flex items-center gap-4 !text-sm"><img
+                                                        class=" w-10" :src="child.icon" alt="icon"> {{ child.title }}</a>
                                             </template>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class=" mt-4">
+                                <li class=" mt-4 w-full">
                                     <button @click="sendRequest"
-                                        class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy md:hidden">
+                                        class=" font-semibold h-12 w-full px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy md:hidden">
                                         Request early access
                                     </button>
                                 </li>
@@ -104,6 +126,9 @@ import hunt from '@/assets/images/icons/product-hunt.svg'
 import reddit from '@/assets/images/icons/reddit.svg'
 import slack from '@/assets/images/icons/slack.svg'
 import medium from '@/assets/images/icons/medium.svg'
+import cup from '@/assets/images/icons/cup.svg'
+import bold from '@/assets/images/icons/bold.svg'
+import midass from '@/assets/images/icons/midass.svg'
 const route = useRoute()
 const modal = useModal();
 const iSmobileMenu = ref(false)
@@ -114,6 +139,14 @@ const links = ref([
         title: 'FAQs',
         to: "/faq",
         local: true,
+        icon: bold
+    },
+    {
+        id: 3,
+        title: 'About us',
+        to: "/about",
+        local: true,
+        icon: cup
     },
     {
         id: 2,
@@ -151,12 +184,6 @@ const links = ref([
             },
         ]
     },
-    {
-        id: 3,
-        title: 'About us',
-        to: "/about",
-        local: true,
-    }
 ])
 const showModal = computed(() => modal.show.value);
 onMounted(() => {
@@ -262,6 +289,11 @@ const sendRequest = () => {
 
 .router-link-active {
     color: #E8E8E8 !important;
+
+    @media (max-width: 768px) {
+        background-color: #0D0D0D;
+        border-radius: 8px;
+    }
 }
 
 .hamburger {
@@ -327,4 +359,5 @@ const sendRequest = () => {
 .hamburger.active span:after {
     transform: translateY(-10px) rotate(-45deg);
     top: 10px;
-}</style>
+}
+</style>
