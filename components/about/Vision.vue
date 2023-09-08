@@ -15,7 +15,7 @@
     </section>
     <section class=" !py-16 bg-[#F5FAF4] zoom">
         <div
-            class=" container md:max-w-screen-xl mx-auto flex flex-wrap md:flex-nowrap items-center justify-between gap-10 md:gap-6">
+            class=" container md:max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row flex-wrap md:flex-nowrap items-center justify-between gap-10 md:gap-6">
             <div>
                 <h5 class=" font-medium font-stapel text-[32px] md:text-[64px]">
                     Our vision

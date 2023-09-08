@@ -32,11 +32,10 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.7.0",
-    "@pinia/nuxt": "^0.4.8",
     "@vee-validate/nuxt": "^4.11.3",
     "@vueuse/motion": "^2.0.0",
+    "nuxt-lazyimages": "^0.2.0",
     "nuxt-swiper": "^1.2.1",
-    "pinia": "^2.0.34",
     "vue-i18n": "^9.2.2",
     "vue3-autocounter": "^1.0.6",
     "vue3-lottie": "^3.0.0"

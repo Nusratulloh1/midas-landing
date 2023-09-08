@@ -11,7 +11,7 @@
                     </button>
                     <div class="modal-header">
                         <h6 :class="step == 2 ? 'text-center' : ''">
-                            {{ step == 1 ? 'Get Early Access' : 'Thank you!' }}
+                            {{ step == 1 ? 'Get early access' : 'Thank you!' }}
                         </h6>
                     </div>
                     <form class="modal-body" v-if="step == 1" ref="anim">
@@ -59,7 +59,7 @@
                     </form>
                     <div v-else class="success">
                         <div class=" p-4 md:p-6 pt-0">
-                            <img src="@/assets/images/icons/tor.svg" class=" absolute top-0 left-0" alt="tor">
+                            <img src="@/assets/images/icons/tor.svg" class=" absolute top-0 left-0" alt="tor"  >
                             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M15.4535 0.333069H38.5735C47.6135 0.333069 53.6668 6.67974 53.6668 16.1197V37.9091C53.6668 47.3197 47.6135 53.6664 38.5735 53.6664H15.4535C6.4135 53.6664 0.333496 47.3197 0.333496 37.9091V16.1197C0.333496 6.67974 6.4135 0.333069 15.4535 0.333069ZM25.4802 34.9731L38.1468 22.3064C39.0535 21.3997 39.0535 19.9331 38.1468 18.9997C37.2402 18.0931 35.7468 18.0931 34.8402 18.9997L23.8268 30.0131L19.1602 25.3464C18.2535 24.4397 16.7602 24.4397 15.8535 25.3464C14.9468 26.2531 14.9468 27.7197 15.8535 28.6531L22.2002 34.9731C22.6535 35.4264 23.2402 35.6397 23.8268 35.6397C24.4402 35.6397 25.0268 35.4264 25.4802 34.9731Z"

@@ -44,7 +44,7 @@
                             fill="#A1BAA1" />
                     </svg>
                     <h6 class=" font-stapel text-[#A1BAA1] font-medium text-[32px] md:text-5xl my-2 md:my-6">
-                        Q4 2023
+                        Q2 2024
                     </h6>
                     <ul class="text-[#EAECF0] font-gilroy md:text-lg flex flex-col gap-4 md:gap-6">
                         <li>
@@ -68,7 +68,7 @@
                             fill="#A1BAA1" />
                     </svg>
                     <h6 class=" font-stapel text-[#A1BAA1] font-medium text-[32px] md:text-5xl my-2 md:my-6">
-                        Q1 2024
+                        Q3 2024
                     </h6>
                     <ul class="text-[#EAECF0] font-gilroy md:text-lg flex flex-col gap-4 md:gap-6">
                         <li>
@@ -89,7 +89,7 @@
                             fill="#A1BAA1" />
                     </svg>
                     <h6 class=" font-stapel text-[#A1BAA1] font-medium text-[32px] md:text-5xl my-2 md:my-6">
-                        Q2 2024
+                        Q4 2024
                     </h6>
                     <ul class="text-[#EAECF0] font-gilroy md:text-lg flex flex-col gap-4 md:gap-6">
                         <li>

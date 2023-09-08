@@ -1,6 +1,6 @@
 <template>
-    <header class="w-full fixed top-0 bg-[#0D0D0D] md:absolute zoom  md:bg-transparent z-[9999] shadow-md md:shadow-none"
-        :class="{ '!top-[40px] md:!top-0 bg-white': route.path === '/' }">
+    <header class="w-full fixed top-0 bg-[#0D0D0D] md:absolute zoom  md:bg-transparent z-[9999] "
+        :class="{ '!top-[40px] md:!top-0 bg-transparent': route.path === '/', 'shadow-md md:shadow-none': scrolled, '!bg-white': route.path === '/' && scrolled }">
         <nav class=" py-3 md:py-5 w-full">
             <div class="flex items-center justify-between container md:max-w-screen-2xl mx-auto">
                 <div class="hidden md:flex items-center gap-8">
@@ -14,7 +14,7 @@
                             <div class="dropdown" v-if="link.children">
                                 <ul class="flex flex-col gap-6">
                                     <li class="item" v-for="child in link.children" :key="child.id">
-                                        <img :src="child.icon" alt="icon">
+                                        <img :data-src="child.icon" class="lazyload" alt="icon">
                                         <template v-if="child.local">
                                             <nuxt-link :to="child.to">{{ child.title }}</nuxt-link>
                                         </template>
@@ -32,30 +32,12 @@
                         <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
                             :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
                     </nuxt-link>
-                    <li class="parent w-full items-end text-[#404040]  text-base font-medium font-gilroy pt-1">
+                    <li class="parent w-full items-end text-[#404040]  text-base font-medium font-gilroy">
                         <button @click="iSmobileMenu = !iSmobileMenu"
-                            class=" md:hidden bg-[#262626] rounded-lg relative w-7 h-7 menu-opener" id="menuButton" title="menu-Button">
-                            <a class="hamburger" aria-label="swipe" href="#" :class="{ 'active': iSmobileMenu }"><span></span></a>
-                            <!-- <svg class=" w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#eee"
-                                stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
-                                <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
-                                    <animate dur="0.2s" attributeName="d"
-                                        values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7"
-                                        fill="freeze" begin="start.begin" />
-                                    <animate dur="0.2s" attributeName="d"
-                                        values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7"
-                                        fill="freeze" begin="reverse.begin" />
-                                </path>
-                                <rect width="10" height="10" stroke="none">
-                                    <animate dur="2s" id="reverse" attributeName="width" begin="click" />
-                                </rect>
-                                <rect width="10" height="10" stroke="none">
-                                    <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze"
-                                        begin="click" />
-                                    <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze"
-                                        begin="reverse.begin" />
-                                </rect>
-                            </svg> -->
+                            class=" md:hidden bg-[#262626] rounded-lg relative w-10 h-10 menu-opener" id="menuButton"
+                            title="menu-Button">
+                            <a class="hamburger" aria-label="swipe" href="#"
+                                :class="{ 'active': iSmobileMenu }"><span></span></a>
                         </button>
                         <div class="dropdown !w-[92%] !mx-auto top-10 !shadow-2xl"
                             :class="{ 'active': iSmobileMenu, '!top-20': route.path === '/' }">
@@ -64,7 +46,7 @@
                                     <nuxt-link to="/"
                                         class="cursor-pointer flex items-center gap-4 justify-start w-full !text-sm">
                                         <div class=" w-10 h-10 rounded-full">
-                                            <img class="w-full h-full" :src="midass" alt="icon">
+                                            <img class="w-full h-full lazyload" :data-src="midass" alt="icon">
                                         </div>
                                         Home
                                     </nuxt-link>
@@ -74,7 +56,7 @@
                                         class="cursor-pointer flex items-center gap-4 justify-start w-full !text-sm"
                                         v-if="!link.children">
                                         <div class=" w-10 h-10 rounded-full  p-0.5">
-                                            <img class="w-full h-full" :src="link.icon" alt="icon">
+                                            <img class="w-full h-full lazyload" :data-src="link.icon" alt="icon">
                                         </div>
                                         {{ link.title
                                         }}
@@ -83,12 +65,14 @@
                                         <li v-for="child in link.children" class="w-full" :key="child.id">
                                             <template v-if="child.local">
                                                 <nuxt-link :to="child.to" class="flex items-center gap-4 !text-sm"><img
-                                                        class=" w-10" :src="child.icon" alt="icon"> {{ child.title
+                                                        class=" w-10 lazyload" :data-src="child.icon" alt="icon"> {{
+                                                            child.title
                                                         }}</nuxt-link>
                                             </template>
                                             <template v-else>
                                                 <a :href="child.to" class="flex items-center gap-4 !text-sm"><img
-                                                        class=" w-10" :src="child.icon" alt="icon"> {{ child.title }}</a>
+                                                        class=" w-10 lazyload" :data-src="child.icon" alt="icon"> {{
+                                                            child.title }}</a>
                                             </template>
                                         </li>
                                     </ul>
@@ -186,6 +170,7 @@ const links = ref([
     },
 ])
 const showModal = computed(() => modal.show.value);
+const scrolled = ref(false)
 onMounted(() => {
     if (headRef.value) {
         window.addEventListener("scroll", () => {
@@ -198,6 +183,15 @@ onMounted(() => {
             }
         });
     }
+    window.addEventListener('scroll', () => {
+        const verticalScrollPx = window.scrollY || window.pageYOffset;
+        if (verticalScrollPx == 0) {
+            scrolled.value = false
+        }
+        else {
+            scrolled.value = true
+        }
+    })
 });
 watch(
     () => route.fullPath,
@@ -298,8 +292,8 @@ const sendRequest = () => {
 
 .hamburger {
     position: absolute;
-    left: 18%;
-    top: 48%;
+    left: 29%;
+    top: 49%;
 }
 
 .hamburger {
@@ -313,7 +307,7 @@ const sendRequest = () => {
     cursor: pointer;
     border-radius: 1px;
     height: 2px;
-    width: 18px;
+    width: 16px;
     background: white;
     position: absolute;
     display: flex;

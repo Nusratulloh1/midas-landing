@@ -999,7 +999,7 @@
                 Revolutionise the way of saving money
             </h4>
             <div class="borderedCard mx-auto">
-                <img src="@/assets/images/phone.png" v-motion-slide-visible-bottom alt="phone">
+                <img :data-src="phonePng" class="lazyload" v-motion-slide-visible-bottom alt="phone">
             </div>
             <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-20 md:h-[535px]">
                 <div @click="$emit('send')" class="card " v-motion-slide-visible-once-bottom>
@@ -1007,7 +1007,7 @@
                         Automated financial insights
                     </h5>
                     <div>
-                        <img src="@/assets/images/icons/finance.svg" alt="finance">
+                        <img :data-src="financeSvg" class="lazyload" alt="finance">
                         <MFinanceAnimeIcon class="animation"></MFinanceAnimeIcon>
                     </div>
                     <p>
@@ -1019,7 +1019,7 @@
                         Targeted savings distribution
                     </h5>
                     <div>
-                        <img src="@/assets/images/icons/target.svg" alt="target">
+                        <img :data-src="targetSvg" class="lazyload" alt="target">
                         <MTargetAnimeIcon class="animation"></MTargetAnimeIcon>
                     </div>
                     <p>
@@ -1044,6 +1044,9 @@
 import { useParallax, useMediaQuery } from '@vueuse/core'
 import MoneyGame from './MoneyGame.vue';
 import { MFinanceAnimeIcon, MTargetAnimeIcon } from '../icons';
+import phonePng from "@/assets/images/phone.png"
+import financeSvg from "@/assets/images/icons/finance.svg"
+import targetSvg from "@/assets/images/icons/target.svg"
 // import MoneyIcon from './icons/MoneyIcon.vue';
 const isMobile = useMediaQuery('(max-width: 768px)')
 const container2 = ref(null)

@@ -14,7 +14,7 @@
                     Default
                 </h6>
                 <div>
-                    <img src="@/assets/images/icons/sdefault.svg" alt="sdefault">
+                    <img :data-src="sdefault" class="lazyload" alt="sdefault">
                 </div>
                 <p>
                     Default Space, track all your <br class=" hidden md:block"> finances in one app
@@ -25,7 +25,7 @@
                     Savings
                 </h6>
                 <div>
-                    <img src="@/assets/images/icons/ssaving.svg" alt="ssaving">
+                    <img :data-src="ssaving" class="lazyload" alt="ssaving">
 
                 </div>
                 <p>
@@ -37,8 +37,7 @@
                     Budget
                 </h6>
                 <div>
-                    <img src="@/assets/images/icons/sbudget.svg" alt="sbudget">
-
+                    <img :data-src="sbudget" class="lazyload" alt="sbudget">
                 </div>
                 <p>
                     Budget Space, create budgets and <br class=" hidden md:block"> manage your planned costs
@@ -52,7 +51,7 @@
                         Set multiple budgets with ease
                     </h5>
                     <div>
-                        <img src="@/assets/images/icons/budget.svg" alt="budget">
+                        <img :data-src="budget" class="lazyload" alt="budget">
                         <MBudgetAnimeIcon></MBudgetAnimeIcon>
                     </div>
                     <p>
@@ -65,7 +64,7 @@
                         Unite in shared spaces
                     </h5>
                     <div>
-                        <img src="@/assets/images/icons/shared.svg" alt="shared">
+                        <img :data-src="shared" class="lazyload" alt="shared">
                         <MSharedAnimeIcon></MSharedAnimeIcon>
                     </div>
                     <p>
@@ -88,6 +87,11 @@
   
 <script lang="ts" setup>
 import { MBudgetAnimeIcon, MSharedAnimeIcon } from '../icons';
+import sdefault from "@/assets/images/icons/sdefault.svg"
+import ssaving from "@/assets/images/icons/ssaving.svg"
+import sbudget from "@/assets/images/icons/sbudget.svg"
+import budget from "@/assets/images/icons/budget.svg"
+import shared from "@/assets/images/icons/shared.svg"
 
 
 </script>
@@ -258,4 +262,5 @@ import { MBudgetAnimeIcon, MSharedAnimeIcon } from '../icons';
             }
         }
     }
-}</style>
+}
+</style>

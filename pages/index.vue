@@ -39,10 +39,10 @@
         </div>
         <div class="svgs zoom">
           <MTargetIcon :style="isMobile ? '' : layer0"
-            class="w-[125px] md:w-auto md:left-5 bottom-[-20px] z-[-99] md:bottom-[190px] absolute">
+            class="w-[115px] md:w-auto md:left-5 bottom-[-20px] z-[-99] md:bottom-[190px] absolute">
           </MTargetIcon>
           <MPieIcon :style="isMobile ? '' : layer1"
-            class=" w-[125px] md:w-auto right-7 top-[85px] z-[-99] md:right-[70px] md:top-[30px] absolute">
+            class=" w-[110px] md:w-auto right-7 top-[88px] z-[-99] md:right-[70px] md:top-[30px] absolute">
           </MPieIcon>
           <!-- <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
           </MDiagramIcon>
@@ -78,7 +78,7 @@
                 </p>
               </div>
               <div class=" w-[193px] md:w-[35%] mt-6 md:mt-0 h-full">
-                <img src="@/assets/images/phone2.webp" class="w-full h-full md:w-full md:h-auto dark-svg object-contain md:px-4 md:mb-[75px]" alt="phone2">
+                <img :data-src="phoneWep" class="lazyload w-full h-full md:w-full md:h-auto dark-svg object-contain md:px-4 md:mb-[75px]" alt="phone2">
                 <video class=" w-full h-full rounded-[30px] md:rounded-[60px] object-contain dark-image" autoplay muted loop>
                   <source src="@/assets/images/demo.webm" type="video/webm">
                   <source src="@/assets/images/demo.webm" type="video/webm">
@@ -94,8 +94,8 @@
               <h5>
                 Reach your <br> financial goals
               </h5>
-              <div class="anime ">
-                <img src="@/assets/images/icons/mishen.svg" alt="mishen">
+              <div class="anime">
+                <img :data-src="mishenSvg" class=" lazyload" alt="mishen">
                 <Blottie ref="blottie" class="onHover" :loop="true" renderer="svg" :path="mishen" @ready="onReady" />
               </div>
               <p>
@@ -109,7 +109,7 @@
                 Smart analytics <br> insights
               </h5>
               <div class="anime">
-                <img src="@/assets/images/icons/chart.svg" alt="chart">
+                <img :data-src="chartSvg" class="lazyload" alt="chart">
                 <Blottie ref="blottie" class="onHover" :loop="true" renderer="svg" :path="diagram" @ready="onReady" />
               </div>
               <p class="!text-[#0D0D0D]">
@@ -124,7 +124,7 @@
   
               </h5>
               <div class="anime">
-                <img src="@/assets/images/icons/setting.svg" alt="chart">
+                <img :data-src="settingSvg" class="lazyload" alt="chart">
                 <Blottie ref="blottie" class="onHover" :loop="true" renderer="svg" :path="setting" @ready="onReady" />
               </div>
               <p>
@@ -180,7 +180,10 @@
   import MoneySaving from '~/components/home/MoneySaving.vue';
   import Reviews from '~/components/home/Reviews.vue';
   import { useRoute } from 'vue-router'
-  
+  import phoneWep from "@/assets/images/phone2.webp"
+  import mishenSvg from "@/assets/images/icons/mishen.svg"
+  import chartSvg from "@/assets/images/icons/chart.svg"
+  import settingSvg from "@/assets/images/icons/setting.svg"
   const route = useRoute()
   const container = ref(null)
   const isMobile = useMediaQuery('(max-width: 768px)')
@@ -271,15 +274,6 @@
       // }
     });
   })
-  // const layer2 = computed(() => ({
-  //   transform: `translateX(${parallax.tilt * 30}px) translateY(${parallax.roll * 80
-  //     }px) scale(1.23)`,
-  // }))
-  
-  // const layer3 = computed(() => ({
-  //   transform: `translateX(${parallax.tilt * 40}px) translateY(${parallax.roll * 90
-  //     }px) scale(1.23)`,
-  // }))
   </script>
   <style lang="scss">
   .top-section {
