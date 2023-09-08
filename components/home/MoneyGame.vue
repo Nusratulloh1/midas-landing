@@ -363,7 +363,7 @@ onMounted(() => {
         if (verticalScrollPx > 2699 && verticalScrollPx < 3295 && width > 768) {
             show.value = true
         }
-        if (verticalScrollPx > 4100 && verticalScrollPx < 4400 && width < 768) {
+        if (verticalScrollPx > 4000 && verticalScrollPx < 4400 && width < 768) {
             show.value = true
         }
     })

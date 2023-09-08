@@ -69,7 +69,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class=" mt-10">
+                                <li class=" mt-5">
                                     <button @click="sendRequest"
                     class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy md:hidden">
                     Request early access

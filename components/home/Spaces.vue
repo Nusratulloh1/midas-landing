@@ -245,8 +245,17 @@ import { MBudgetAnimeIcon, MSharedAnimeIcon } from '../icons';
         svg {
             height: 170.687px;
         }
-        &:hover{
+
+        &:hover {
             margin-top: -10px;
+
+            svg {
+                display: none;
+            }
+
+            img {
+                display: block;
+            }
         }
     }
 }</style>

@@ -10,7 +10,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-24 mt-24">
                 <div class="flex justify-center flex-col">
                     <h5 class=" font-stapel font-medium text-lg md:text-2xl text-white">
-                        The Story Behind the Name: <span class="text-[#CBE8CA]"> "Midas"?</span>
+                        The story behind the name <span class="text-[#CBE8CA]"> Midas</span>
                     </h5>
                     <p class=" font-gilroy text-sm md:text-lg text-[#E8E8E8] max-w-[529px] mt-4">
                         Inspired by King Midas, the mythical figure who turned everything he touched into gold, we aim to
@@ -23,10 +23,11 @@
                 <img src="@/assets/images/history2.png" alt="history2">
                 <div class="flex justify-center flex-col">
                     <h5 class=" font-stapel font-medium text-lg md:text-2xl text-white">
-                        Decoding the <span class="text-[#CBE8CA]">Logo “M”</span>
+                        Decoding the logo
                     </h5>
                     <p class=" font-gilroy text-sm md:text-lg text-[#E8E8E8] max-w-[529px] mt-4">
-                        Our logo's <span class="text-[#CBE8CA] font-bold">"M"</span> is more than a letter; it's a narrative. It harks back to the age-old concept of
+                        Our logo's <span class="text-[#CBE8CA] font-bold">"M"</span> is more than a letter; it's a
+                        narrative. It harks back to the age-old concept of
                         treasure chests filled with gold coins. When you look closely, you'll see a trio of coins forming a
                         symmetrical pattern, encapsulating our holistic approach to financial wellness.
                     </p>
