@@ -999,7 +999,7 @@
                 Revolutionise the way of saving money
             </h4>
             <div class="borderedCard mx-auto">
-                <img :data-src="phonePng" class="lazyload" v-motion-slide-visible-bottom alt="phone">
+                <img :data-src="phonePng" height="100" width="100" class="lazyload" v-motion-slide-visible-bottom alt="phone">
             </div>
             <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-20 md:h-[535px]">
                 <div @click="$emit('send')" class="card " v-motion-slide-visible-once-bottom>

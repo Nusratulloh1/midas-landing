@@ -65,7 +65,7 @@
                                         <li v-for="child in link.children" class="w-full" :key="child.id">
                                             <template v-if="child.local">
                                                 <nuxt-link :to="child.to" class="flex items-center gap-4 !text-sm"><img
-                                                        class=" w-10 lazyload" :data-src="child.icon" alt="icon"> {{
+                                                        class=" w-10 lazyload" height="40" width="40" :data-src="child.icon" alt="icon"> {{
                                                             child.title
                                                         }}</nuxt-link>
                                             </template>
@@ -208,7 +208,7 @@ const sendRequest = () => {
 <style lang="scss" scoped>
 .parent {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 
     &.desktop {
         display: flex;
