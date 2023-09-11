@@ -42,7 +42,7 @@
           class="w-[115px] md:w-auto md:left-5 bottom-[-20px] z-[-99] md:bottom-[190px] absolute">
         </MTargetIcon>
         <MPieIcon :style="isMobile ? '' : layer1"
-          class=" w-[110px] md:w-auto right-7 top-[88px] z-[-99] md:right-[70px] md:top-[30px] absolute">
+          class=" w-[110px] md:w-auto right-7 top-[75px] z-[-99] md:right-[70px] md:top-[30px] absolute">
         </MPieIcon>
         <!-- <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
           </MDiagramIcon>
@@ -78,14 +78,21 @@
               </p>
             </div>
             <div class=" w-[193px] md:w-[35%] mt-6 md:mt-0 h-full">
-              <img :data-src="phoneWep"
-                class="lazyload w-full h-full md:w-full md:h-auto dark-svg object-contain md:px-4 md:mb-[75px]"
+              <img :src="phoneWep"
+                class="w-full h-full md:w-full md:h-auto dark-svg object-contain md:px-4 md:mb-[75px]"
                 alt="phone2">
-              <video class=" w-full h-full rounded-[30px] md:rounded-[60px] object-contain dark-image" autoplay muted
-                loop>
-                <source src="@/assets/images/demo.webm" type="video/webm">
-                Your browser does not support the video tag.
-              </video>
+              <div class="dark-image">
+                <video class=" w-full h-full rounded-[30px] md:hidden md:rounded-[60px] object-contain"
+                  :poster="phoneWep" autoplay muted loop>
+                  <source src="@/assets/videos/demo_compressed.webm" type="video/webm">
+                  Your browser does not support the video tag.
+                </video>
+                <video class=" w-full h-full rounded-[30px] hidden md:block md:rounded-[60px] object-contain"
+                  :poster="phoneWep" autoplay muted loop>
+                  <source src="@/assets/videos/demo.webm" type="video/webm">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </div>
         </div>
@@ -523,4 +530,5 @@ onMounted(() => {
       zoom: 100%;
     }
   }
-}</style>
+}
+</style>

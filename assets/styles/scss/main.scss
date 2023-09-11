@@ -1,5 +1,6 @@
 @tailwind components;
 @tailwind utilities;
+
 @layer components {}
 
 @import '~/assets/fonts/index.css';
@@ -32,6 +33,15 @@ a {
   padding: 0 16px;
 }
 
+@media (max-width: 768px) {
+  a {
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 620px;
@@ -42,6 +52,7 @@ a {
   .container {
     max-width: 748px;
   }
+
 
   .zoom {
     zoom: 100%;
@@ -88,7 +99,7 @@ a {
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity .5s ease-out all;
-  
+
 }
 
 .fade-enter-from,

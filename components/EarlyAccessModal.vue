@@ -73,7 +73,7 @@
                         </div>
                         <hr />
                         <div class="p-4 md:p-6 mt-4">
-                            <img :data-src="AvatarSvg" class="h-[56px] lazyload" alt="avatars">
+                            <img :src="AvatarSvg" class="h-[56px]" alt="avatars">
                             <h5>
                                 1,511 People ahead of you
                             </h5>

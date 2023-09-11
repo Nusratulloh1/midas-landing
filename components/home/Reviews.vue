@@ -6,7 +6,7 @@
             </h3>
             <div class="reviews overflow-hidden mb-16 md:mb-56" v-motion-slide-visible-once-bottom>
                 <div class="left flex gap-3 md:w-1/2 box-border overflow-hidden justify-end">
-                    <Swiper lazy-preload-prev-next :direction="'vertical'" class="h-[694px] w-[385.15px]" :space-between="50"
+                    <Swiper :direction="'vertical'" class="h-[694px] w-[385.15px]" :space-between="50"
                         style="margin-left: -250px !important;" :modules="[SwiperAutoplay, SwiperEffectCreative]"
                         :slides-per-view="3" :loop="true" :speed="3000" :autoplay="{
                             delay: 0,
@@ -19,7 +19,7 @@
                                 </p>
                                 <div class="info">
                                     <div class="avatar">
-                                        <img loading="lazy" src="@/assets/images/avatars/1.png" alt="avatar">
+                                        <img src="@/assets/images/avatars/1.png" alt="avatar">
                                     </div>
                                     <h6>
                                         {{ rev.name }}
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                     </div> -->
-                    <Swiper :direction="'vertical'" lazy-preload-prev-next class="h-[694px] md:w-[365.15px]"
+                    <Swiper :direction="'vertical'" class="h-[694px] md:w-[365.15px]"
                         :modules="[SwiperAutoplay, SwiperEffectCreative]" :slides-per-view="3" :speed="3000" :loop="true"
                         :space-between="50" :autoplay="{
                             delay: 0,
@@ -56,7 +56,7 @@
                                 </p>
                                 <div class="info">
                                     <div class="avatar">
-                                        <img loading="lazy" src="@/assets/images/avatars/1.png" alt="avatar">
+                                        <img src="@/assets/images/avatars/1.png" alt="avatar">
                                     </div>
                                     <h6>
                                         {{ rev.name }}

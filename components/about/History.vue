@@ -19,8 +19,8 @@
                         money through smart saving tools.
                     </p>
                 </div>
-                <img src="@/assets/images/history1.png" alt="history1">
-                <img src="@/assets/images/history2.png" alt="history2">
+                <img src="@/assets/images/history1.webp" alt="history1">
+                <img src="@/assets/images/history2.webp" alt="history2">
                 <div class="flex justify-center flex-col">
                     <h5 class=" font-stapel font-medium text-lg md:text-2xl text-white">
                         Decoding the logo

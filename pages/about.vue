@@ -12,7 +12,8 @@
                     Beyond the ordinary realm of all in one personal finance managers, we are one of the pioneers of a new
                     era - saving money apps.
                 </p>
-                <img class="mx-auto mt-10" src="@/assets/images/icons/about.svg" alt="about">
+                <img class="mx-auto mt-10 md:hidden" src="@/assets/images/about.webp" alt="about">
+                <img class="mx-auto mt-10 hidden md:block" src="@/assets/images/icons/about.svg" alt="about">
             </div>
         </div>
         <Vision></Vision>
