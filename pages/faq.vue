@@ -13,9 +13,6 @@
         </div>
         <section class=" py-8 md:py-16">
             <div class="container mx-auto">
-                <!-- <h4 class=" font-medium font-stapel text-[40px] leading-[44px] tracking-[-0.8px] text-center">
-                    Frequently asked questions
-                </h4> -->
                 <div class="collapses">
                     <collapse class=" collaps" v-for="(item, i) in questions" :key="item.id">
                         <header class="head">
@@ -48,7 +45,8 @@
                     v-motion-slide-visible-once-bottom>
                     Still have questions?
                 </h4>
-                <p class="mt-2 text-base md:text-lg font-gilroy text-[#475467] text-center" v-motion-slide-visible-once-bottom>
+                <p class="mt-2 text-base md:text-lg font-gilroy text-[#475467] text-center"
+                    v-motion-slide-visible-once-bottom>
                     Can’t find the answer you’re looking for? Please send the request to our friendly team.
                 </p>
                 <div class="flex items-center justify-center mt-8" v-motion-slide-visible-once-bottom>
@@ -150,6 +148,10 @@ const questions = ref([
         computedHeight: 0,
     },
 ])
+definePageMeta({
+    title: 'Midas | FAQs',
+    ogTitle: 'Midas | FAQs',
+})
 const toggleExpand = (i) => {
     // questions.value.forEach((acc, curr) => {
     //     acc.isExpand = false
@@ -311,4 +313,5 @@ onMounted(() => {
             }
         }
     }
-}</style>
+}
+</style>

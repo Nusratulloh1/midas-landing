@@ -5,6 +5,9 @@
 
 @import '~/assets/fonts/index.css';
 
+@import './components/hamburger.scss';
+@import './components/money-saving.scss';
+
 body {
   -webkit-transition: background-color 700ms linear;
   -moz-transition: background-color 700ms linear;

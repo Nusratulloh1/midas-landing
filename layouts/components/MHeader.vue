@@ -28,10 +28,12 @@
                     </ul>
                 </div>
                 <ul class="flex items-center gap-8 justify-between md:hidden w-full">
-                    <nuxt-link class=" !no-underline !bg-transparent" to="/">
-                        <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
-                            :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
-                    </nuxt-link>
+                    <li>
+                        <nuxt-link class=" !no-underline !bg-transparent" to="/">
+                            <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
+                                :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
+                        </nuxt-link>
+                    </li>
                     <li class="parent w-full items-end text-[#404040]  text-base font-medium font-gilroy">
                         <button @click="iSmobileMenu = !iSmobileMenu"
                             class=" md:hidden bg-[#262626] rounded-lg relative w-10 h-10 menu-opener" id="menuButton"
@@ -65,7 +67,8 @@
                                         <li v-for="child in link.children" class="w-full" :key="child.id">
                                             <template v-if="child.local">
                                                 <nuxt-link :to="child.to" class="flex items-center gap-4 !text-sm"><img
-                                                        class=" w-10 lazyload" height="40" width="40" :data-src="child.icon" alt="icon"> {{
+                                                        class=" w-10 lazyload" height="40" width="40" :data-src="child.icon"
+                                                        alt="icon"> {{
                                                             child.title
                                                         }}</nuxt-link>
                                             </template>
@@ -288,70 +291,5 @@ const sendRequest = () => {
         background-color: #0D0D0D;
         border-radius: 8px;
     }
-}
-
-.hamburger {
-    position: absolute;
-    left: 29%;
-    top: 49%;
-}
-
-.hamburger {
-    cursor: pointer;
-    // padding: 10px 35px 16px 0px;
-}
-
-.hamburger span,
-.hamburger span:before,
-.hamburger span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 2px;
-    width: 16px;
-    background: white;
-    position: absolute;
-    display: flex;
-    content: "";
-}
-
-.hamburger span:before {
-    top: -5px;
-}
-
-.hamburger span:after {
-    bottom: -5px;
-}
-
-/*
-#hamburger span, #hamburger span:before, #hamburger span:after {
-  transition: all 200ms ease-in-out;
-}
-*/
-.hamburger span,
-.hamburger span:before,
-.hamburger span:after {
-    -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    -moz-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    -o-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    /* easeInOutCubic */
-}
-
-.hamburger.active span {
-    background-color: transparent;
-}
-
-.hamburger.active span:before,
-.hamburger.active span:after {
-    top: 0;
-}
-
-.hamburger.active span:before {
-    transform: rotate(45deg);
-}
-
-.hamburger.active span:after {
-    transform: translateY(-10px) rotate(-45deg);
-    top: 10px;
 }
 </style>

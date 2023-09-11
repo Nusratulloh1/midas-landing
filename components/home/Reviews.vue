@@ -28,21 +28,6 @@
                             </div>
                         </SwiperSlide>
                     </Swiper>
-                    <!-- <div class="flex flex-col gap-8 mt-[-20px]">
-                        <div class="box" v-for="rev in reviewsList" :key="rev.id">
-                            <p>
-                                {{ rev.text }}
-                            </p>
-                            <div class="info">
-                                <div class="avatar">
-                                    <img src="../assets/images/avatars/1.png" alt="avatar">
-                                </div>
-                                <h6>
-                                    {{ rev.name }}
-                                </h6>
-                            </div>
-                        </div>
-                    </div> -->
                     <Swiper :direction="'vertical'" class="h-[694px] md:w-[365.15px]"
                         :modules="[SwiperAutoplay, SwiperEffectCreative]" :slides-per-view="3" :speed="3000" :loop="true"
                         :space-between="50" :autoplay="{

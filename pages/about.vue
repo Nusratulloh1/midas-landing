@@ -100,5 +100,8 @@
 import Vision from '~/components/about/Vision.vue';
 import History from '~/components/about/History.vue';
 import Binefits from '~/components/about/Binefits.vue';
-
+definePageMeta({
+    title: 'Midas | About',
+    ogTitle: 'Midas | About',
+})
 </script>
