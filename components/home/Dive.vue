@@ -3,43 +3,37 @@
         <section data-bg="#0D0D0D" second="#0D0D0D" class="section pt-10 md:pt-20 pb-10">
             <div class="container mx-auto zoom">
                 <div class="dark">
-                    <h3 class=" text-[32px] md:text-7xl font-medium  font-stapel leading-[normal]">
+                    <h3 class=" text-[32px] md:text-5xl lg:text-7xl font-medium  font-stapel leading-[normal]">
                         Redefining finance:
                         <br>
                         Dive into standout features
                     </h3>
-                    <div class="content py-3 px-4 md:px-24 rounded-[32px] w-full my-10 mb-16 h-[530px] overflow-hidden md:h-[594px] flex flex-col md:flex-row items-center justify-between"
+                    <div class="content py-3 px-4 md:px-7 lg:px-24 rounded-[32px] w-full my-10 mb-16 h-[530px] overflow-hidden lg:h-[594px] flex flex-col lg:flex-row items-center justify-between"
                         v-motion-slide-visible-once-bottom>
-                        <div>
-                            <h3 class="text-[32px] md:text-7xl font-medium  font-stapel leading-[normal]">
+                        <div class="w-full">
+                            <h3 class="text-[32px] lg:text-7xl font-medium  font-stapel leading-[normal]">
                                 All in one <br> Finance hub
                             </h3>
                             <p
-                                class=" mt-4 md:mt-6 max-w-[512px] text-base md:text-2xl font-gilroy leading-[normal] text-[#404040]">
+                                class=" mt-4 lg:mt-6 max-w-[512px] text-base lg:text-2xl font-gilroy leading-[normal] text-[#404040]">
                                 Manage, track, and optimize all your financial activities seamlessly in one intuitive app.
                             </p>
                         </div>
-                        <div class=" w-[193px] md:w-[35%] mt-6 md:mt-0 h-full">
+                        <div class=" w-[193px] lg:w-[35%] mt-6 lg:mt-0 h-full">
                             <img :src="phoneWep"
-                                class="w-full h-full md:w-full md:h-auto dark-svg object-contain md:px-4 md:mb-[75px]"
+                                class="w-full h-full md:w-full lg:h-auto dark-svg object-contain lg:px-4 lg:mb-[75px]"
                                 alt="phone2">
                             <div class="dark-image">
-                                <video class=" w-full h-full rounded-[30px] md:rounded-[60px] object-contain"
+                                <video class=" w-full h-full rounded-[30px] lg:rounded-[60px] object-contain"
                                     :poster="phoneWep" autoplay muted loop>
                                     <source :src="isMobile ? demo_compressed : demo" type="video/webm">
                                     Your browser does not support the video tag.
                                 </video>
-                                <!-- <video
-                                    class=" w-full h-full rounded-[30px] hidden md:block md:rounded-[60px] object-contain"
-                                    :poster="phoneWep" autoplay muted loop>
-                                    <source src="@/assets/videos/demo.webm" type="video/webm">
-                                    Your browser does not support the video tag.
-                                </video> -->
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                     <div @click="sendRequest"
                         class="advantage hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
                         v-motion-slide-visible-once-bottom>
@@ -257,7 +251,7 @@ const sendRequest = () => {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     .content {
         transition: .2s ease-out all !important;

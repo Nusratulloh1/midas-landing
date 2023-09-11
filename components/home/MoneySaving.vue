@@ -32,10 +32,10 @@
                 <img :data-src="layer13" :style="isMobile ? '' : layerr13"
                     v-motion-roll-visible-bottom class="layerr13 lazyload" alt="layer13">
             </div>
-            <p class="text font-stapel font-light text-[#666] text-xl md:text-[32px] text-center">
+            <p class="text font-stapel font-light text-[#666] text-xl md:text-2xl lg:text-[32px] text-center">
                 Introducing Money Game
             </p>
-            <h4 class="desc text-[32px] md:text-[64px] font-medium font-stapel mt-3 text-center">
+            <h4 class="desc text-[32px] md:text-5xl lg:text-[64px] font-medium font-stapel mt-3 text-center">
                 Revolutionise the way of saving money
             </h4>
             <div class="borderedCard mx-auto">
@@ -102,7 +102,7 @@ import layer10 from "@/assets/images/money-icons/layer10.svg"
 import layer11 from "@/assets/images/money-icons/layer11.svg"
 import layer12 from "@/assets/images/money-icons/layer12.svg"
 import layer13 from "@/assets/images/money-icons/layer13.svg"
-const isMobile = useMediaQuery('(max-width: 768px)')
+const isMobile = useMediaQuery('(max-width: 1024px)')
 const container2 = ref(null)
 const parallax2 = reactive(useParallax(container2))
 const layerr0 = computed(() => ({

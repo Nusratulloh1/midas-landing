@@ -1,14 +1,14 @@
 <template>
-    <section data-bg="#F6F6F6" four="#F6F6F6" class=" py-5 md:py-20 section">
+    <section data-bg="#F6F6F6" four="#F6F6F6" class=" py-5 lg:py-20 section">
         <div class="text-center zooom">
-            <p class=" font-stapel text-[#8C8C8C] text-xl md:text-[32px] font-light">
+            <p class=" font-stapel text-[#8C8C8C] text-xl lg:text-[32px] font-light">
                 Introducing Spaces
             </p>
-            <h4 class=" text-[32px] md:text-[64px] font-medium font-stapel mt-3">
+            <h4 class=" text-[32px] lg:text-[64px] font-medium font-stapel mt-3">
                 Manage your transactions in 3 modes:
             </h4>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 mt-11 zoom">
+        <div class="grid grid-cols-1 lg:grid-cols-3 mt-11 zoom">
             <div class="serving">
                 <h6>
                     Default
@@ -17,7 +17,7 @@
                     <img :data-src="sdefault" height="100" class="lazyload" alt="sdefault">
                 </div>
                 <p>
-                    Default Space, track all your <br class=" hidden md:block"> finances in one app
+                    Default Space, track all your <br class=" hidden lg:block"> finances in one app
                 </p>
             </div>
             <div class="serving second">
@@ -29,7 +29,7 @@
 
                 </div>
                 <p>
-                    Savings Space, limit your spendings <br class=" hidden md:block"> with Money Game, to save more money
+                    Savings Space, limit your spendings <br class=" hidden lg:block"> with Money Game, to save more money
                 </p>
             </div>
             <div class="serving third">
@@ -40,12 +40,12 @@
                     <img :data-src="sbudget" height="100" class="lazyload" alt="sbudget">
                 </div>
                 <p>
-                    Budget Space, create budgets and <br class=" hidden md:block"> manage your planned costs
+                    Budget Space, create budgets and <br class=" hiddenlg:block"> manage your planned costs
                 </p>
             </div>
         </div>
         <div class="container mx-auto mt-16 zoom">
-            <div class="cards flex flex-col md:flex-row items-center gap-10 md:gap-4 justify-center">
+            <div class="cards flex flex-col lg:flex-row items-center gap-10 lg:gap-4 justify-center">
                 <div @click="$emit('send')" class="card !pr-2" v-motion-slide-visible-once-bottom>
                     <h5>
                         Set multiple budgets with ease
@@ -73,7 +73,7 @@
                     </p>
                 </div>
             </div>
-            <div class=" hidden md:flex justify-center mt-24">
+            <div class=" hidden lg:flex justify-center mt-24">
                 <button class="text-[#343330] hover:text-[#CBE8CA] animate-bounce">
                     <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -213,7 +213,7 @@ import shared from "@/assets/images/icons/shared.svg"
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .serving {
         height: 400px;
         padding: 32px 16px;

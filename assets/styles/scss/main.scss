@@ -36,7 +36,7 @@ a {
   padding: 0 16px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   a {
 
     &:hover {
@@ -53,7 +53,7 @@ a {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 748px;
+    max-width: 768px;
   }
 
 

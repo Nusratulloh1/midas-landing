@@ -413,7 +413,7 @@ const nextStep = () => {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .modal-container {
         width: 90%;
 
@@ -428,6 +428,7 @@ const nextStep = () => {
         .modal-body {
             padding: 16px;
             gap: 10px;
+            width: 100%;
 
             button {
                 padding: 8px 14px;
@@ -509,4 +510,5 @@ const nextStep = () => {
         }
 
     }
-}</style>
+}
+</style>

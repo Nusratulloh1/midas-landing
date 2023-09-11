@@ -2,7 +2,7 @@
   <div>
     <div class="w-full more md:pt-[84px] fixed md:relative z-[999] top-0" ref="headRef">
       <div class=" md:container mx-auto zoom">
-        <button class="aviable !rounded-none md:!rounded-lg !mt-0 md:!mt-6 !w-full md:!w-[65%] !h-10 md:!h-[50px]">
+        <button class="aviable !rounded-none md:!rounded-lg !mt-0 md:!mt-6 !w-full md:!w-[65%] !h-10 lg:!h-[50px]">
           <h6>
             Available in EU🇪🇺, UK🇬🇧, USA🇺🇸!
           </h6>
@@ -13,7 +13,7 @@
       </div>
     </div>
     <section data-bg="#FAFAFA" first="#FAFAFA" ref="container"
-      class="section pt-[200px] md:pt-[44px] 2xl:pt-20 top-section pb-40 md:pb-0 md:h-[100vh] 2xl:h-[883px] relative overflow-hidden "
+      class="section pt-[200px] md:pt-[44px] lg:pt-24 2xl:pt-20 top-section pb-40 md:pb-0 md:h-[80vh] lg:h-[100vh] 2xl:h-[883px] relative overflow-hidden "
       style=" transition: .3s ease-out all; ">
       <div class=" container md:max-w-screen-xl mx-auto zoom ">
         <h1>
@@ -39,10 +39,10 @@
       </div>
       <div class="svgs zoom">
         <MTargetIcon :style="isMobile ? '' : layer0"
-          class="w-[115px] md:w-auto md:left-5 bottom-[-20px] z-[-99] md:bottom-[190px] absolute">
+          class="w-[115px] md:w-[125px] lg:w-auto lg:left-5 bottom-[-20px] z-[-99] lg:bottom-[190px] absolute">
         </MTargetIcon>
         <MPieIcon :style="isMobile ? '' : layer1"
-          class=" w-[110px] md:w-auto right-7 top-[75px] z-[-99] md:right-[70px] md:top-[30px] absolute">
+          class=" w-[110px] md:w-[120px] lg:w-auto right-7 top-[75px] md:top-[-20px] z-[-99] lg:right-[70px] lg:top-[30px] absolute">
         </MPieIcon>
       </div>
       <div>
@@ -162,6 +162,7 @@ onMounted(() => {
     margin-top: 24px;
   }
 }
+
 .more {
   .aviable {
     border-radius: 8px;
@@ -210,7 +211,7 @@ onMounted(() => {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .top-section {
     h1 {
       font-size: 40px;
@@ -222,6 +223,7 @@ onMounted(() => {
       margin-top: 16px;
     }
   }
+
   .more {
 
     .aviable {
@@ -234,7 +236,23 @@ onMounted(() => {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .top-section {
+    h1 {
+      font-size: 80px;
+      line-height: 105%;
+    }
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .top-section {
+    h1 {
+      font-size: 90px;
+      line-height: 105%;
+    }
+  }
+}
+@media (min-width: 1024px) {
   .top-section {
     .zoom {
       zoom: 100%;
