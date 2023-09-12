@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="bg-[#0D0D0D] pt-24 lg:pt-[144px] h-[673px] md:h-[760px] lg:h-[995px] header">
+        <div class="bg-[#0D0D0D] pt-24 lg:pt-[144px] h-[673px] md:h-[760px] lg:h-[995px] header relative">
             <div class="container mx-auto text-center">
                 <h6 class=" text-[#A1BAA1] font-gilroy text-lg lg:text-xl">
                     About us
@@ -12,9 +12,9 @@
                     Beyond the ordinary realm of all in one personal finance managers, we are one of the pioneers of a new
                     era - saving money apps.
                 </p>
-                <img class="mx-auto mt-10 lg:hidden" src="@/assets/images/about.webp" alt="about">
-                <!-- <img class="mx-auto mt-10 hidden lg:block object-contain" src="@/assets/images/about.png" alt="about"> -->
-                <img class="mx-auto mt-10 hidden lg:block object-contain" src="@/assets/images/icons/about.svg" alt="about">
+                <div class="absolute bottom-0 w-full left-0">
+                    <img class="mx-auto mt-10 object-contain" src="@/assets/images/icons/about.svg" alt="about">
+                </div>
             </div>
         </div>
         <Vision></Vision>
