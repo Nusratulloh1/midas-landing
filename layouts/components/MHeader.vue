@@ -2,7 +2,7 @@
     <header class="w-full fixed top-0 bg-[#0D0D0D] md:absolute zoom  md:bg-transparent z-[9999] "
         :class="{ '!top-[40px] md:!top-0 bg-transparent': route.path === '/', 'shadow-md md:shadow-none': scrolled, '!bg-white': route.path === '/' && scrolled }">
         <nav class=" py-3 md:py-5 w-full">
-            <div class="flex items-center justify-between container md:max-w-screen-2xl mx-auto">
+            <div class="flex items-center justify-between container xl:max-w-screen-2xl mx-auto">
                 <div class="hidden md:flex items-center gap-8">
                     <nuxt-link to="/" class=" !no-underline !bg-transparent">
                         <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
@@ -19,7 +19,7 @@
                                             <nuxt-link :to="child.to">{{ child.title }}</nuxt-link>
                                         </template>
                                         <template v-else>
-                                            <a :href="child.to">{{ child.title }}</a>
+                                            <a :href="child.to" target="_blank">{{ child.title }}</a>
                                         </template>
                                     </li>
                                 </ul>
@@ -28,10 +28,12 @@
                     </ul>
                 </div>
                 <ul class="flex items-center gap-8 justify-between md:hidden w-full">
-                    <nuxt-link class=" !no-underline !bg-transparent" to="/">
-                        <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
-                            :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
-                    </nuxt-link>
+                    <li>
+                        <nuxt-link class=" !no-underline !bg-transparent" to="/">
+                            <MLogo :iconColor="route.path === '/' ? '#0D0D0D' : '#CBE8CA'"
+                                :text-color="route.path === '/' ? '#23262F' : '#fff'"></MLogo>
+                        </nuxt-link>
+                    </li>
                     <li class="parent w-full items-end text-[#404040]  text-base font-medium font-gilroy">
                         <button @click="iSmobileMenu = !iSmobileMenu"
                             class=" md:hidden bg-[#262626] rounded-lg relative w-10 h-10 menu-opener" id="menuButton"
@@ -65,12 +67,13 @@
                                         <li v-for="child in link.children" class="w-full" :key="child.id">
                                             <template v-if="child.local">
                                                 <nuxt-link :to="child.to" class="flex items-center gap-4 !text-sm"><img
-                                                        class=" w-10 lazyload" :data-src="child.icon" alt="icon"> {{
+                                                        class=" w-10 lazyload" height="40" width="40" :data-src="child.icon"
+                                                        alt="icon"> {{
                                                             child.title
                                                         }}</nuxt-link>
                                             </template>
                                             <template v-else>
-                                                <a :href="child.to" class="flex items-center gap-4 !text-sm"><img
+                                                <a :href="child.to" target="_blank" class="flex items-center gap-4 !text-sm"><img
                                                         class=" w-10 lazyload" :data-src="child.icon" alt="icon"> {{
                                                             child.title }}</a>
                                             </template>
@@ -141,28 +144,28 @@ const links = ref([
             {
                 id: 1,
                 title: `Product Hunt`,
-                to: "#",
+                to: "https://www.producthunt.com/",
                 local: false,
                 icon: hunt
             },
             {
                 id: 2,
                 title: 'Reddit',
-                to: "#",
+                to: "https://www.reddit.com/",
                 local: false,
                 icon: reddit
             },
             {
                 id: 3,
                 title: `Slack`,
-                to: "#",
+                to: "https://slack.com/",
                 local: false,
                 icon: slack
             },
             {
                 id: 4,
                 title: 'Medium',
-                to: "#",
+                to: "https://medium.com/",
                 local: false,
                 icon: medium
             },
@@ -208,7 +211,7 @@ const sendRequest = () => {
 <style lang="scss" scoped>
 .parent {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 
     &.desktop {
         display: flex;
@@ -285,73 +288,7 @@ const sendRequest = () => {
     color: #E8E8E8 !important;
 
     @media (max-width: 768px) {
-        background-color: #0D0D0D;
-        border-radius: 8px;
+        color: var(--secondary-900, #0D0D0D) !important;
     }
-}
-
-.hamburger {
-    position: absolute;
-    left: 29%;
-    top: 49%;
-}
-
-.hamburger {
-    cursor: pointer;
-    // padding: 10px 35px 16px 0px;
-}
-
-.hamburger span,
-.hamburger span:before,
-.hamburger span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 2px;
-    width: 16px;
-    background: white;
-    position: absolute;
-    display: flex;
-    content: "";
-}
-
-.hamburger span:before {
-    top: -5px;
-}
-
-.hamburger span:after {
-    bottom: -5px;
-}
-
-/*
-#hamburger span, #hamburger span:before, #hamburger span:after {
-  transition: all 200ms ease-in-out;
-}
-*/
-.hamburger span,
-.hamburger span:before,
-.hamburger span:after {
-    -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    -moz-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    -o-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    /* easeInOutCubic */
-}
-
-.hamburger.active span {
-    background-color: transparent;
-}
-
-.hamburger.active span:before,
-.hamburger.active span:after {
-    top: 0;
-}
-
-.hamburger.active span:before {
-    transform: rotate(45deg);
-}
-
-.hamburger.active span:after {
-    transform: translateY(-10px) rotate(-45deg);
-    top: 10px;
 }
 </style>

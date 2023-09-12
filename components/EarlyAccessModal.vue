@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div>
         <div class="modal-mask zoom">
             <div class="modal-wrapper">
                 <div class="modal-container relative overflow-hidden" ref="anim2">
@@ -59,7 +59,7 @@
                     </form>
                     <div v-else class="success">
                         <div class=" p-4 md:p-6 pt-0">
-                            <img src="@/assets/images/icons/tor.svg" class=" absolute top-0 left-0" alt="tor"  >
+                            <img src="@/assets/images/icons/tor.svg" class=" absolute top-0 left-0" alt="tor">
                             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M15.4535 0.333069H38.5735C47.6135 0.333069 53.6668 6.67974 53.6668 16.1197V37.9091C53.6668 47.3197 47.6135 53.6664 38.5735 53.6664H15.4535C6.4135 53.6664 0.333496 47.3197 0.333496 37.9091V16.1197C0.333496 6.67974 6.4135 0.333069 15.4535 0.333069ZM25.4802 34.9731L38.1468 22.3064C39.0535 21.3997 39.0535 19.9331 38.1468 18.9997C37.2402 18.0931 35.7468 18.0931 34.8402 18.9997L23.8268 30.0131L19.1602 25.3464C18.2535 24.4397 16.7602 24.4397 15.8535 25.3464C14.9468 26.2531 14.9468 27.7197 15.8535 28.6531L22.2002 34.9731C22.6535 35.4264 23.2402 35.6397 23.8268 35.6397C24.4402 35.6397 25.0268 35.4264 25.4802 34.9731Z"
@@ -73,7 +73,7 @@
                         </div>
                         <hr />
                         <div class="p-4 md:p-6 mt-4">
-                            <img src="@/assets/images/icons/avatars.svg" class="h-[56px]" alt="avatars">
+                            <img :src="AvatarSvg" class="h-[56px]" alt="avatars">
                             <h5>
                                 1,511 People ahead of you
                             </h5>
@@ -82,7 +82,8 @@
                                 you’ll
                                 get access
                             </p>
-                            <div class="flex justify-center items-center gap-5 md:gap-8 mt-4 md:mt-8 mb-2 md:mb-4 external-links">
+                            <div
+                                class="flex justify-center items-center gap-5 md:gap-8 mt-4 md:mt-8 mb-2 md:mb-4 external-links">
                                 <a href="http://" target="_blank" rel="noopener noreferrer">
                                     <img class=" w-16 h-16" src="@/assets/images/icons/facebook.svg" alt="facebook">
                                 </a>
@@ -140,6 +141,7 @@
 import { useModal } from "@/composables";
 import { ref } from 'vue'
 import { useAutoAnimate } from '@formkit/auto-animate/vue'
+import AvatarSvg from "@/assets/images/icons/avatars.svg"
 // import useClipboard from 'vue-clipboard3'
 const modal = useModal();
 const step = ref(1)
@@ -411,7 +413,7 @@ const nextStep = () => {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .modal-container {
         width: 90%;
 
@@ -426,82 +428,86 @@ const nextStep = () => {
         .modal-body {
             padding: 16px;
             gap: 10px;
-            button{
-                padding: 8px 14px;
-            }
-            .form-item {
-
-            label {
-                font-size: 12px;
-                line-height: normal;
-                /* 142.857% */
-            }
-
-            textarea,
-            select,
-            input {
-                font-size: 14px;
-                line-height: normal;
-                height: 40px;
-
-                /* 150% */
-            }
-
-            span {
-                font-size: 12px;
-                line-height: normal;
-                /* 142.857% */
-            }
-        }
-        }
-        .success {
-
-        img {
-            width: 80px;
-        }
-
-        svg {
-            width: 40px;
-        }
-
-        .email {
-            font-size: 14px;
-            line-height: normal;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        p {
-            font-size: 12px;
-            line-height: normal;
-            /* 125% */
-        }
-
-        h5 {
-            font-size: 24px;
-            margin-top: 14px;
-        }
-
-        .link {
-
-            input {
-                font-size: 12px;
-                height: 40px;
-            }
+            width: 100%;
 
             button {
-                padding: 8.5px;
-                right: 14px;
+                padding: 8px 14px;
             }
 
-            span {
-                right: 20px;
-                bottom: 10px;
-                font-size: 12px;
-                padding: 4px;
+            .form-item {
+
+                label {
+                    font-size: 12px;
+                    line-height: normal;
+                    /* 142.857% */
+                }
+
+                textarea,
+                select,
+                input {
+                    font-size: 14px;
+                    line-height: normal;
+                    height: 40px;
+
+                    /* 150% */
+                }
+
+                span {
+                    font-size: 12px;
+                    line-height: normal;
+                    /* 142.857% */
+                }
             }
         }
-    }
+
+        .success {
+
+            img {
+                width: 80px;
+            }
+
+            svg {
+                width: 40px;
+            }
+
+            .email {
+                font-size: 14px;
+                line-height: normal;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: normal;
+                /* 125% */
+            }
+
+            h5 {
+                font-size: 24px;
+                margin-top: 14px;
+            }
+
+            .link {
+
+                input {
+                    font-size: 12px;
+                    height: 40px;
+                }
+
+                button {
+                    padding: 8.5px;
+                    right: 14px;
+                }
+
+                span {
+                    right: 20px;
+                    bottom: 10px;
+                    font-size: 12px;
+                    padding: 4px;
+                }
+            }
+        }
 
     }
 }

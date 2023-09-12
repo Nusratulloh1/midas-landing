@@ -1,523 +1,262 @@
 <template>
-    <div>
-      <div class="w-full more md:pt-[84px] fixed md:relative z-[999] top-0" ref="headRef">
-        <div class=" md:container mx-auto zoom">
-          <button class="aviable !rounded-none md:!rounded-lg !mt-0 md:!mt-6 !w-full md:!w-[65%] !h-10 md:!h-[50px]">
-            <h6>
-              Available in EU🇪🇺, UK🇬🇧, USA🇺🇸!
-            </h6>
-            <p>
-              Watch our promo video.
-            </p>
-          </button>
-        </div>
-      </div>
-      <section data-bg="#FAFAFA" first="#FAFAFA" ref="container"
-        class="section pt-[200px] md:pt-[44px] 2xl:pt-20 top-section pb-40 md:pb-0 md:h-[100vh] 2xl:h-[883px] relative overflow-hidden "
-        style=" transition: .3s ease-out all; ">
-        <div class=" container md:max-w-screen-xl mx-auto zoom ">
-          <h1>
-            Save money,
-            <br>
-            with money, for money
-          </h1>
+  <div>
+    <div class="w-full more md:pt-[74px] fixed md:relative z-[999] top-0" ref="headRef">
+      <div class=" md:container mx-auto zoom">
+        <button class="aviable !rounded-none md:!rounded-lg !mt-0 md:!mt-6 !w-full md:!w-[65%] !h-10 lg:!h-[50px]">
+          <h6>
+            Available in EU🇪🇺, UK🇬🇧, USA🇺🇸!
+          </h6>
           <p>
-            We aim to shift your prism of association with savings, by developing our solutions,
-            and turn saving from a necessity, into an ingrained way of your life.
+            Watch our promo video.
           </p>
-          <div class="flex justify-center mt-8 md:mt-9">
-            <button @click="sendRequest"
-              class="  h-16 px-8 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-stapel">
-              Request early access
-            </button>
-          </div>
-          <p class=" !mt-[12%] md:mt-[8%] !text-xs md:!text-base">
-            Midas is a financial technology company, is not a bank. All activities are virtual and developed for
-            analytical
-            purposes only.
-          </p>
-        </div>
-        <div class="svgs zoom">
-          <MTargetIcon :style="isMobile ? '' : layer0"
-            class="w-[115px] md:w-auto md:left-5 bottom-[-20px] z-[-99] md:bottom-[190px] absolute">
-          </MTargetIcon>
-          <MPieIcon :style="isMobile ? '' : layer1"
-            class=" w-[110px] md:w-auto right-7 top-[88px] z-[-99] md:right-[70px] md:top-[30px] absolute">
-          </MPieIcon>
-          <!-- <MDiagramIcon :style="layer2" class=" left-1 bottom-0 absolute">
-          </MDiagramIcon>
-          <MBankIcon :style="layer3" class=" right-9 bottom-0 absolute"> </MBankIcon> -->
-        </div>
-        <div>
-          <button
-            class="absolute right-[46%] md:right-[48.8%] bottom-10 md:bottom-4  text-[#343330] hover:text-[#CBE8CA] animate-bounce hidden md:block">
-            <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M33.7411 24.5536L21.9286 36.3661C21.8067 36.4881 21.6619 36.5849 21.5026 36.651C21.3433 36.717 21.1725 36.751 21 36.751C20.8275 36.751 20.6567 36.717 20.4974 36.651C20.3381 36.5849 20.1933 36.4881 20.0714 36.3661L8.25891 24.5536C8.01263 24.3073 7.87427 23.9733 7.87427 23.625C7.87427 23.2767 8.01263 22.9427 8.25891 22.6964C8.50518 22.4501 8.83921 22.3118 9.1875 22.3118C9.53579 22.3118 9.86982 22.4501 10.1161 22.6964L19.6875 32.2695V6.5625C19.6875 6.2144 19.8258 5.88056 20.0719 5.63442C20.3181 5.38828 20.6519 5.25 21 5.25C21.3481 5.25 21.6819 5.38828 21.9281 5.63442C22.1742 5.88056 22.3125 6.2144 22.3125 6.5625V32.2695L31.8839 22.6964C32.1302 22.4501 32.4642 22.3118 32.8125 22.3118C33.1608 22.3118 33.4948 22.4501 33.7411 22.6964C33.9874 22.9427 34.1257 23.2767 34.1257 23.625C34.1257 23.9733 33.9874 24.3073 33.7411 24.5536Z" />
-            </svg>
+        </button>
+      </div>
+    </div>
+    <section data-bg="#FAFAFA" first="#FAFAFA" ref="container"
+      class="section pt-[200px] md:pt-[44px] lg:pt-24 2xl:pt-20 top-section pb-40 md:pb-0 md:h-[80vh] lg:h-[100vh] 2xl:h-[883px] relative overflow-hidden "
+      style=" transition: .3s ease-out all; ">
+      <div class=" container md:max-w-screen-xl mx-auto zoom ">
+        <h1>
+          Save money,
+          <br>
+          with money, for money
+        </h1>
+        <p>
+          We aim to shift your prism of association with savings, by developing our solutions,
+          and turn saving from a necessity, into an ingrained way of your life.
+        </p>
+        <div class="flex justify-center mt-8 md:mt-9">
+          <button @click="sendRequest"
+            class="  h-16 px-8 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-stapel">
+            Request early access
           </button>
         </div>
-      </section>
-      <section data-bg="#0D0D0D" second="#0D0D0D" class="section pt-10 md:pt-20 pb-10">
-        <div class="container mx-auto zoom">
-          <div class="dark">
-            <h3 class=" text-[32px] md:text-7xl font-medium  font-stapel leading-[normal]">
-              Redefining finance:
-              <br>
-              Dive into standout features
-            </h3>
-            <div
-              class="content py-3 px-4 md:px-24 rounded-[32px] w-full my-10 mb-16 h-[530px] overflow-hidden md:h-[594px] flex flex-col md:flex-row items-center justify-between"
-              v-motion-slide-visible-once-bottom>
-              <div>
-                <h3 class="text-[32px] md:text-7xl font-medium  font-stapel leading-[normal]">
-                  All in one <br> Finance hub
-                </h3>
-                <p class=" mt-4 md:mt-6 max-w-[512px] text-base md:text-2xl font-gilroy leading-[normal] text-[#404040]">
-                  Manage, track, and optimize all your financial activities seamlessly in one intuitive app.
-                </p>
-              </div>
-              <div class=" w-[193px] md:w-[35%] mt-6 md:mt-0 h-full">
-                <img :data-src="phoneWep" class="lazyload w-full h-full md:w-full md:h-auto dark-svg object-contain md:px-4 md:mb-[75px]" alt="phone2">
-                <video class=" w-full h-full rounded-[30px] md:rounded-[60px] object-contain dark-image" autoplay muted loop>
-                  <source src="@/assets/images/demo.webm" type="video/webm">
-                  <source src="@/assets/images/demo.webm" type="video/webm">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div @click="sendRequest"
-              class="advantage hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
-              v-motion-slide-visible-once-bottom>
-              <h5>
-                Reach your <br> financial goals
-              </h5>
-              <div class="anime">
-                <img :data-src="mishenSvg" class=" lazyload" alt="mishen">
-                <Blottie ref="blottie" class="onHover" :loop="true" renderer="svg" :path="mishen" @ready="onReady" />
-              </div>
-              <p>
-                Set your financial goals and let our app guide you, step by step, to make them a reality.
-              </p>
-            </div>
-            <div @click="sendRequest"
-              class="advantage !bg-[#FAFAFA] hover:translate-y-[-15px] transition-all cursor-pointer hover:shadow-xl"
-              v-motion-slide-visible-once-bottom>
-              <h5 class="!text-[#0D0D0D]">
-                Smart analytics <br> insights
-              </h5>
-              <div class="anime">
-                <img :data-src="chartSvg" class="lazyload" alt="chart">
-                <Blottie ref="blottie" class="onHover" :loop="true" renderer="svg" :path="diagram" @ready="onReady" />
-              </div>
-              <p class="!text-[#0D0D0D]">
-                Dive into tailored transaction overviews, understand spending habits, and master finance easily.
-              </p>
-            </div>
-            <div @click="sendRequest"
-              class="advantage hover:translate-y-[-15px] transition-[0.12s] cursor-pointer hover:shadow-xl"
-              v-motion-slide-visible-once-bottom>
-              <h5>
-                Personalize your experience
-  
-              </h5>
-              <div class="anime">
-                <img :data-src="settingSvg" class="lazyload" alt="chart">
-                <Blottie ref="blottie" class="onHover" :loop="true" renderer="svg" :path="setting" @ready="onReady" />
-              </div>
-              <p>
-                Navigate with multi-currency support, craft your categories, and receive notifications that truly
-                resonate.
-              </p>
-            </div>
-          </div>
-          <!-- <div class=" bg-white px-24 rounded-[32px] w-full my-10 h-[594px] flex items-center justify-between">
-            <div>
-              <h3 class=" text-[64px] font-medium text-[#0D0D0D] font-stapel">
-                Bank sync
-              </h3>
-              <p class="mt-3 max-w-[336px] text-xl font-gilroy">
-                Instantly connect with top banks for real-time financial updates.
-              </p>
-            </div>
-            <div class=" w-[451px]">
-              <Blottie ref="blottie" :loop="true" renderer="svg" :path="banka" @ready="onReady" />
-            </div>
-          </div> -->
-          <div class=" hidden md:flex justify-center mt-20">
-            <button class=" text-[#343330] hover:text-[#CBE8CA] animate-bounce w-24 mx-auto">
-              <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" class="mx-auto"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M33.7411 24.5536L21.9286 36.3661C21.8067 36.4881 21.6619 36.5849 21.5026 36.651C21.3433 36.717 21.1725 36.751 21 36.751C20.8275 36.751 20.6567 36.717 20.4974 36.651C20.3381 36.5849 20.1933 36.4881 20.0714 36.3661L8.25891 24.5536C8.01263 24.3073 7.87427 23.9733 7.87427 23.625C7.87427 23.2767 8.01263 22.9427 8.25891 22.6964C8.50518 22.4501 8.83921 22.3118 9.1875 22.3118C9.53579 22.3118 9.86982 22.4501 10.1161 22.6964L19.6875 32.2695V6.5625C19.6875 6.2144 19.8258 5.88056 20.0719 5.63442C20.3181 5.38828 20.6519 5.25 21 5.25C21.3481 5.25 21.6819 5.38828 21.9281 5.63442C22.1742 5.88056 22.3125 6.2144 22.3125 6.5625V32.2695L31.8839 22.6964C32.1302 22.4501 32.4642 22.3118 32.8125 22.3118C33.1608 22.3118 33.4948 22.4501 33.7411 22.6964C33.9874 22.9427 34.1257 23.2767 34.1257 23.625C34.1257 23.9733 33.9874 24.3073 33.7411 24.5536Z"
-                  fill="white" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </section>
-      <MoneySaving @send="sendRequest"></MoneySaving>
-      <Spaces @send="sendRequest"></Spaces>
-      <Reviews></Reviews>
-      <Teleport to="body">
-        <Transition name="fade">
-          <GetEarlyAccessModal v-if="showModal"></GetEarlyAccessModal>
-        </Transition>
-      </Teleport>
-    </div>
-  </template>
-  <script lang="ts" setup>
-  import { useParallax } from '@vueuse/core'
-  import { MPieIcon, MTargetIcon } from '@/components/icons'
-  import GetEarlyAccessModal from '@/components/EarlyAccessModal.vue'
-  import { useModal } from "@/composables";
-  import type { AnimationItem } from 'lottie-web'
-  import { ref, computed, reactive, onMounted } from 'vue'
-  import { Blottie, type BlottieExpose } from 'blottie'
-  import Spaces from '~/components/home/Spaces.vue';
-  import MoneySaving from '~/components/home/MoneySaving.vue';
-  import Reviews from '~/components/home/Reviews.vue';
-  import { useRoute } from 'vue-router'
-  import phoneWep from "@/assets/images/phone2.webp"
-  import mishenSvg from "@/assets/images/icons/mishen.svg"
-  import chartSvg from "@/assets/images/icons/chart.svg"
-  import settingSvg from "@/assets/images/icons/setting.svg"
-  const route = useRoute()
-  const container = ref(null)
-  const isMobile = useMediaQuery('(max-width: 768px)')
-  const parallax = reactive(useParallax(container))
-  const mishen = new URL('../assets/lottie/mishen.json', import.meta.url).href
-  const diagram = new URL('../assets/lottie/diagrama_kv.json', import.meta.url).href
-  const setting = new URL('../assets/lottie/6.json', import.meta.url).href
-  const blottie = ref<BlottieExpose>()
-  function onReady(anim?: AnimationItem) {
-    anim?.play()
-  }
-  const layer0 = computed(() => ({
-    transform: `translateX(${parallax.tilt * 10}px) translateY(${parallax.roll * 70
-      }px) scale(1.23)`,
-  }))
-  
-  const layer1 = computed(() => ({
-    transform: `translateX(${parallax.tilt * 20}px) translateY(${parallax.roll * 50
-      }px) scale(1.23)`,
-  }))
-  const modal = useModal();
-  const showModal = computed(() => modal.show.value);
-  const sendRequest = () => {
-    modal.setTitle('');
-    modal.setWidth("60%");
-    modal.showModal();
-  }
-  onMounted(() => {
-    window.addEventListener('scroll', () => {
-      const dark = document.getElementsByClassName('dark')
-      const money = document.getElementsByClassName('money-saving')
-      const review = document.getElementsByClassName('review')
-      const sections = [...document.querySelectorAll('.section')]
-      document.body.style.background = sections[0]?.getAttribute('data-bg');
-      const section = sections
-        .map(section => {
-          const el = section;
-          const rect = el.getBoundingClientRect();
-          return { el, rect };
-        })
-        .find(section => section.rect.bottom >= (window.innerHeight * 0.4));
-      document.body.style.background = section?.el.getAttribute('data-bg');
-      if (route.path === '/') {
-        if (section?.el.getAttribute('first')) {
-          dark[0].classList.remove('white')
-        }
-        else if (section?.el.getAttribute('second')) {
-          dark[0].classList.add('white')
-          money[0].classList.remove('scrolled')
-        }
-        else if (section?.el.getAttribute('third')) {
-          dark[0].classList.remove('white')
-          money[0].classList.add('scrolled')
-        }
-        else if (section?.el.getAttribute('four')) {
-          review[0].classList.remove('scrolled')
-        }
-        else if (section?.el.getAttribute('five')) {
-          review[0].classList.add('scrolled')
-        }
-        else {
-          document.body.style.backgroundColor = '#0D0D0D';
-          console.log('last');
-        }
+        <p class=" !mt-[12%] md:!mt-[5%] !text-xs md:!text-base">
+          Midas is a financial technology company, is not a bank. All activities are virtual and developed for
+          analytical
+          purposes only.
+        </p>
+      </div>
+      <div class="svgs zoom">
+        <MTargetIcon :style="isMobile ? '' : layer0"
+          class="w-[115px] md:w-[125px] lg:w-auto lg:left-5 bottom-[-20px] z-[-99] lg:bottom-[190px] absolute">
+        </MTargetIcon>
+        <MPieIcon :style="isMobile ? '' : layer1"
+          class=" w-[110px] md:w-[120px] lg:w-auto right-7 top-[75px] md:top-[-20px] z-[-99] lg:right-[70px] lg:top-[30px] absolute">
+        </MPieIcon>
+      </div>
+      <div>
+        <button
+          class="absolute right-[46%] md:right-[48.8%] bottom-9 md:bottom-12  text-[#343330] hover:text-[#CBE8CA] animate-bounce hidden md:block">
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M33.7411 24.5536L21.9286 36.3661C21.8067 36.4881 21.6619 36.5849 21.5026 36.651C21.3433 36.717 21.1725 36.751 21 36.751C20.8275 36.751 20.6567 36.717 20.4974 36.651C20.3381 36.5849 20.1933 36.4881 20.0714 36.3661L8.25891 24.5536C8.01263 24.3073 7.87427 23.9733 7.87427 23.625C7.87427 23.2767 8.01263 22.9427 8.25891 22.6964C8.50518 22.4501 8.83921 22.3118 9.1875 22.3118C9.53579 22.3118 9.86982 22.4501 10.1161 22.6964L19.6875 32.2695V6.5625C19.6875 6.2144 19.8258 5.88056 20.0719 5.63442C20.3181 5.38828 20.6519 5.25 21 5.25C21.3481 5.25 21.6819 5.38828 21.9281 5.63442C22.1742 5.88056 22.3125 6.2144 22.3125 6.5625V32.2695L31.8839 22.6964C32.1302 22.4501 32.4642 22.3118 32.8125 22.3118C33.1608 22.3118 33.4948 22.4501 33.7411 22.6964C33.9874 22.9427 34.1257 23.2767 34.1257 23.625C34.1257 23.9733 33.9874 24.3073 33.7411 24.5536Z" />
+          </svg>
+        </button>
+      </div>
+    </section>
+    <Dive></Dive>
+    <MoneySaving @send="sendRequest"></MoneySaving>
+    <Spaces @send="sendRequest"></Spaces>
+    <Reviews></Reviews>
+    <Teleport to="body">
+      <Transition name="fade">
+        <GetEarlyAccessModal v-if="showModal"></GetEarlyAccessModal>
+      </Transition>
+    </Teleport>
+  </div>
+</template>
+<script lang="ts" setup>
+import { useParallax } from '@vueuse/core'
+import { MPieIcon, MTargetIcon } from '@/components/icons'
+import GetEarlyAccessModal from '@/components/EarlyAccessModal.vue'
+import { useModal } from "@/composables";
+import { ref, computed, reactive, onMounted } from 'vue'
+import Spaces from '~/components/home/Spaces.vue';
+import MoneySaving from '~/components/home/MoneySaving.vue';
+import Dive from '~/components/home/Dive.vue';
+import Reviews from '~/components/home/Reviews.vue';
+import { useRoute } from 'vue-router'
+const route = useRoute()
+const container = ref(null)
+const isMobile = useMediaQuery('(max-width: 768px)')
+const parallax = reactive(useParallax(container))
+const layer0 = computed(() => ({
+  transform: `translateX(${parallax.tilt * 10}px) translateY(${parallax.roll * 70
+    }px) scale(1.23)`,
+}))
+
+const layer1 = computed(() => ({
+  transform: `translateX(${parallax.tilt * 20}px) translateY(${parallax.roll * 50
+    }px) scale(1.23)`,
+}))
+const modal = useModal();
+const showModal = computed(() => modal.show.value);
+const sendRequest = () => {
+  modal.setTitle('');
+  modal.setWidth("60%");
+  modal.showModal();
+}
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    const dark = document.getElementsByClassName('dark')
+    const money = document.getElementsByClassName('money-saving')
+    const review = document.getElementsByClassName('review')
+    const sections = [...document.querySelectorAll('.section')]
+    document.body.style.background = sections[0]?.getAttribute('data-bg');
+    const section = sections
+      .map(section => {
+        const el = section;
+        const rect = el.getBoundingClientRect();
+        return { el, rect };
+      })
+      .find(section => section.rect.bottom >= (window.innerHeight * 0.4));
+    document.body.style.background = section?.el.getAttribute('data-bg');
+    if (route.path === '/') {
+      if (section?.el.getAttribute('first')) {
+        dark[0].classList.remove('white')
       }
-      // const verticalScrollPx = window.scrollY || window.pageYOffset;
-      // console.log(verticalScrollPx);
-      // if (verticalScrollPx < 400) {
-      //   document.body.style.backgroundColor = '#FAFAFA';
-      //   dark[0].classList.remove('white')
-      // } else if (verticalScrollPx > 400 && verticalScrollPx < 1400) {
-      //   document.body.style.backgroundColor = '#0D0D0D';
-      //   dark[0].classList.add('white')
-      //   money[0].classList.remove('scrolled')
-      // }
-      // else if (verticalScrollPx > 1400 && verticalScrollPx < 3589) {
-      //   dark[0].classList.remove('white')
-      //   money[0].classList.add('scrolled')
-      //   document.body.style.backgroundColor = '#EAF6EA';
-      // }
-      // else if (verticalScrollPx > 3589 && verticalScrollPx < 4850) {
-      //   document.body.style.backgroundColor = '#F6F6F6';
-      //   review[0].classList.remove('scrolled')
-      // }
-      // else {
-      //   review[0].classList.add('scrolled')
-      //   document.body.style.backgroundColor = '#0D0D0D';
-      // }
-    });
-  })
-  </script>
-  <style lang="scss">
+      else if (section?.el.getAttribute('second')) {
+        dark[0].classList.add('white')
+        money[0].classList.remove('scrolled')
+      }
+      else if (section?.el.getAttribute('third')) {
+        dark[0].classList.remove('white')
+        money[0].classList.add('scrolled')
+      }
+      else if (section?.el.getAttribute('four')) {
+        review[0].classList.remove('scrolled')
+      }
+      else if (section?.el.getAttribute('five')) {
+        review[0].classList.add('scrolled')
+      }
+      else {
+        document.body.style.backgroundColor = '#0D0D0D';
+        console.log('last');
+      }
+    }
+  });
+})
+</script>
+<style lang="scss">
+.top-section {
+  h1 {
+    color: #0D0D0D;
+    text-align: center;
+    font-family: 'Stapel';
+    font-size: 104px;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  p {
+    color: #404040;
+    text-align: center;
+    font-family: 'Gilroy';
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 1064px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: normal;
+    margin-top: 24px;
+  }
+}
+
+.more {
+  .aviable {
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.01);
+    background: rgba(0, 0, 0, 0.90);
+    backdrop-filter: blur(8px);
+    height: 50px;
+    width: 90%;
+    margin: auto;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h6 {
+      color: #FCFCFC;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0.5px;
+      margin-right: 5px;
+    }
+
+    p {
+      color: #FCFCFC;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 0.5px;
+      text-decoration-line: underline;
+      transition: 0.5s;
+
+      &:hover {
+        color: #CBE8CA;
+      }
+    }
+  }
+
+  &.scrolled {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    box-shadow: inset;
+  }
+}
+
+@media (max-width: 1024px) {
   .top-section {
     h1 {
-      color: #0D0D0D;
-      text-align: center;
-      font-family: 'Stapel';
-      font-size: 104px;
-      font-weight: 500;
-      line-height: normal;
+      font-size: 40px;
+      line-height: 105%;
     }
-  
+
     p {
-      color: #404040;
-      text-align: center;
-      font-family: 'Gilroy';
-      font-size: 20px;
-      font-weight: 400;
-      max-width: 1064px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: normal;
-      margin-top: 24px;
+      font-size: 14px;
+      margin-top: 16px;
     }
   }
-  
-  .advantage {
-    padding: 46px 30px;
-    border-radius: 32px;
-    background: #262626;
-    height: 531px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: .5s ease-out all;
-  
-    h5 {
-      color: #FFF;
-      font-family: 'Stapel';
-      font-size: 32px;
-      font-weight: 500;
-      margin-bottom: 24px;
-      line-height: normal;
-    }
-  
-    p {
-      margin-top: 24px;
-      color: #B3B3B3;
-      font-family: 'Gilroy';
-      font-size: 18px;
-      font-weight: 400;
-      line-height: normal;
-    }
-  
-    .anime {
-      width: 190.745px;
-      height: 191.459px;
-      display: flex;
-      margin: auto;
-  
-      .onHover {
-        display: none;
-      }
-    }
-  
-    &:hover {
-      margin-top: -20px;
-      cursor: pointer;
-      box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
-      transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-  
-      .onHover {
-        display: block;
-      }
-  
-      img {
-        display: none;
-      }
-    }
-  }
-  
-  .svgs {
-    svg {
-      // transition: .3s ease-out all;
-    }
-  }
-  
-  .dark {
-    h3 {
-      color: #0D0D0D;
-    }
-  
-  
-    .dark-image {
-      display: none;
-    }
-  
-    .content {
-      transition: .5s ease-out all;
-      background: #0D0D0D;
-  
-      h3 {
-        color: #E8E8E8;
-      }
-  
-      p {
-        color: white;
-      }
-    }
-  
-    &.white {
-      h3 {
-        color: white;
-      }
-  
-      .dark-svg {
-        display: none;
-      }
-  
-      .dark-image {
-        display: block;
-      }
-  
-      .content {
-        background: white;
-  
-        h3 {
-          color: #0D0D0D;
-        }
-  
-        p {
-          color: #404040;
-        }
-      }
-    }
-  }
-  
+
   .more {
+
     .aviable {
-      border-radius: 8px;
-      border: 2px solid rgba(0, 0, 0, 0.01);
-      background: rgba(0, 0, 0, 0.90);
-      backdrop-filter: blur(8px);
-      height: 50px;
-      width: 90%;
-      margin: auto;
-      margin-top: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      h6 {
-        color: #FCFCFC;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 18px;
-        letter-spacing: 0.5px;
-        margin-right: 5px;
-      }
-  
+
+      h6,
       p {
-        color: #FCFCFC;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 18px;
-        letter-spacing: 0.5px;
-        text-decoration-line: underline;
-        transition: 0.5s;
-  
-        &:hover {
-          color: #CBE8CA;
-        }
-      }
-    }
-  
-    &.scrolled {
-      position: fixed;
-      top: 0;
-      z-index: 999;
-      box-shadow: inset;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .top-section {
-      h1 {
-        font-size: 40px;
-        line-height: 105%;
-      }
-  
-      p {
-        font-size: 14px;
-        margin-top: 16px;
-      }
-    }
-  .content{
-    transition: .2s ease-out all !important;
-  }
-    .more {
-  
-      .aviable {
-  
-        h6,
-        p {
-          font-size: 10px;
-        }
-      }
-    }
-  
-    .advantage {
-      height: 373px;
-      padding: 16px;
-      transition: .2s ease-out all;
-  
-      h5 {
-        font-size: 24px;
-      }
-  
-      p {
-        font-size: 16px;
-      }
-  
-      .anime {
-        width: 144.445px;
-        height: 161px;
-      }
-  
-      .onHover {
-        display: block !important;
-      }
-  
-      img {
-        display: none;
+        font-size: 10px;
       }
     }
   }
-  
-  @media (min-width: 768px) {
-    .top-section {
-      .zoom {
-        zoom: 100%;
-      }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .top-section {
+    h1 {
+      font-size: 80px;
+      line-height: 105%;
     }
   }
-  </style>
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .top-section {
+    h1 {
+      font-size: 90px;
+      line-height: 105%;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .top-section {
+    .zoom {
+      zoom: 100%;
+    }
+  }
+}
+</style>

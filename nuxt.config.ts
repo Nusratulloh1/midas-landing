@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: 'Midas',
+      meta: [
+        { name: 'description', content: 'My amazing site.' }
+      ],
       link: [
         {
           rel: 'icon',
@@ -20,7 +23,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@vueuse/motion/nuxt',
     'nuxt-swiper',
-    'nuxt-lazyimages'
+    'nuxt-lazyimages',
+    '@nuxtjs/device'
   ],
   lazyimages: {
     // Default configuration:
@@ -32,19 +36,19 @@ export default defineNuxtConfig({
     errorClass: 'lazyerror',
     autosizesClass: 'lazyautosizes',
     fastLoadedClass: 'ls-is-cached',
-    iframeLoadMode: 0,
+    iframeLoadMode: 1,
     srcAttr: 'data-src',
     srcsetAttr: 'data-srcset',
     sizesAttr: 'data-sizes',
     minSize: 40,
     customMedia: {},
-    expFactor: 1.5,
-    hFac: 0.8,
-    loadMode: 2,
+    expFactor: 4,
+    hFac: 1.5,
+    loadMode: 3,
     loadHidden: true,
     ricTimeout: 0,
-    throttleDelay: 125
-},
+    throttleDelay: 66
+  },
   css: [
     '~/assets/styles/css/tailwind.css',
     '~/assets/styles/scss/main.scss'

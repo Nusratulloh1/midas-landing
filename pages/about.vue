@@ -1,27 +1,29 @@
 <template>
     <div>
-        <div class="bg-[#0D0D0D] pt-24 md:pt-[144px] h-[673px] md:h-[995px] header">
+        <div class="bg-[#0D0D0D] pt-24 lg:pt-[144px] h-[673px] md:h-[760px] lg:h-[995px] header relative">
             <div class="container mx-auto text-center">
-                <h6 class=" text-[#A1BAA1] font-gilroy text-lg md:text-xl">
+                <h6 class=" text-[#A1BAA1] font-gilroy text-lg lg:text-xl">
                     About us
                 </h6>
-                <h2 class=" text-[32px] leading-normal md:text-5xl font-medium font-stapel text-white">
+                <h2 class=" text-[32px] leading-normal lg:text-5xl font-medium font-stapel text-white">
                     Empowering your money-related status by savings
                 </h2>
-                <p class=" text-[#E8E8E8] text-base md:text-xl font-gilroy max-w-[629px] mx-auto mt-6">
+                <p class=" text-[#E8E8E8] text-base lg:text-xl font-gilroy max-w-[629px] mx-auto mt-6">
                     Beyond the ordinary realm of all in one personal finance managers, we are one of the pioneers of a new
                     era - saving money apps.
                 </p>
-                <img class="mx-auto mt-10" src="@/assets/images/icons/about.svg" alt="about">
+                <div class="absolute bottom-0 w-full left-0">
+                    <img class="mx-auto mt-10 object-contain" src="@/assets/images/icons/about.svg" alt="about">
+                </div>
             </div>
         </div>
         <Vision></Vision>
         <section class=" !py-16 container mx-auto zoom">
-            <h4 class=" text-[40px] md:text-[64px] font-medium font-stapel text-center">
+            <h4 class=" text-[40px] lg:text-[64px] font-medium font-stapel text-center transition" v-motion-slide-visible-once-bottom>
                 Three pilars we believe about <br> saving money
             </h4>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-                <div class="p-6 bg-[#F5F5F5] rounded-2xl h-[226px] md:h-[337px]">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-16">
+                <div class="p-6 bg-[#F5F5F5] rounded-2xl h-[226px] lg:h-[337px] transition" v-motion-slide-visible-once-left>
                     <div class="p-3 rounded-xl bg-[#0D0D0D] h-12 w-12 text-white">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -29,16 +31,16 @@
                                 fill="white" />
                         </svg>
                     </div>
-                    <div class=" mt-10 md:mt-16">
-                        <h6 class=" text-xl md:text-[30px] font-medium font-stapel">
+                    <div class=" mt-10 lg:mt-16">
+                        <h6 class=" text-xl lg:text-[30px] font-medium font-stapel">
                             Automated savings
                         </h6>
-                        <p class=" font-gilroy text-sm md:text-lg text-[#404040] mt-2">
+                        <p class=" font-gilroy text-sm lg:text-lg text-[#404040] mt-2">
                             The best way to save is when you don't have to think about it.
                         </p>
                     </div>
                 </div>
-                <div class="p-6 bg-[#F5F5F5] rounded-2xl h-[226px] md:h-[337px]">
+                <div class="p-6 bg-[#F5F5F5] rounded-2xl h-[226px] lg:h-[337px] transition" v-motion-slide-visible-once-bottom>
                     <div class="p-3 rounded-xl bg-[#0D0D0D] h-12 w-12 text-white">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -46,16 +48,16 @@
                                 fill="white" />
                         </svg>
                     </div>
-                    <div class=" mt-10 md:mt-16">
-                        <h6 class=" text-xl md:text-[30px] font-medium font-stapel">
+                    <div class=" mt-10 lg:mt-16">
+                        <h6 class=" text-xl lg:text-[30px] font-medium font-stapel">
                             Goal-oriented
                         </h6>
-                        <p class=" font-gilroy text-sm md:text-lg text-[#404040] mt-2">
+                        <p class=" font-gilroy text-sm lg:text-lg text-[#404040] mt-2">
                             Every penny saved should have a purpose, whether it's for an emergency fund or a dream vacation.
                         </p>
                     </div>
                 </div>
-                <div class="p-6 bg-[#F5F5F5] rounded-2xl h-[226px] md:h-[337px]">
+                <div class="p-6 bg-[#F5F5F5] rounded-2xl h-[226px] lg:h-[337px] transition" v-motion-slide-visible-once-right>
                     <div class="p-3 rounded-xl bg-[#0D0D0D] h-12 w-12 text-white">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -63,11 +65,11 @@
                                 fill="white" />
                         </svg>
                     </div>
-                    <div class=" mt-10 md:mt-16">
-                        <h6 class=" text-xl md:text-[30px] font-medium font-stapel">
+                    <div class=" mt-10 lg:mt-16">
+                        <h6 class=" text-xl lg:text-[30px] font-medium font-stapel">
                             Informed decision
                         </h6>
-                        <p class=" font-gilroy text-sm md:text-lg text-[#404040] mt-2">
+                        <p class=" font-gilroy text-sm lg:text-lg text-[#404040] mt-2">
                             Knowledge is power, and understanding your spending habits can lead to significant savings.
                         </p>
                     </div>
@@ -77,27 +79,14 @@
         </section>
         <History></History>
         <Binefits></Binefits>
-        <section class=" py-20 bg-[#0D0D0D]">
-            <div class="container mx-auto">
-                <p class="text-[#A1BAA1] font-gilroy md:text-lg text-center">
-                    What are you waiting for?
-                </p>
-                <h4 class=" text-[32px] md:text-5xl font-medium font-stapel text-white text-center mt-2">
-                    Get the only money saving app
-                </h4>
-                <div class="flex items-center justify-center mt-8">
-                    <button
-                        class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy mx-auto">
-                        Request early access
-                    </button>
-                </div>
-            </div>
-        </section>
     </div>
 </template>
 <script lang="ts" setup>
 import Vision from '~/components/about/Vision.vue';
 import History from '~/components/about/History.vue';
 import Binefits from '~/components/about/Binefits.vue';
-
+definePageMeta({
+    title: 'Midas | About',
+    ogTitle: 'Midas | About',
+})
 </script>
