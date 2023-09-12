@@ -19,17 +19,15 @@
                                 Manage, track, and optimize all your financial activities seamlessly in one intuitive app.
                             </p>
                         </div>
-                        <div class=" w-[193px] lg:w-[35%] mt-6 lg:mt-0 h-full">
+                        <div class=" w-[193px] lg:w-[47%] mt-6 lg:mt-0 h-full">
                             <img :src="phoneWep"
-                                class="w-full h-full md:w-full lg:h-auto dark-svg object-contain lg:px-4 lg:mb-[75px]"
+                                class="w-full h-full md:w-full lg:h-auto dark-svg object-contain lg:mb-[75px]"
                                 alt="phone2">
-                            <div class="dark-image">
-                                <video class=" w-full h-full rounded-[30px] lg:rounded-[60px] object-contain"
-                                    :poster="phoneWep" autoplay muted loop>
-                                    <source :src="isMobile ? demo_compressed : demo" type="video/webm">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
+                            <video class=" w-full h-full rounded-[30px] lg:rounded-[60px] object-contain dark-image"
+                                :poster="phoneWep" autoplay muted loop>
+                                <source :src="isMobile ? demo_compressed : demo" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -41,7 +39,7 @@
                             Reach your <br> financial goals
                         </h5>
                         <div class="anime">
-                            <img :data-src="mishenSvg" class=" lazyload" alt="mishen">
+                            <img :data-src="mishenSvg" class=" lazyload blur-up" alt="mishen">
                             <Blottie ref="blottie" class="onHover" :loop="true" renderer="svg" :path="mishen"
                                 @ready="onReady" />
                         </div>
@@ -56,7 +54,7 @@
                             Smart analytics <br> insights
                         </h5>
                         <div class="anime">
-                            <img :data-src="chartSvg" class="lazyload" alt="chart">
+                            <img :data-src="chartSvg" class="lazyload blur-up" alt="chart">
                             <Blottie ref="blottie" class="onHover" :loop="true" renderer="svg" :path="diagram"
                                 @ready="onReady" />
                         </div>
@@ -72,7 +70,7 @@
 
                         </h5>
                         <div class="anime">
-                            <img :data-src="settingSvg" class="lazyload" alt="chart">
+                            <img :data-src="settingSvg" class="lazyload blur-up" alt="chart">
                             <Blottie ref="blottie" class="onHover" :loop="true" renderer="svg" :path="setting"
                                 @ready="onReady" />
                         </div>

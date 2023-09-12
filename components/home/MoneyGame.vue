@@ -39,20 +39,20 @@
             </div>
         </div>
         <div class=" absolute right-9 top-[263px] lg:right-7 lg:top-0">
-            <img class=" w-12 h-12 lg:w-auto lg:h-auto lazyload" :data-src="game1" alt="game1">
+            <img class=" w-12 h-12 lg:w-auto lg:h-auto lazyload blur-up" :data-src="game1" alt="game1">
         </div>
         <div class="absolute right-[115px] top-[303px] lg:right-[205px] lg:top-[35px]">
-            <img class=" h-11 w-16 lg:w-auto lg:h-auto lazyload" :data-src="game2" alt="game2">
+            <img class=" h-11 w-16 lg:w-auto lg:h-auto lazyload blur-up" :data-src="game2" alt="game2">
         </div>
         <div class="absolute right-[192px] top-[384px] lg:right-[371px] lg:top-[168px]">
-            <img class=" h-11 w-16 lg:w-auto lg:h-auto lazyload" :data-src="game3" alt="game3">
+            <img class=" h-11 w-16 lg:w-auto lg:h-auto lazyload blur-up" :data-src="game3" alt="game3">
         </div>
         <div class="absolute right-[203px] bottom-[80px] lg:right-[419px] lg:bottom-[187px]">
-            <img class=" h-11 w-16 lg:w-auto lg:h-auto lazyload" :data-src="game4" alt="game4">
+            <img class=" h-11 w-16 lg:w-auto lg:h-auto lazyload blur-up" :data-src="game4" alt="game4">
 
         </div>
         <div class="absolute right-[198px] bottom-[6px] lg:right-[411px] lg:bottom-[19px]">
-            <img class=" h-11 w-16 lg:w-auto lg:h-auto lazyload" :data-src="game5" alt="game5">
+            <img class=" h-11 w-16 lg:w-auto lg:h-auto lazyload blur-up" :data-src="game5" alt="game5">
         </div>
 
 

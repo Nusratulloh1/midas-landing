@@ -19,7 +19,7 @@
                                 </p>
                                 <div class="info">
                                     <div class="avatar">
-                                        <img src="@/assets/images/avatars/1.png" alt="avatar">
+                                        <img :src="rev.image" alt="avatar">
                                     </div>
                                     <h6>
                                         {{ rev.name }}
@@ -41,7 +41,7 @@
                                 </p>
                                 <div class="info">
                                     <div class="avatar">
-                                        <img src="@/assets/images/avatars/1.png" alt="avatar">
+                                        <img :src="rev.image" alt="avatar">
                                     </div>
                                     <h6>
                                         {{ rev.name }}
@@ -145,6 +145,9 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
+import avatar1 from "../../assets/images/avatars/1.png"
+import avatar2 from "@/assets/images/avatars/2.png"
+import avatar3 from "@/assets/images/avatars/3.png"
 
 const reviewsList: any = ref(
     [
@@ -152,109 +155,109 @@ const reviewsList: any = ref(
         {
             id: 1,
             name: 'Arlene McCoy',
-            // image: new URL('../assets/images/avatars/1.png', import.meta.url).href,
+            image: avatar1,
             text: "Thanks to Midas, I've ditched my old budgeting spreadsheets. The app's tools and alerts ensure I never overspend, and I'm more financially aware."
         },
         {
             id: 2,
             name: 'Guy Hawkins',
-            // image: new URL('../assets/images/avatars/2.png', import.meta.url).href,
+            image: avatar2,
             text: "As someone who used to struggle with budgeting, Midas has been a lifesaver. It's so easy to input expenses and view spending trends. The budgeting tools and notifications keep me on track, and I've finally been able to gain control over my finances."
         },
         {
-            id: 2,
+            id: 3,
             name: 'John Keep',
-            // image: new URL('../assets/images/avatars/3.png', import.meta.url).href,
+            image: avatar3,
             text: "Midas has transformed my financial life! Tracking expenses is a breeze, and the insights have helped me save more than ever."
         },
         {
             id: 1,
             name: 'Arlene McCoy',
-            // image: new URL('../assets/images/avatars/1.png', import.meta.url).href,
+            image: avatar1,
             text: "Thanks to Midas, I've ditched my old budgeting spreadsheets. The app's tools and alerts ensure I never overspend, and I'm more financially aware."
         },
         {
             id: 2,
             name: 'Guy Hawkins',
-            // image: new URL('../assets/images/avatars/2.png', import.meta.url).href,
+            image: avatar2,
             text: "As someone who used to struggle with budgeting, Midas has been a lifesaver. It's so easy to input expenses and view spending trends. The budgeting tools and notifications keep me on track, and I've finally been able to gain control over my finances."
         },
         {
-            id: 2,
+            id: 3,
             name: 'John Keep',
-            // image: new URL('../assets/images/avatars/3.png', import.meta.url).href,
+            image: avatar3,
             text: "Midas has transformed my financial life! Tracking expenses is a breeze, and the insights have helped me save more than ever."
         },
         {
             id: 1,
             name: 'Arlene McCoy',
-            // image: new URL('../assets/images/avatars/1.png', import.meta.url).href,
+            image: avatar1,
             text: "Thanks to Midas, I've ditched my old budgeting spreadsheets. The app's tools and alerts ensure I never overspend, and I'm more financially aware."
         },
         {
             id: 2,
             name: 'Guy Hawkins',
-            // image: new URL('../assets/images/avatars/2.png', import.meta.url).href,
+            image: avatar2,
             text: "As someone who used to struggle with budgeting, Midas has been a lifesaver. It's so easy to input expenses and view spending trends. The budgeting tools and notifications keep me on track, and I've finally been able to gain control over my finances."
         },
         {
-            id: 2,
+            id: 3,
             name: 'John Keep',
-            // image: new URL('../assets/images/avatars/3.png', import.meta.url).href,
+            image: avatar3,
             text: "Midas has transformed my financial life! Tracking expenses is a breeze, and the insights have helped me save more than ever."
         },
         {
             id: 1,
             name: 'Arlene McCoy',
-            // image: new URL('../assets/images/avatars/1.png', import.meta.url).href,
+            image: avatar1,
             text: "Thanks to Midas, I've ditched my old budgeting spreadsheets. The app's tools and alerts ensure I never overspend, and I'm more financially aware."
         },
         {
             id: 2,
             name: 'Guy Hawkins',
-            // image: new URL('../assets/images/avatars/2.png', import.meta.url).href,
+            image: avatar2,
             text: "As someone who used to struggle with budgeting, Midas has been a lifesaver. It's so easy to input expenses and view spending trends. The budgeting tools and notifications keep me on track, and I've finally been able to gain control over my finances."
         },
         {
-            id: 2,
+            id: 3,
             name: 'John Keep',
-            // image: new URL('../assets/images/avatars/3.png', import.meta.url).href,
+            image: avatar3,
             text: "Midas has transformed my financial life! Tracking expenses is a breeze, and the insights have helped me save more than ever."
         },
         {
             id: 1,
             name: 'Arlene McCoy',
-            // image: new URL('../assets/images/avatars/1.png', import.meta.url).href,
+            image: avatar1,
             text: "Thanks to Midas, I've ditched my old budgeting spreadsheets. The app's tools and alerts ensure I never overspend, and I'm more financially aware."
         },
         {
             id: 2,
             name: 'Guy Hawkins',
-            // image: new URL('../assets/images/avatars/2.png', import.meta.url).href,
+            image: avatar2,
             text: "As someone who used to struggle with budgeting, Midas has been a lifesaver. It's so easy to input expenses and view spending trends. The budgeting tools and notifications keep me on track, and I've finally been able to gain control over my finances."
         },
         {
-            id: 2,
+            id: 3,
             name: 'John Keep',
-            // image: new URL('../assets/images/avatars/3.png', import.meta.url).href,
+            image: avatar3,
             text: "Midas has transformed my financial life! Tracking expenses is a breeze, and the insights have helped me save more than ever."
         },
         {
             id: 1,
             name: 'Arlene McCoy',
-            // image: new URL('../assets/images/avatars/1.png', import.meta.url).href,
+            image: avatar1,
             text: "Thanks to Midas, I've ditched my old budgeting spreadsheets. The app's tools and alerts ensure I never overspend, and I'm more financially aware."
         },
         {
             id: 2,
             name: 'Guy Hawkins',
-            // image: new URL('../assets/images/avatars/2.png', import.meta.url).href,
+            image: avatar2,
             text: "As someone who used to struggle with budgeting, Midas has been a lifesaver. It's so easy to input expenses and view spending trends. The budgeting tools and notifications keep me on track, and I've finally been able to gain control over my finances."
         },
         {
-            id: 2,
+            id: 3,
             name: 'John Keep',
-            // image: new URL('../assets/images/avatars/3.png', import.meta.url).href,
+            image: avatar3,
             text: "Midas has transformed my financial life! Tracking expenses is a breeze, and the insights have helped me save more than ever."
         },
     ]

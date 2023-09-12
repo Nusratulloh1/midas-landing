@@ -14,7 +14,7 @@
                     Default
                 </h6>
                 <div>
-                    <img :data-src="sdefault" height="100" class="lazyload" alt="sdefault">
+                    <img :data-src="sdefault" height="100" class="lazyload blur-up" alt="sdefault">
                 </div>
                 <p>
                     Default Space, track all your <br class=" hidden lg:block"> finances in one app
@@ -25,7 +25,7 @@
                     Savings
                 </h6>
                 <div>
-                    <img :data-src="ssaving" height="100" class="lazyload" alt="ssaving">
+                    <img :data-src="ssaving" height="100" class="lazyload blur-up" alt="ssaving">
 
                 </div>
                 <p>
@@ -37,7 +37,7 @@
                     Budget
                 </h6>
                 <div>
-                    <img :data-src="sbudget" height="100" class="lazyload" alt="sbudget">
+                    <img :data-src="sbudget" height="100" class="lazyload blur-up" alt="sbudget">
                 </div>
                 <p>
                     Budget Space, create budgets and <br class=" hiddenlg:block"> manage your planned costs
@@ -51,7 +51,7 @@
                         Set multiple budgets with ease
                     </h5>
                     <div>
-                        <img :data-src="budget"  class="lazyload" alt="budget">
+                        <img :data-src="budget"  class="lazyload blur-up" alt="budget">
                         <MBudgetAnimeIcon></MBudgetAnimeIcon>
                     </div>
                     <p>
@@ -64,7 +64,7 @@
                         Unite in shared spaces
                     </h5>
                     <div>
-                        <img :data-src="shared"  class="lazyload" alt="shared">
+                        <img :data-src="shared"  class="lazyload blur-up" alt="shared">
                         <MSharedAnimeIcon></MSharedAnimeIcon>
                     </div>
                     <p>

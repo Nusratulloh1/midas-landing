@@ -5,10 +5,25 @@
       <div class=" overflow-hidden">
         <slot />
       </div>
-      <div class="w-full zoom" :class="{ 'bg-[#0D0D0D]': route.path.includes('about') }">
+      <section class=" py-20 bg-[#0D0D0D]">
+        <div class="container mx-auto">
+          <p class="text-[#A1BAA1] font-gilroy lg:text-lg text-center">
+            What are you waiting for?
+          </p>
+          <h4 class=" text-[32px] lg:text-5xl font-medium font-stapel text-white text-center mt-2">
+            Get the only money saving app
+          </h4>
+          <div class="flex items-center justify-center mt-8">
+            <button
+              class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy mx-auto">
+              Request early access
+            </button>
+          </div>
+        </div>
+      </section>
+      <div class="w-full zoom bg-[#0D0D0D]">
         <div class=" container md:max-w-screen-2xl flex justify-end mx-auto h-20">
-          <button @click="scrollTop"
-          id="al" aria-label="Scrool"
+          <button @click="scrollTop" id="al" aria-label="Scrool"
             class="h-16 w-16 bg-[#F5F5F5] rounded-2xl px-4 py-4 hover:bg-[#CBE8CA] transition-all topper">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path

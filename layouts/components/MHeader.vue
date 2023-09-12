@@ -288,8 +288,7 @@ const sendRequest = () => {
     color: #E8E8E8 !important;
 
     @media (max-width: 768px) {
-        background-color: #0D0D0D;
-        border-radius: 8px;
+        color: var(--secondary-900, #0D0D0D) !important;
     }
 }
 </style>

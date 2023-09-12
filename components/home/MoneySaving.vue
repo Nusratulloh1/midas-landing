@@ -4,33 +4,33 @@
         <div class="container mx-auto zoom">
             <div class="bg-icons">
                 <img :data-src="layer0" :style="isMobile ? '' : layerr0"
-                    v-motion-roll-visible-bottom class="layerr0 lazyload" alt="layer0">
+                    v-motion-roll-visible-bottom class="layerr0 lazyload blur-up" alt="layer0">
                 <img :data-src="layer1" :style="isMobile ? '' : layerr1"
-                    v-motion-roll-visible-bottom class="layerr1 lazyload" alt="layer1">
+                    v-motion-roll-visible-bottom class="layerr1 lazyload blur-up"  alt="layer1">
                 <img :data-src="layer2" :style="isMobile ? '' : layerr2"
-                    v-motion-roll-visible-bottom class="layerr2 lazyload" alt="layer2">
+                    v-motion-roll-visible-bottom class="layerr2 lazyload blur-up" alt="layer2">
                 <img :data-src="layer3" :style="isMobile ? '' : layerr3"
-                    v-motion-roll-visible-bottom class="layerr3 lazyload" alt="layer3">
+                    v-motion-roll-visible-bottom class="layerr3 lazyload blur-up" alt="layer3">
                 <img :data-src="layer4" :style="isMobile ? '' : layerr4"
-                    v-motion-roll-visible-bottom class="layerr4 lazyload" alt="layer4">
+                    v-motion-roll-visible-bottom class="layerr4 lazyload blur-up" alt="layer4">
                 <img :data-src="layer5" :style="isMobile ? '' : layerr5"
-                    v-motion-roll-visible-bottom class="layerr5 lazyload" alt="layer5">
+                    v-motion-roll-visible-bottom class="layerr5 lazyload blur-up" alt="layer5">
                 <img :data-src="layer6" :style="isMobile ? '' : layerr6"
-                    v-motion-roll-visible-bottom class="layerr6 lazyload" alt="layer6">
+                    v-motion-roll-visible-bottom class="layerr6 lazyload blur-up" alt="layer6">
                 <img :data-src="layer7" :style="isMobile ? '' : layerr7"
-                    v-motion-roll-visible-bottom class="layerr7 lazyload" alt="layer7">
+                    v-motion-roll-visible-bottom class="layerr7 lazyload blur-up" alt="layer7">
                 <img :data-src="layer8" :style="isMobile ? '' : layerr8"
-                    v-motion-roll-visible-bottom class="layerr8 lazyload" alt="layer8">
+                    v-motion-roll-visible-bottom class="layerr8 lazyload blur-up" alt="layer8">
                 <img :data-src="layer9" :style="isMobile ? '' : layerr9"
-                    v-motion-roll-visible-bottom class="layerr9 lazyload" alt="layer9">
+                    v-motion-roll-visible-bottom class="layerr9 lazyload blur-up" alt="layer9">
                 <img :data-src="layer10" :style="isMobile ? '' : layerr10"
-                    v-motion-roll-visible-bottom class="layerr10 lazyload" alt="layer10">
+                    v-motion-roll-visible-bottom class="layerr10 lazyload blur-up" alt="layer10">
                 <img :data-src="layer11" :style="isMobile ? '' : layerr11"
-                    v-motion-roll-visible-bottom class="layerr11 lazyload" alt="layer11">
+                    v-motion-roll-visible-bottom class="layerr11 lazyload blur-up" alt="layer11">
                 <img :data-src="layer12" :style="isMobile ? '' : layerr12"
-                    v-motion-roll-visible-bottom class="layerr12 lazyload" alt="layer12">
+                    v-motion-roll-visible-bottom class="layerr12 lazyload blur-up" alt="layer12">
                 <img :data-src="layer13" :style="isMobile ? '' : layerr13"
-                    v-motion-roll-visible-bottom class="layerr13 lazyload" alt="layer13">
+                    v-motion-roll-visible-bottom class="layerr13 lazyload blur-up" alt="layer13">
             </div>
             <p class="text font-stapel font-light text-[#666] text-xl md:text-2xl lg:text-[32px] text-center">
                 Introducing Money Game
