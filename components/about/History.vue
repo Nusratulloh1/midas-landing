@@ -1,14 +1,14 @@
 <template>
     <section class=" py-16 bg-[#0D0D0D] zoom">
         <div class=" container lg:max-w-screen-xl mx-auto">
-            <p class="text-[#A1BAA1] font-gilroy text-lg text-center">
+            <p class="text-[#A1BAA1] font-gilroy text-lg text-center transition" v-motion-slide-visible-once-bottom>
                 Our history
             </p>
-            <h5 class=" text-white font-inter text-4xl font-semibold text-center mt-2 tracking-[-0.72px]">
+            <h5 v-motion-slide-visible-once-bottom class=" text-white font-inter text-4xl font-semibold text-center mt-2 tracking-[-0.72px] transition">
                 The history of creating midas
             </h5>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 mt-24">
-                <div class="flex justify-center flex-col">
+                <div v-motion-slide-visible-once-left class="flex justify-center flex-col transition">
                     <h5 class=" font-stapel font-medium text-lg lg:text-2xl text-white">
                         The story behind the name <span class="text-[#CBE8CA]"> Midas</span>
                     </h5>
@@ -19,9 +19,9 @@
                         money through smart saving tools.
                     </p>
                 </div>
-                <img src="@/assets/images/history1.webp" alt="history1">
-                <img src="@/assets/images/history2.webp" alt="history2">
-                <div class="flex justify-center flex-col">
+                <img v-motion-slide-visible-once-right class="transition" src="@/assets/images/history1.webp" alt="history1">
+                <img v-motion-slide-visible-once-left class="transition" src="@/assets/images/history2.webp" alt="history2">
+                <div v-motion-slide-visible-once-right class="flex justify-center flex-col transition">
                     <h5 class=" font-stapel font-medium text-lg lg:text-2xl text-white">
                         Decoding the logo
                     </h5>

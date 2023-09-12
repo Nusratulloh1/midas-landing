@@ -23,7 +23,9 @@ a {
     text-decoration: underline;
   }
 }
-
+.transition {
+  transition: .3s ease-out all;
+}
 .swiper-wrapper {
   transition-timing-function: linear !important;
 }
@@ -66,12 +68,13 @@ a {
   .container {
     max-width: 1024px;
   }
-}
 
-@media (min-width: 1280px) {
   .zoom {
     zoom: 80%;
   }
+}
+
+@media (min-width: 1280px) {
 
   .container {
     max-width: 1120px;

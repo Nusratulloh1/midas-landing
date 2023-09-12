@@ -1,8 +1,8 @@
 <template>
     <section class=" container lg:max-w-screen-xl  mx-auto !py-16 zoom">
         <div class="flex flex-wrap lg:flex-nowrap items-center gap-10 lg:gap-6">
-            <img src="@/assets/images/icons/vision.svg" alt="vision">
-            <div>
+            <img src="@/assets/images/icons/vision.svg" class="transition" v-motion-slide-visible-once-left alt="vision">
+            <div v-motion-slide-visible-once-right class="transition">
                 <h5 class=" font-medium font-stapel text-[32px] lg:text-[64px]">
                     Our mission
                 </h5>
@@ -16,7 +16,7 @@
     <section class=" !py-16 bg-[#F5FAF4] zoom">
         <div
             class=" container lg:max-w-screen-xl mx-auto flex flex-col-reverse lg:flex-row flex-wrap lg:flex-nowrap items-center justify-between gap-10 lg:gap-6">
-            <div>
+            <div v-motion-slide-visible-once-left class="transition">
                 <h5 class=" font-medium font-stapel text-[32px] lg:text-[64px]">
                     Our vision
                 </h5>
@@ -26,18 +26,20 @@
                     possibilities and achievements without limits.
                 </p>
             </div>
-            <img src="@/assets/images/icons/mission.svg" alt="vision">
+            <img v-motion-slide-visible-once-right class="transition" src="@/assets/images/icons/mission.svg" alt="vision">
         </div>
     </section>
     <section class="bg-[#0D0D0D] py-16 zoom">
         <div
             class=" container lg:max-w-screen-xl mx-auto flex flex-wrap lg:flex-nowrap items-center justify-between px-8 gap-16">
-            <img src="@/assets/images/icons/values.svg" class=" w-[80%] mx-auto lg:w-auto" alt="values">
-            <div>
+            <img v-motion-slide-visible-once-left src="@/assets/images/icons/values.svg" class="transition w-[80%] mx-auto lg:w-auto"
+                alt="values">
+            <div v-motion-slide-visible-once-right class="transition">
                 <h5 class=" font-medium font-stapel text-[40px] lg:text-[64px] text-white">
                     Our values
                 </h5>
-                <ul class="text-[#D9D9D9] font-gilroy text-sm lg:text-lg max-w-[643px] leading-8 lg:leading-normal list-disc lg:list-none pl-4 lg:pl-0">
+                <ul
+                    class="text-[#D9D9D9] font-gilroy text-sm lg:text-lg max-w-[643px] leading-8 lg:leading-normal list-disc lg:list-none pl-4 lg:pl-0">
                     <li>
                         <span class=" font-semibold">Excelling in continuous improvement.</span>
                     </li>
