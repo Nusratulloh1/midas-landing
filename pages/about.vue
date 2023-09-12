@@ -13,7 +13,7 @@
                     era - saving money apps.
                 </p>
                 <div class="absolute bottom-0 w-full left-0">
-                    <img class="mx-auto mt-10 object-contain" src="@/assets/images/icons/about.svg" alt="about">
+                    <img class="mx-auto mt-10 object-contain" src="@/assets/images/about.png" alt="about">
                 </div>
             </div>
         </div>

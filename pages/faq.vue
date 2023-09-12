@@ -7,7 +7,7 @@
                     FAQs
                 </h2>
                 <p>
-                    Everything you need to know about the product
+                    Everything you need to know about Midas
                 </p>
             </div>
         </div>
@@ -15,11 +15,11 @@
             <div class="container mx-auto">
                 <div class="collapses">
                     <collapse class=" collaps" v-for="(item, i) in questions" :key="item.id">
-                        <header class="head">
+                        <header class="head cursor-pointer" @click="toggleExpand(i, item)">
                             <h6>
                                 {{ item.title }}
                             </h6>
-                            <button @click="toggleExpand(i, item)">
+                            <button>
                                 <p v-if="item.isExpand">-</p>
                                 <p v-else>+</p>
                             </button>
@@ -49,9 +49,9 @@
                     v-motion-slide-visible-once-bottom>
                     Can’t find the answer you’re looking for? Please send the request to our friendly team.
                 </p>
-                <div class="flex items-center justify-center mt-8" v-motion-slide-visible-once-bottom>
+                <div class="flex justify-center mt-8" v-motion-slide-visible-once-bottom>
                     <button
-                        class=" font-semibold h-12 md:h-14 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy mx-auto">
+                        class=" font-semibold h-12 md:h-14 mr-1 px-8 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy">
                         Get in touch
                     </button>
                 </div>
