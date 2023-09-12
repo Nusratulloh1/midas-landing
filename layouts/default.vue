@@ -14,7 +14,7 @@
             Get the only money saving app
           </h4>
           <div class="flex items-center justify-center mt-8">
-            <button
+            <button @click="sendRequest"
               class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy mx-auto">
               Request early access
             </button>
@@ -35,13 +35,27 @@
       </div>
     </main>
     <MFooter></MFooter>
+    <Teleport to="body">
+      <Transition name="fade">
+        <GetEarlyAccessModal v-if="showModal"></GetEarlyAccessModal>
+      </Transition>
+    </Teleport>
   </div>
 </template>
 <script lang="ts" setup>
 import MHeader from './components/MHeader.vue'
 import MFooter from './components/MFooter.vue'
 import { useRoute } from 'vue-router'
+import GetEarlyAccessModal from '@/components/EarlyAccessModal.vue'
+import { useModal } from "@/composables";
 const route = useRoute()
+const modal = useModal();
+const showModal = computed(() => modal.show.value);
+const sendRequest = () => {
+  modal.setTitle('');
+  modal.setWidth("60%");
+  modal.showModal();
+}
 const scrollTop = () => {
   setTimeout(() => window.scrollTo({
     top: 0,

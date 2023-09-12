@@ -19,7 +19,7 @@
                                             <nuxt-link :to="child.to">{{ child.title }}</nuxt-link>
                                         </template>
                                         <template v-else>
-                                            <a :href="child.to">{{ child.title }}</a>
+                                            <a :href="child.to" target="_blank">{{ child.title }}</a>
                                         </template>
                                     </li>
                                 </ul>
@@ -73,7 +73,7 @@
                                                         }}</nuxt-link>
                                             </template>
                                             <template v-else>
-                                                <a :href="child.to" class="flex items-center gap-4 !text-sm"><img
+                                                <a :href="child.to" target="_blank" class="flex items-center gap-4 !text-sm"><img
                                                         class=" w-10 lazyload" :data-src="child.icon" alt="icon"> {{
                                                             child.title }}</a>
                                             </template>
@@ -144,28 +144,28 @@ const links = ref([
             {
                 id: 1,
                 title: `Product Hunt`,
-                to: "#",
+                to: "https://www.producthunt.com/",
                 local: false,
                 icon: hunt
             },
             {
                 id: 2,
                 title: 'Reddit',
-                to: "#",
+                to: "https://www.reddit.com/",
                 local: false,
                 icon: reddit
             },
             {
                 id: 3,
                 title: `Slack`,
-                to: "#",
+                to: "https://slack.com/",
                 local: false,
                 icon: slack
             },
             {
                 id: 4,
                 title: 'Medium',
-                to: "#",
+                to: "https://medium.com/",
                 local: false,
                 icon: medium
             },
