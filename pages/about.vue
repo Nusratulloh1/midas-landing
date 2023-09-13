@@ -12,18 +12,21 @@
                     Beyond the ordinary realm of all in one personal finance managers, we are one of the pioneers of a new
                     era - saving money apps.
                 </p>
-                <div class="absolute bottom-0 w-full left-0">
-                    <img class="mx-auto mt-10 object-contain" src="@/assets/images/about.png" alt="about">
+                <div class="absolute bottom-0 left-0 w-full">
+                    <img class="mx-auto mt-10 object-contain max-w-[1285px] max-h-[604px]"
+                        src="@/assets/images/icons/about.svg" alt="about">
                 </div>
             </div>
         </div>
         <Vision></Vision>
         <section class=" !py-16 container mx-auto zoom">
-            <h4 class=" text-[40px] lg:text-[64px] font-medium font-stapel text-center transition" v-motion-slide-visible-once-bottom>
+            <h4 class=" text-[40px] lg:text-[64px] font-medium font-stapel text-center transition"
+                v-motion-slide-visible-once-bottom>
                 Three pilars we believe about <br> saving money
             </h4>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-16">
-                <div class="p-6 bg-[#F5F5F5] rounded-2xl h-[226px] lg:h-[337px] transition" v-motion-slide-visible-once-left>
+                <div class="p-6 bg-[#F5F5F5] rounded-2xl h-[226px] lg:h-[337px] transition"
+                    v-motion-slide-visible-once-left>
                     <div class="p-3 rounded-xl bg-[#0D0D0D] h-12 w-12 text-white">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -40,7 +43,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="p-6 bg-[#F5F5F5] rounded-2xl h-[226px] lg:h-[337px] transition" v-motion-slide-visible-once-bottom>
+                <div class="p-6 bg-[#F5F5F5] rounded-2xl h-[226px] lg:h-[337px] transition"
+                    v-motion-slide-visible-once-bottom>
                     <div class="p-3 rounded-xl bg-[#0D0D0D] h-12 w-12 text-white">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -57,7 +61,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="p-6 bg-[#F5F5F5] rounded-2xl h-[226px] lg:h-[337px] transition" v-motion-slide-visible-once-right>
+                <div class="p-6 bg-[#F5F5F5] rounded-2xl h-[226px] lg:h-[337px] transition"
+                    v-motion-slide-visible-once-right>
                     <div class="p-3 rounded-xl bg-[#0D0D0D] h-12 w-12 text-white">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
