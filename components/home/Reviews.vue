@@ -120,25 +120,25 @@
                     </div>
                 </div>
             </div>
-            <p class="text-[#A1BAA1] text-base lg:text-xl font-semibold font-gilroy text-center"
-                v-motion-slide-visible-once-bottom>
-                Shape the future of midas
-            </p>
-            <h4 class=" text-[32px] lg:text-5xl font-medium font-stapel text-white text-center my-2 lg:my-3"
-                v-motion-slide-visible-once-bottom>
-                Be the changer of midas future
-            </h4>
-            <p class="max-w-[762px] text-[#E8E8E8] font-gilroy text-base lg:text-xl text-center mx-auto"
-                v-motion-slide-visible-once-bottom>
-                Midas is more than just an app; it's a community. We're committed to transparency and inclusivity, which is
-                why
-                our roadmap is open for your input. Help us prioritize features that matter most to you.
-            </p>
-            <div class="flex items-center justify-center mt-6" v-motion-slide-visible-once-bottom>
-                <button
-                    class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy mx-auto">
-                    Submit your feedback on our roadmap!
-                </button>
+            <div class=" transition" v-motion-slide-visible-once-bottom>
+                <p class="text-[#A1BAA1] text-base lg:text-xl font-semibold font-gilroy text-center">
+                    Shape the future of midas
+                </p>
+                <h4 class=" text-[32px] lg:text-5xl font-medium font-stapel text-white text-center my-2 lg:my-3">
+                    Be the changer of midas future
+                </h4>
+                <p class="max-w-[762px] text-[#E8E8E8] font-gilroy text-base lg:text-xl text-center mx-auto">
+                    Midas is more than just an app; it's a community. We're committed to transparency and inclusivity, which
+                    is
+                    why
+                    our roadmap is open for your input. Help us prioritize features that matter most to you.
+                </p>
+                <div class="flex items-center justify-center mt-6">
+                    <button
+                        class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy mx-auto">
+                        Submit your feedback on our roadmap!
+                    </button>
+                </div>
             </div>
         </div>
     </section>
