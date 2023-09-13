@@ -1,7 +1,7 @@
 <template>
     <section data-bg="#F6F6F6" four="#F6F6F6" class=" py-5 lg:py-20 section">
         <div class="text-center zooom">
-            <p class=" font-stapel text-[#8C8C8C] text-xl lg:text-[32px] font-light">
+            <p class=" font-stapel text-[#8C8C8C] text-xl lg:text-[32px] font-normal">
                 Introducing Spaces
             </p>
             <h4 class=" text-[32px] lg:text-[64px] font-medium font-stapel mt-3">
