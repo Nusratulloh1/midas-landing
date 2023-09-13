@@ -111,7 +111,7 @@ import shared from "@/assets/images/icons/shared.svg"
         font-family: 'Stapel';
         font-size: 30px;
         font-style: normal;
-        font-weight: 300;
+        font-weight: 400;
         line-height: normal;
     }
 

@@ -32,7 +32,7 @@
                 <img :data-src="layer13" :style="isMobile ? '' : layerr13"
                     v-motion-roll-visible-bottom class="layerr13 lazyload blur-up" alt="layer13">
             </div>
-            <p class="text font-stapel font-normal text-[#666] text-xl md:text-2xl lg:text-[32px] text-center">
+            <p class="text font-stapel font-normal text-[#666] text-lg md:text-2xl lg:text-[32px] text-center">
                 Introducing Money Game
             </p>
             <h4 class="desc text-[32px] md:text-5xl lg:text-[64px] font-medium font-stapel mt-3 text-center">
