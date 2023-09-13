@@ -6,7 +6,7 @@
                 <h5 class=" font-medium font-stapel text-[32px] lg:text-[64px]">
                     Our mission
                 </h5>
-                <p class=" font-gilroy text-[#404040] text-sm  lg:text-lg  max-w-[550px]">
+                <p class="font-gilroy text-[#404040] text-sm  lg:text-lg  max-w-[550px]">
                     Our mission is to revolutionise people's perspectives on saving money and achieving goals. We strive to
                     develop innovative technological solutions that allow people to make savings like a their way of life
                 </p>
