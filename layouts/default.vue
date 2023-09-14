@@ -5,16 +5,16 @@
       <div class=" overflow-hidden">
         <slot />
       </div>
-      <section class=" py-20 bg-[#0D0D0D]" style=" transition: .3s ease-out all">
-        <div class="container mx-auto">
-          <p class="text-[#A1BAA1] font-gilroy lg:text-lg text-center" v-motion-slide-visible-once-bottom>
+      <section class=" py-20 bg-[#0D0D0D]" >
+        <div class="container mx-auto transition" v-motion-slide-visible-once-bottom>
+          <p class="text-[#A1BAA1] font-gilroy lg:text-lg text-center" >
             What are you waiting for?
           </p>
-          <h4 class=" text-[32px] lg:text-5xl font-medium font-stapel text-white text-center mt-2" v-motion-slide-visible-once-bottom>
+          <h4 class=" text-[32px] lg:text-5xl font-medium font-stapel text-white text-center mt-2" >
             Get the only money saving app
           </h4>
           <div class="flex items-center justify-center mt-8" >
-            <button @click="sendRequest" v-motion-slide-visible-once-bottom
+            <button @click="sendRequest" 
               class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy mx-auto">
               Request early access
             </button>
