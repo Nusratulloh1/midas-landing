@@ -24,7 +24,7 @@
                                 class="w-full h-full md:w-full lg:h-auto dark-svg object-contain lg:mb-[75px]"
                                 alt="phone2">
                             <video class=" w-full h-full rounded-[30px] lg:rounded-[60px] object-contain dark-image"
-                                :poster="phoneWep" autoplay muted loop>
+                                :poster="phoneWep" autoplay muted loop playsinline>
                                 <source :src="isMobile ? demo_compressed : demo" type="video/webm">
                                 Your browser does not support the video tag.
                             </video>
