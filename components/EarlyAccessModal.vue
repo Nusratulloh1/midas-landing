@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="modal-mask zoom">
+        <div class="modal-mask zoom" :class="{ 'show': showModal }">
             <div class="modal-wrapper">
                 <div class="modal-container relative overflow-hidden" ref="anim2">
                     <button @click="modal.hideModal()" class="float-right m-4 md:m-6">
@@ -146,6 +146,7 @@ import AvatarSvg from "@/assets/images/icons/avatars.svg"
 const modal = useModal();
 const step = ref(1)
 const copied = ref(false)
+const showModal = computed(() => modal.show.value);
 const copyUrl = ref('https://midas/reffer')
 // const { toClipboard } = useClipboard()
 const { data: countryList } = await useFetch('https://restcountries.com/v3.1/all')
@@ -177,14 +178,24 @@ const nextStep = () => {
 <style lang="scss" scoped>
 .modal-mask {
     position: fixed;
-    z-index: 99998;
-    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: -1;
     background-color: rgba(0, 0, 0, 0.6);
     display: table;
-    transition: opacity .6s ease;
+    visibility: hidden;
+    opacity: 0;
+    top: -300px;
+    transition: all 0.3s ease;
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+        top: 0px;
+        z-index: 99998;
+        top: 0;
+    }
 }
 
 .modal-wrapper {
@@ -200,7 +211,9 @@ const nextStep = () => {
     border-radius: 24px;
     background: var(--base-white, #FFF);
     box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
-    transition: all .3s ease;
+    position: relative;
+    transition: all 8s ease-in-out;
+
 
     .modal-header {
         padding: 24px;

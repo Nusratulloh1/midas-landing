@@ -106,15 +106,9 @@
                 </div>
             </div>
         </section>
-        <Teleport to="body">
-            <Transition name="fade">
-                <GetEarlyAccessModal v-if="showModal"></GetEarlyAccessModal>
-            </Transition>
-        </Teleport>
     </div>
 </template>
 <script lang="ts" setup>
-import GetEarlyAccessModal from '@/components/EarlyAccessModal.vue'
 import { useModal } from "@/composables";
 import type { AnimationItem } from 'lottie-web'
 import { ref, computed } from 'vue'
@@ -134,7 +128,6 @@ function onReady(anim?: AnimationItem) {
     anim?.play()
 }
 const modal = useModal();
-const showModal = computed(() => modal.show.value);
 const sendRequest = () => {
     modal.setTitle('');
     modal.setWidth("60%");

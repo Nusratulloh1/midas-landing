@@ -36,9 +36,9 @@
     </main>
     <MFooter></MFooter>
     <Teleport to="body">
-      <Transition name="fade">
-        <GetEarlyAccessModal v-if="showModal"></GetEarlyAccessModal>
-      </Transition>
+      <!-- <Transition name="fade"> -->
+        <GetEarlyAccessModal ></GetEarlyAccessModal>
+      <!-- </Transition> -->
     </Teleport>
   </div>
 </template>
