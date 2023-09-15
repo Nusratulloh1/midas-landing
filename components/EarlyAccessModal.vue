@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div v-if="showModal" class="overlay"></div>
         <div class="modal-mask zoom" :class="{ 'show': showModal }">
             <div class="modal-wrapper">
                 <div class="modal-container relative overflow-hidden" ref="anim2">
@@ -176,25 +177,34 @@ const nextStep = () => {
 }
 </script>
 <style lang="scss" scoped>
+.overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 3s ease;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    z-index: 9999;
+}
+
 .modal-mask {
     position: fixed;
     left: 0;
     width: 100%;
     height: 100%;
+    top: 0px;
     z-index: -1;
-    background-color: rgba(0, 0, 0, 0.6);
     display: table;
     visibility: hidden;
     opacity: 0;
-    top: -300px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease-in-out;
+    transform: scale(0.5);
 
     &.show {
         visibility: visible;
         opacity: 1;
-        top: 0px;
+        transform: scale(1);
         z-index: 99998;
-        top: 0;
     }
 }
 
@@ -212,7 +222,6 @@ const nextStep = () => {
     background: var(--base-white, #FFF);
     box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
     position: relative;
-    transition: all 8s ease-in-out;
 
 
     .modal-header {
