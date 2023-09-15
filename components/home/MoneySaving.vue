@@ -64,7 +64,7 @@
                         <MTargetAnimeIcon class="animation"></MTargetAnimeIcon>
                     </div>
                     <p>
-                        Allocate your savings effectively to meet and exceed your financial goals
+                        Use Midas limits to allocate savings and hit your financial goals.
                     </p>
                 </div>
             </div>
