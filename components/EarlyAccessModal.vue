@@ -180,7 +180,7 @@ const nextStep = () => {
 .overlay {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.6);
-    transition: all 3s ease;
+    // transition: all 3s ease;
     width: 100%;
     height: 100%;
     top: 0px;

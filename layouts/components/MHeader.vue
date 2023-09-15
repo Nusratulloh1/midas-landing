@@ -1,5 +1,5 @@
 <template>
-    <header class="w-full fixed top-0 bg-[#0D0D0D] md:absolute zoom  md:bg-transparent z-[9999] "
+    <header class="w-full fixed top-0 bg-[#0D0D0D] md:absolute zoom  md:bg-transparent z-[9998] "
         :class="{ '!top-[40px] md:!top-0 bg-transparent': route.path === '/', 'shadow-md md:shadow-none': scrolled, '!bg-white': route.path === '/' && scrolled }">
         <nav class=" py-3 md:py-5 w-full">
             <div class="flex items-center justify-between container xl:max-w-screen-2xl mx-auto">
