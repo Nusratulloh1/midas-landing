@@ -73,8 +73,9 @@
                                                         }}</nuxt-link>
                                             </template>
                                             <template v-else>
-                                                <a :href="child.to" target="_blank" class="flex items-center gap-4 !text-sm"><img
-                                                        class=" w-10 lazyload" :data-src="child.icon" alt="icon"> {{
+                                                <a :href="child.to" target="_blank"
+                                                    class="flex items-center gap-4 !text-sm"><img class=" w-10 lazyload"
+                                                        :data-src="child.icon" alt="icon"> {{
                                                             child.title }}</a>
                                             </template>
                                         </li>
@@ -188,7 +189,11 @@ onMounted(() => {
             scrolled.value = true
         }
     })
-});
+    if (route.query.reffer) {
+        sendRequest()
+    }
+}
+);
 watch(
     () => route.fullPath,
     async () => {

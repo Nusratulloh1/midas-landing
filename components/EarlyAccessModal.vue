@@ -15,13 +15,13 @@
                             {{ step == 1 ? 'Get early access' : 'Thank you!' }}
                         </h6>
                     </div>
-                    <form class="modal-body" v-if="step == 1" ref="anim">
+                    <form class="modal-body" @submit.prevent="Submit" v-if="step == 1" ref="anim">
                         <div class="form-item">
                             <label>Who are you?*</label>
-                            <select placeholder="Please select" v-model="form.user_type">
-                                <option value="Please select" selected disabled>Please select</option>
+                            <select label="Please select" aria-placeholder="Please select" v-model="form.type" required>
+                                <option label="Please select" value="" selected disabled hidden>Please select</option>
                                 <option value="investor">Investor</option>
-                                <option value="user">User</option>
+                                <option value="normal_user">User</option>
                             </select>
                             <span>
                                 Please choose either you’re an investor or normal user
@@ -29,17 +29,17 @@
                         </div>
                         <div class="form-item">
                             <label>Name*</label>
-                            <input placeholder="What is your name?" v-model="form.full_name" />
+                            <input placeholder="What is your name?" v-model="form.name" required />
                         </div>
                         <div class="form-item">
                             <label>Email*</label>
-                            <input placeholder="Enter your email address" v-model="form.email" />
+                            <input placeholder="Enter your email address" type="email" v-model="form.email" required />
                         </div>
                         <div class="form-item">
                             <label>Location*</label>
-                            <select placeholder="Please select" v-model="form.location">
-                                <option value="Please select" selected disabled>Please select</option>
-                                <option value="sjbsd" v-for="county in countryList" :key="county.id">{{
+                            <select placeholder="Please select" v-model="form.country_id" required>
+                                <option label="Please select" value="" selected disabled hidden>Please select</option>
+                                <option :value="county?.name.common" v-for="county in countryList" :key="county.id">{{
                                     county?.name.common }}</option>
                             </select>
                             <span>
@@ -47,14 +47,17 @@
                             </span>
                         </div>
                         <!-- <Transition name="fade"> -->
-                        <div class="form-item" v-if="form.user_type == 'investor'">
+                        <div class="form-item" v-if="form.type == 'investor'">
                             <label>Suggestion*</label>
-                            <textarea v-model="form.suggestion"
+                            <textarea v-model="form.suggestion" required
                                 placeholder="e.g. I've come across your application and am genuinely impressed with its potential. I'm interested in exploring investment opportunities. Could we schedule a discussion?" />
 
                         </div>
+                        <p v-if="errorText" class=" text-sm text-red-600">
+                            {{ errorText }}
+                        </p>
                         <!-- </Transition> -->
-                        <button type="button" @click="nextStep">
+                        <button type="submit">
                             Get early access
                         </button>
                     </form>
@@ -67,7 +70,7 @@
                                     fill="#A1BAA1" />
                             </svg>
                             <p class="email">
-                                This reservation is held for john@gmail.com. <button>
+                                This reservation is held for {{ form.email }}. <button @click="step = 1">
                                     Is this not you?
                                 </button>
                             </p>
@@ -76,7 +79,7 @@
                         <div class="p-4 md:p-6 mt-4">
                             <img :src="AvatarSvg" class="h-[56px]" alt="avatars">
                             <h5>
-                                1,511 People ahead of you
+                                {{ count }} People ahead of you
                             </h5>
                             <p>
                                 Get early access for referring your friends. The more friends that join, the sooner
@@ -140,40 +143,59 @@
 </template>
 <script setup>
 import { useModal } from "@/composables";
-import { ref } from 'vue'
+import { ref, reactive, computed } from 'vue'
 import { useAutoAnimate } from '@formkit/auto-animate/vue'
 import AvatarSvg from "@/assets/images/icons/avatars.svg"
+import { useRoute } from 'vue-router'
 // import useClipboard from 'vue-clipboard3'
 const modal = useModal();
 const step = ref(1)
 const copied = ref(false)
+const count = ref(0)
+const route = useRoute()
 const showModal = computed(() => modal.show.value);
-const copyUrl = ref('https://midas/reffer')
-// const { toClipboard } = useClipboard()
+const form = reactive({
+    type: '',
+    email: '',
+    name: '',
+    country_id: '',
+    suggestion: '',
+    reffered_by: route.query.reffer
+})
+const errorText = ref('')
+const copyUrl = ref('https://midasmoney.io/reffer')
 const { data: countryList } = await useFetch('https://restcountries.com/v3.1/all')
 const [anim] = useAutoAnimate()
 const [anim2] = useAutoAnimate()
 const copy = async () => {
     try {
-        // await toClipboard(copyUrl.value)
+        navigator.clipboard.writeText(copyUrl.value)
         copied.value = true
         setTimeout(() => {
             copied.value = false
         }, 1000);
-        // console.log('Copied to clipboard')
+        console.log('Copied to clipboard')
     } catch (e) {
         console.error(e)
     }
 }
-const form = ref({
-    user_type: "Please select",
-    email: '',
-    full_name: '',
-    location: "Please select",
-    suggestion: ''
-})
-const nextStep = () => {
-    step.value = 2
+const Submit = async () => {
+    console.log('gsgsdg');
+    const { error, data: responseData } = await useFetch('http://tangaapp.com/api/auth/get-early-access', {
+        method: 'post',
+        body: {
+            ...form
+        }
+    })
+    if (responseData.value?.length) {
+        copyUrl.value = `https://midasmoney.io/?reffer=${responseData.value?.[0].referral_id}`
+        count.value = responseData.value?.[0].count + 400
+        step.value = 2
+    }
+    else {
+        errorText.value = error.value?.data?.message
+        console.log(error.value);
+    }
 }
 </script>
 <style lang="scss" scoped>
