@@ -21,11 +21,11 @@
                         </div>
                         <div class=" w-[193px] lg:w-[47%] mt-6 lg:mt-0 h-full">
                             <img :src="phoneWep"
-                                class="w-full h-full md:w-full lg:h-auto dark-svg object-contain lg:mb-[75px]"
-                                alt="phone2">
+                                class="w-full h-full md:w-full lg:h-auto dark-svg object-contain lg:mb-[75px]" alt="phone2">
                             <video class=" w-full h-full rounded-[30px] lg:rounded-[60px] object-contain dark-image"
-                                :poster="phoneWep" autoplay muted loop>
-                                <source :src="isMobile ? demo_compressed : demo" type="video/webm">
+                                :poster="phoneWep" autoplay muted loop playsinline>
+                                <source :src="demo" class=" hidden lg:block" type="video/webm">
+                                <source :src="demo_compressed" class=" lg:hidden" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -106,24 +106,18 @@
                 </div>
             </div>
         </section>
-        <Teleport to="body">
-            <Transition name="fade">
-                <GetEarlyAccessModal v-if="showModal"></GetEarlyAccessModal>
-            </Transition>
-        </Teleport>
     </div>
 </template>
 <script lang="ts" setup>
-import GetEarlyAccessModal from '@/components/EarlyAccessModal.vue'
 import { useModal } from "@/composables";
 import type { AnimationItem } from 'lottie-web'
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { Blottie, type BlottieExpose } from 'blottie'
 import phoneWep from "@/assets/images/phone2.webp"
 import mishenSvg from "@/assets/images/icons/mishen.svg"
 import chartSvg from "@/assets/images/icons/chart.svg"
 import settingSvg from "@/assets/images/icons/setting.svg"
-import demo_compressed from "@/assets/videos/demo_compressed.webm"
+import demo_compressed from "@/assets/videos/demo_compressed.mp4"
 import demo from "@/assets/videos/demo.webm"
 const mishen = new URL('@/assets/lottie/mishen.json', import.meta.url).href
 const diagram = new URL('@/assets/lottie/diagrama_kv.json', import.meta.url).href
@@ -134,7 +128,6 @@ function onReady(anim?: AnimationItem) {
     anim?.play()
 }
 const modal = useModal();
-const showModal = computed(() => modal.show.value);
 const sendRequest = () => {
     modal.setTitle('');
     modal.setWidth("60%");

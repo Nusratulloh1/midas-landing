@@ -1,5 +1,5 @@
 <template>
-    <header class="w-full fixed top-0 bg-[#0D0D0D] md:absolute zoom  md:bg-transparent z-[9999] "
+    <header class="w-full fixed top-0 bg-[#0D0D0D] md:absolute zoom  md:bg-transparent z-[9998] "
         :class="{ '!top-[40px] md:!top-0 bg-transparent': route.path === '/', 'shadow-md md:shadow-none': scrolled, '!bg-white': route.path === '/' && scrolled }">
         <nav class=" py-3 md:py-5 w-full">
             <div class="flex items-center justify-between container xl:max-w-screen-2xl mx-auto">
@@ -97,18 +97,12 @@
             </div>
         </nav>
     </header>
-    <Teleport to="body">
-        <Transition name="fade">
-            <GetEarlyAccessModal v-if="showModal"></GetEarlyAccessModal>
-        </Transition>
-    </Teleport>
 </template>
 <script lang="ts" setup>
 import { useModal } from "@/composables";
 import { MLogo } from '../../components/icons'
 import { onMounted, ref, computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import GetEarlyAccessModal from '@/components/EarlyAccessModal.vue'
 import hunt from '@/assets/images/icons/product-hunt.svg'
 import reddit from '@/assets/images/icons/reddit.svg'
 import slack from '@/assets/images/icons/slack.svg'
@@ -172,7 +166,6 @@ const links = ref([
         ]
     },
 ])
-const showModal = computed(() => modal.show.value);
 const scrolled = ref(false)
 onMounted(() => {
     if (headRef.value) {

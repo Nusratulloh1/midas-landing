@@ -24,8 +24,30 @@ export default defineNuxtConfig({
     '@vueuse/motion/nuxt',
     'nuxt-swiper',
     'nuxt-lazyimages',
-    '@nuxtjs/device'
+    '@nuxtjs/device',
+    [
+      'yandex-metrika-module-nuxt3',
+      {
+        id: '94943619',
+        webvisor: true,
+        consoleLog: true,
+        clickmap: true,
+        // useCDN: false,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      }
+    ]
   ],
+  yandexMetrika: {
+    id: '94943619',
+    webvisor: true,
+    consoleLog: true,
+    clickmap: true,
+    // useCDN: false,
+    trackLinks: true,
+    accurateTrackBounce: true,
+    // ...
+  },
   lazyimages: {
     // Default configuration:
     lazyClass: 'lazyload',
