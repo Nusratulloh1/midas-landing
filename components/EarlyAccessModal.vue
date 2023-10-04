@@ -164,7 +164,7 @@ const form = reactive({
 })
 const errorText = ref('')
 const copyUrl = ref('https://midasmoney.io/reffer')
-const { data: countryList } = await useFetch('https://tangaapp.com/api/country/list', {
+const { data: countryList } = await useFetch('http://tangaapp.com/api/country/list', {
     method: 'post'
 })
 const [anim] = useAutoAnimate()
@@ -185,7 +185,7 @@ const Submit = async () => {
     if (form.suggestion_text == '') {
         form.suggestion_text = 'no'
     }
-    const { error, data: responseData } = await useFetch('https://tangaapp.com/api/auth/get-early-access', {
+    const { error, data: responseData } = await useFetch('http://tangaapp.com/api/auth/get-early-access', {
         method: 'post',
         body: {
             ...form
