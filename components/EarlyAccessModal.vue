@@ -39,8 +39,8 @@
                             <label>Location*</label>
                             <select placeholder="Please select" v-model="form.country_id" required>
                                 <option label="Please select" value="" selected disabled hidden>Please select</option>
-                                <option :value="county?.name.common" v-for="county in countryList" :key="county.id">{{
-                                    county?.name.common }}</option>
+                                <option :value="county?.id" v-for="county in countryList" :key="county.id">
+                                    {{ county?.name }}</option>
                             </select>
                             <span>
                                 Location only used to determine early access availability in your country.
@@ -49,7 +49,7 @@
                         <!-- <Transition name="fade"> -->
                         <div class="form-item" v-if="form.type == 'investor'">
                             <label>Suggestion*</label>
-                            <textarea v-model="form.suggestion" required
+                            <textarea v-model="form.suggestion_text" required
                                 placeholder="e.g. I've come across your application and am genuinely impressed with its potential. I'm interested in exploring investment opportunities. Could we schedule a discussion?" />
 
                         </div>
@@ -159,12 +159,14 @@ const form = reactive({
     email: '',
     name: '',
     country_id: '',
-    suggestion: '',
+    suggestion_text: '',
     reffered_by: route.query.reffer
 })
 const errorText = ref('')
 const copyUrl = ref('https://midasmoney.io/reffer')
-const { data: countryList } = await useFetch('https://restcountries.com/v3.1/all')
+const { data: countryList } = await useFetch('http://tangaapp.com/api/country/list', {
+    method: 'post'
+})
 const [anim] = useAutoAnimate()
 const [anim2] = useAutoAnimate()
 const copy = async () => {
@@ -180,7 +182,9 @@ const copy = async () => {
     }
 }
 const Submit = async () => {
-    console.log('gsgsdg');
+    if (form.suggestion_text == '') {
+        form.suggestion_text = 'no'
+    }
     const { error, data: responseData } = await useFetch('http://tangaapp.com/api/auth/get-early-access', {
         method: 'post',
         body: {
