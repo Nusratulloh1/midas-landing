@@ -54,8 +54,6 @@
         <div class="absolute right-[198px] bottom-[6px] lg:right-[411px] lg:bottom-[19px]">
             <img class=" h-11 w-16 lg:w-auto lg:h-auto lazyload blur-up" :data-src="game5" alt="game5">
         </div>
-
-
     </div>
 </template>
 <script lang="ts" setup>
