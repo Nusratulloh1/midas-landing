@@ -171,7 +171,14 @@ const [anim] = useAutoAnimate()
 const [anim2] = useAutoAnimate()
 const copy = async () => {
     try {
-        navigator.clipboard.writeText(copyUrl.value)
+        // navigator.clipboard.writeText(copyUrl.value)
+        let textarea = document.createElement("textarea")
+        textarea.value = copyUrl.value
+        document.body.appendChild(textarea)
+        textarea.focus()
+        textarea.select()
+        document.execCommand("copy")
+        document.body.removeChild(textarea)
         copied.value = true
         setTimeout(() => {
             copied.value = false
@@ -192,7 +199,7 @@ const Submit = async () => {
         }
     })
     if (responseData.value?.length) {
-        copyUrl.value = `https://midasmoney.io/?reffer=${responseData.value?.[0].referral_id}`
+        copyUrl.value = `http://midasmoney.io/?reffer=${responseData.value?.[0].referral_id}`
         count.value = responseData.value?.[0].count + 400
         step.value = 2
     }
