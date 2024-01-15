@@ -1,57 +1,38 @@
 <template>
-  <div>
-    <div class="w-full more md:pt-[74px] fixed md:relative z-[999] top-0" ref="headRef">
-      <div class=" md:container mx-auto zoom">
-        <button class="aviable !rounded-none md:!rounded-lg !mt-0 md:!mt-6 !w-full md:!w-[65%] !h-10 lg:!h-[50px]">
-          <h6>
-            Available in EU🇪🇺, UK🇬🇧, USA🇺🇸!
-          </h6>
-          <p>
-            Watch our promo video.
-          </p>
-        </button>
-      </div>
-    </div>
+  <div class="bg-black">
     <section data-bg="#FAFAFA" first="#FAFAFA" ref="container"
       class="section pt-[200px] md:pt-[44px] lg:pt-24 2xl:pt-20 top-section pb-40 md:pb-0 md:h-[80vh] lg:h-[100vh] 2xl:h-[883px] relative overflow-hidden "
       style=" transition: .3s ease-out all; ">
-      <div class=" container md:max-w-screen-xl mx-auto zoom ">
-        <h1>
-          Save money,
-          <br>
-          with money, for money
-        </h1>
-        <p>
-          We aim to shift your prism of association with savings, by developing our solutions,
-          and turn saving from a necessity, into an ingrained way of your life.
-        </p>
-        <div class="flex justify-center mt-8 md:mt-9">
-          <button @click="sendRequest"
-            class="  h-16 px-8 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-stapel">
-            Request early access
-          </button>
+      <div class=" container mx-auto flex items-center justify-between">
+        <div class=" w-[726px]">
+          <div class="flex items-center gap-2.5">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-95 bg-[#62AF6080]"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-[#92E490]"></span>
+            </span>
+            <span class="text-[#92E490] font-semibold">
+              Available for both iOS and Android
+            </span>
+          </div>
+          <h1>
+            Your Financial Mastery, Our Mission
+          </h1>
         </div>
-        <p class=" !mt-[12%] md:!mt-[5%] !text-xs md:!text-sm">
-          Midas is a financial technology company, is not a bank. All activities are virtual and developed for
-          analytical
-          purposes only.
-        </p>
-      </div>
-      <div class="svgs zoom">
-        <MTargetIcon :style="isMobile ? '' : layer0"
-          class="w-[115px] md:w-[125px] lg:w-auto lg:left-5 bottom-[-20px] z-[-99] lg:bottom-[190px] absolute">
-        </MTargetIcon>
-        <MPieIcon :style="isMobile ? '' : layer1"
-          class=" w-[110px] md:w-[120px] lg:w-auto right-7 top-[75px] md:top-[-20px] z-[-99] lg:right-[70px] lg:top-[30px] absolute">
-        </MPieIcon>
-      </div>
-      <div class="absolute  bottom-9 md:bottom-12 w-full">
-        <button class=" mx-auto  text-[#343330] hover:text-[#CBE8CA] animate-bounce hidden md:block">
-          <svg width="42" height="42" viewBox="0 0 42 42" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <div class=" w-[35%]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="564" height="653" viewBox="0 0 564 653" fill="none">
             <path
-              d="M33.7411 24.5536L21.9286 36.3661C21.8067 36.4881 21.6619 36.5849 21.5026 36.651C21.3433 36.717 21.1725 36.751 21 36.751C20.8275 36.751 20.6567 36.717 20.4974 36.651C20.3381 36.5849 20.1933 36.4881 20.0714 36.3661L8.25891 24.5536C8.01263 24.3073 7.87427 23.9733 7.87427 23.625C7.87427 23.2767 8.01263 22.9427 8.25891 22.6964C8.50518 22.4501 8.83921 22.3118 9.1875 22.3118C9.53579 22.3118 9.86982 22.4501 10.1161 22.6964L19.6875 32.2695V6.5625C19.6875 6.2144 19.8258 5.88056 20.0719 5.63442C20.3181 5.38828 20.6519 5.25 21 5.25C21.3481 5.25 21.6819 5.38828 21.9281 5.63442C22.1742 5.88056 22.3125 6.2144 22.3125 6.5625V32.2695L31.8839 22.6964C32.1302 22.4501 32.4642 22.3118 32.8125 22.3118C33.1608 22.3118 33.4948 22.4501 33.7411 22.6964C33.9874 22.9427 34.1257 23.2767 34.1257 23.625C34.1257 23.9733 33.9874 24.3073 33.7411 24.5536Z" />
+              d="M448.798 162.015L448.79 162.006C385.974 96.6127 300.179 87.7285 226.953 123.489C155.163 158.522 115.364 218.134 103.286 297.518C90.8197 379.225 130.823 475.053 215.461 520.704C263.638 546.718 314.524 554.396 367.733 539.608L367.743 539.605L367.752 539.602C401.601 529.481 432.038 510.092 455.713 483.571C462.822 475.964 469.411 467.832 475.998 459.703C478.921 456.096 481.843 452.488 484.811 448.928C491.021 452.031 501.683 459.389 515.074 469.76C528.87 480.445 545.49 494.27 562.985 509.785C563.112 511.915 562.42 513.68 561.354 515.385C560.783 516.297 560.116 517.176 559.412 518.087L559.219 518.337C558.585 519.157 557.926 520.009 557.333 520.894C518.679 576.711 469.144 618.872 404.116 637.864L404.116 637.864C296.131 669.457 197.598 647.99 111.956 574.52C43.2348 515.565 7.24296 438.572 1.71645 347.404L0.718285 347.465L1.71645 347.404C-3.48019 261.837 19.5278 184.707 72.8391 117.97C123.885 54.0714 189.828 15.1872 270.702 4.19945C330.729 -3.93063 384.051 3.55505 431.544 25.2698C478.786 46.869 520.318 82.5729 556.964 131.105L476.963 191.101C474.516 190.89 472.966 189.756 471.652 188.246C470.979 187.472 470.382 186.615 469.751 185.709L469.654 185.569C469 184.631 468.304 183.644 467.496 182.769C464.706 179.736 461.914 176.59 459.119 173.44C455.686 169.571 452.248 165.696 448.798 162.015Z"
+              stroke="url(#paint0_linear_6530_12000)" stroke-width="2" />
+            <defs>
+              <linearGradient id="paint0_linear_6530_12000" x1="282" y1="0" x2="282" y2="653"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#92E490" />
+                <stop offset="0.583398" stop-color="#189115" stop-opacity="0.416602" />
+                <stop offset="1" stop-color="#92E490" stop-opacity="0" />
+              </linearGradient>
+            </defs>
           </svg>
-        </button>
+        </div>
       </div>
     </section>
     <Dive></Dive>
@@ -132,12 +113,21 @@ onMounted(() => {
 </script>
 <style lang="scss">
 .top-section {
-  h1 {
-    color: #0D0D0D;
-    text-align: center;
+  span {
+    color: #92E490;
     font-family: 'Stapel';
-    font-size: 104px;
-    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  h1 {
+    color:  #FFF;
+    font-family: 'Stapel';
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 600;
     line-height: normal;
   }
 

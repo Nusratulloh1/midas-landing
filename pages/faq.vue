@@ -1,13 +1,13 @@
 <template>
     <div class="zoom">
-        <div class="bg-[#0D0D0D] pt-[128px] h-[424px] header">
+        <div class="bg-black pt-20 h-[424px] header">
             <div class="container mx-auto">
-                <img src="@/assets/images/icons/bold.svg" class="w-[52px] md:w-auto mx-auto" alt="bold">
+                <img src="@/assets/images/icons/bold.svg" class="w-20 mx-auto" alt="bold">
                 <h2>
-                    FAQs
+                    Frequently Asked Questions (FAQ)
                 </h2>
                 <p>
-                    Everything you need to know about Midas
+                    Everything you need to know about the product
                 </p>
             </div>
         </div>
@@ -39,9 +39,9 @@
         </section>
         <section class=" pt-8 pb-16">
             <div class="container mx-auto">
-                <img src="@/assets/images/icons/question.svg" class="mx-auto" alt="question"
-                    v-motion-slide-visible-once-bottom>
-                <h4 class=" text-lg md:text-2xl font-stapel md:leading-[44px] md:tracking-[-0.8px] text-center font-medium mt-8"
+                <!-- <img src="@/assets/images/icons/question.svg" class="mx-auto" alt="question"
+                    v-motion-slide-visible-once-bottom> -->
+                <h4 class="text-[#101828] text-lg md:text-2xl font-stapel md:leading-[44px] md:tracking-[-0.8px] text-center font-semibold mt-8"
                     v-motion-slide-visible-once-bottom>
                     Still have questions?
                 </h4>
@@ -51,7 +51,7 @@
                 </p>
                 <div class="flex justify-center mt-8" v-motion-slide-visible-once-bottom>
                     <button
-                        class=" font-semibold h-12 md:h-14 mr-1 px-8 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy">
+                        class=" font-semibold h-12 md:h-14 mr-1 px-8 bg-[#92E490] rounded-full hover:bg-[#d2f0d2] transition-all font-gilroy">
                         Get in touch
                     </button>
                 </div>
@@ -194,17 +194,17 @@ onMounted(() => {
         color: var(--system-white-blocks-elements, #FFF);
         text-align: center;
         font-family: 'Stapel';
-        font-size: 72px;
+        font-size: 64px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         line-height: normal;
         margin-top: 16px;
     }
 
     p {
-        color: var(--gray-200, #EAECF0);
+        color: var(--Secondary-50, #E8E8E8);
         text-align: center;
-        font-family: 'Gilroy';
+        font-family: Gilroy;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -236,12 +236,13 @@ onMounted(() => {
             // margin-bottom: 10px;
 
             h6 {
-                color: var(--gray-900, #101828);
+                color: var(--Gray-900, #101828);
                 font-family: Gilroy;
                 font-size: 18px;
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 600;
                 line-height: 28px;
+                /* 155.556% */
                 width: 90%;
             }
 
@@ -267,12 +268,13 @@ onMounted(() => {
             transition: 250ms ease-out;
 
             p {
-                color: var(--gray-600, #475467);
+                color: var(--Gray-600, #475467);
                 font-family: Gilroy;
                 font-size: 16px;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 600;
                 line-height: 24px;
+                /* 150% */
                 /* 150% */
             }
         }

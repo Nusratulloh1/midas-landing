@@ -67,7 +67,7 @@
                             <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M15.4535 0.333069H38.5735C47.6135 0.333069 53.6668 6.67974 53.6668 16.1197V37.9091C53.6668 47.3197 47.6135 53.6664 38.5735 53.6664H15.4535C6.4135 53.6664 0.333496 47.3197 0.333496 37.9091V16.1197C0.333496 6.67974 6.4135 0.333069 15.4535 0.333069ZM25.4802 34.9731L38.1468 22.3064C39.0535 21.3997 39.0535 19.9331 38.1468 18.9997C37.2402 18.0931 35.7468 18.0931 34.8402 18.9997L23.8268 30.0131L19.1602 25.3464C18.2535 24.4397 16.7602 24.4397 15.8535 25.3464C14.9468 26.2531 14.9468 27.7197 15.8535 28.6531L22.2002 34.9731C22.6535 35.4264 23.2402 35.6397 23.8268 35.6397C24.4402 35.6397 25.0268 35.4264 25.4802 34.9731Z"
-                                    fill="#A1BAA1" />
+                                    fill="#5BA25A" />
                             </svg>
                             <p class="email">
                                 This reservation is held for {{ form.email }}. <button @click="step = 1">
@@ -312,7 +312,7 @@ const Submit = async () => {
                 margin-bottom: 4px;
 
                 &:focus {
-                    border-color: #CBE8CA;
+                    border-color: #92E490;
                 }
 
                 /* 150% */
@@ -346,9 +346,9 @@ const Submit = async () => {
             padding: 16px 28px;
             justify-content: center;
             align-items: center;
-            border-radius: 8px;
-            border: 1px solid var(--primary-500-main, #CBE8CA);
-            background: var(--primary-500-main, #CBE8CA);
+            border-radius: 118px;
+            border: 1px solid var(--primary-500-main, #92E490);
+            background: var(--primary-500-main, #92E490);
             box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
             color: var(--secondary-900, #0D0D0D);
             font-family: Gilroy;
@@ -386,7 +386,7 @@ const Submit = async () => {
             margin-bottom: 24px;
 
             button {
-                color: var(--primary-600, #A1BAA1);
+                color: var(--primary-600, #5BA25A);
                 font-feature-settings: 'clig' off, 'liga' off;
                 font-weight: 700;
                 text-decoration-line: underline;
@@ -436,7 +436,7 @@ const Submit = async () => {
                 width: 100%;
 
                 &:focus {
-                    border-color: #CBE8CA;
+                    border-color: #92E490;
                 }
             }
 
@@ -449,7 +449,7 @@ const Submit = async () => {
                 position: absolute;
 
                 &:hover {
-                    background-color: #CBE8CA;
+                    background-color: #92E490;
                 }
             }
 

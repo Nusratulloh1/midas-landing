@@ -1,20 +1,37 @@
 <template>
   <div>
+    <Transition name="fade">
+      <div v-if="cookies" class="h-[62px] bg-[#E8E8E8] relative zoom py-[22px]">
+        <div class="container xl:max-w-screen-2xl mx-auto flex items-center justify-between">
+          <p class=" font-gilroy">
+            The website uses cookies to personalize content and to analyze web traffic.
+          </p>
+          <div class="flex items-center gap-4">
+            <button class=" font-semibold font-gilroy underline" @click="setCookie()">
+              Accept cookies
+            </button>
+            <button class="text-[#727272] font-semibold font-gilroy underline" @click="setCookie()">
+              Reject
+            </button>
+          </div>
+        </div>
+      </div>
+    </Transition>
     <MHeader></MHeader>
     <main>
       <div class=" overflow-hidden">
         <slot />
       </div>
-      <section class=" py-20 bg-[#0D0D0D]" >
+      <!-- <section class=" py-20 bg-[#0D0D0D]">
         <div class="container mx-auto transition" v-motion-slide-visible-once-bottom>
-          <p class="text-[#A1BAA1] font-gilroy lg:text-lg text-center" >
+          <p class="text-[#A1BAA1] font-gilroy lg:text-lg text-center">
             What are you waiting for?
           </p>
-          <h4 class=" text-[32px] lg:text-5xl font-medium font-stapel text-white text-center mt-2" >
+          <h4 class=" text-[32px] lg:text-5xl font-medium font-stapel text-white text-center mt-2">
             Get the only money saving app
           </h4>
-          <div class="flex items-center justify-center mt-8" >
-            <button @click="sendRequest" 
+          <div class="flex items-center justify-center mt-8">
+            <button @click="sendRequest"
               class=" font-semibold h-12 px-6 bg-[#CBE8CA] rounded-2xl hover:bg-[#d2f0d2] transition-all font-gilroy mx-auto">
               Request early access
             </button>
@@ -32,12 +49,12 @@
             </svg>
           </button>
         </div>
-      </div>
+      </div> -->
     </main>
     <MFooter></MFooter>
     <Teleport to="body">
       <!-- <Transition name="fade"> -->
-        <GetEarlyAccessModal ></GetEarlyAccessModal>
+      <GetEarlyAccessModal></GetEarlyAccessModal>
       <!-- </Transition> -->
     </Teleport>
   </div>
@@ -51,10 +68,15 @@ import { useModal } from "@/composables";
 const route = useRoute()
 const modal = useModal();
 const showModal = computed(() => modal.show.value);
+const cookies = ref()
 const sendRequest = () => {
   modal.setTitle('');
   modal.setWidth("60%");
   modal.showModal();
+}
+const setCookie = () => {
+  localStorage.setItem('accept', 'true')
+  cookies.value = false
 }
 const scrollTop = () => {
   setTimeout(() => window.scrollTo({
@@ -62,6 +84,9 @@ const scrollTop = () => {
     behavior: "smooth",
   }), 0);
 };
+onMounted(() => {
+  cookies.value = localStorage.getItem('accept') === 'true' ? false : true
+})
 </script>
 <style>
 .layout-enter-active,
