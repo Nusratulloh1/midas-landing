@@ -1,7 +1,7 @@
 <template>
-    <header class="w-full bg-black zoom">
+    <header class="w-full bg-black">
         <nav class=" py-3 md:py-5 w-full">
-            <div class="flex items-center justify-between container xl:max-w-screen-2xl mx-auto">
+            <div class="flex items-center justify-between container mx-auto">
                 <div class="hidden md:flex items-center gap-8">
                     <nuxt-link to="/" class=" !no-underline !bg-transparent">
                         <MLogo></MLogo>
@@ -45,7 +45,7 @@
                             <a class="hamburger" aria-label="swipe" href="#"
                                 :class="{ 'active': iSmobileMenu }"><span></span></a>
                         </button>
-                        <div class="dropdown !w-[92%] !mx-auto top-10 !shadow-2xl"
+                        <div class="dropdown !w-[92%] !mx-auto top-10 !mt-0 !shadow-xl !shadow-white"
                             :class="{ 'active': iSmobileMenu, '!top-20': route.path === '/' }">
                             <ul class="flex flex-col gap-4">
                                 <li class="item flex flex-col !items-start">

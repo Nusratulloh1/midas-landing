@@ -50,15 +50,15 @@ a {
 }
 
 @media (min-width: 640px) {
-  .container {
-    max-width: 620px;
-  }
+  // .container {
+  //   max-width: 620px;
+  // }
 }
 
 @media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
+  // .container {
+  //   max-width: 768px;
+  // }
 
 
   .zoom {
@@ -67,9 +67,9 @@ a {
 }
 
 @media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
+  // .container {
+  //   max-width: 1024px;
+  // }
 
   .zoom {
     zoom: 80%;
@@ -78,9 +78,9 @@ a {
 
 @media (min-width: 1280px) {
 
-  .container {
-    max-width: 1120px;
-  }
+  // .container {
+  //   max-width: 1120px;
+  // }
 }
 
 @media (min-width: 1536px) {
@@ -88,9 +88,9 @@ a {
     zoom: 100%;
   }
 
-  .container {
-    max-width: 1120px;
-  }
+  // .container {
+  //   max-width: 1120px;
+  // }
 }
 
 .modal-enter,

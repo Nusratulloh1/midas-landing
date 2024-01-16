@@ -1,6 +1,6 @@
 <template>
-    <footer class=" py-12 lg:py-16 pb-12  bg-[#0D0D0D] zoom">
-        <div class=" container lg:max-w-screen-2xl mx-auto">
+    <footer class=" py-12 lg:py-16 pb-12  bg-[#0D0D0D]">
+        <div class=" container mx-auto">
             <div class="flex items-start gap-8 lg:gap-0 lg:items-center flex-col lg:flex-row justify-between">
                 <div>
                     <MLogo iconColor="#CBE8CA" textColor="#fff"></MLogo>
